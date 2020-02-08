@@ -1,0 +1,5 @@
+D:\document\17.VisualStudio\Arduino.DataLogging\xml_file_load\bin\Debug\xml_file_load.exe
+D:\document\17.VisualStudio\Arduino.DataLogging\xml_file_load\bin\Debug\xml_file_load.pdb
+D:\document\17.VisualStudio\Arduino.DataLogging\xml_file_load\obj\Debug\xml_file_load.csprojResolveAssemblyReference.cache
+D:\document\17.VisualStudio\Arduino.DataLogging\xml_file_load\obj\Debug\xml_file_load.exe
+D:\document\17.VisualStudio\Arduino.DataLogging\xml_file_load\obj\Debug\xml_file_load.pdb
