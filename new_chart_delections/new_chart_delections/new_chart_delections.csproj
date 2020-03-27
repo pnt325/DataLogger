@@ -11,6 +11,8 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -96,6 +98,37 @@
     <Compile Include="gui\ListViewNF.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="gui_new\ComponentManage.cs" />
+    <Compile Include="gui_new\Configure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui_new\Configure.Designer.cs">
+      <DependentUpon>Configure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui_new\FrmRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui_new\FrmRegister.Designer.cs">
+      <DependentUpon>FrmRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui_new\FrmSelectComponent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui_new\FrmSelectComponent.Designer.cs">
+      <DependentUpon>FrmSelectComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui_new\LineChartInfo.cs" />
+    <Compile Include="gui_new\FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui_new\FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui_new\Grid.cs" />
+    <Compile Include="gui_new\LineChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui_new\Memory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="gui\FrmConfigure.resx">
@@ -112,6 +145,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="gui\FrmSelectItem.resx">
       <DependentUpon>FrmSelectItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui_new\Configure.resx">
+      <DependentUpon>Configure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui_new\FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui_new\FrmRegister.resx">
+      <DependentUpon>FrmRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui_new\FrmSelectComponent.resx">
+      <DependentUpon>FrmSelectComponent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

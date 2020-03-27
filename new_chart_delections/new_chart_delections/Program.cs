@@ -13,6 +13,13 @@ namespace new_chart_delections
         public static List<data.ControlObject> ControlObjs = new List<data.ControlObject>();
         public static GridLine.Grid FGrid = new GridLine.Grid();
 
+
+
+
+        public static gui_new.Grid Grid;
+        public static gui_new.ComponentManage ComponentManage;
+        public static gui_new.MemoryManage MemoryManage;
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -21,8 +28,8 @@ namespace new_chart_delections
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmMain());
-            //Application.Run(new gui.FrmTest());
+            //Application.Run(new FrmMain());
+            Application.Run(new gui_new.FrmMain());
         }
     }
 }

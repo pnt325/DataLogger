@@ -87,14 +87,14 @@ namespace new_chart_delections
             {
                 //this.Text = string.Format("(x,y) = {0},{1}; index({2}, {3})", recSelect.xStart, recSelect.yStart,
                 //    recSelect.xCount, recSelect.yCount);
-                using(gui.FrmSelectItem frm = new gui.FrmSelectItem())
+                using (gui.FrmSelectItem frm = new gui.FrmSelectItem())
                 {
                     frm.StartPosition = FormStartPosition.Manual;
                     frm.Top = this.Top + (this.Size.Height - frm.Size.Height) / 2;
                     frm.Left = this.Left + (this.Size.Width - frm.Size.Width) / 2;
                     frm.ShowDialog();
 
-                    if(frm.ItemSelected.Count > 0)
+                    if (frm.ItemSelected.Count > 0)
                     {
                         // TODO add method call chart here.
                         data.ControlObject obj = new data.ControlObject();

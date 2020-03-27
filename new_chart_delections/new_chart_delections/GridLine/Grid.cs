@@ -32,7 +32,7 @@ namespace new_chart_delections.GridLine
             g.ResetTransform();
             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighSpeed;
 
-            // calcula step size.
+            // calculate step size.
             XStep = size.Width / X;
             YStep = (size.Height - startHeigh) / Y;
 
