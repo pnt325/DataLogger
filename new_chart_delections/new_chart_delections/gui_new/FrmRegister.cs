@@ -22,13 +22,27 @@ namespace new_chart_delections.gui_new
             cbbType.TextChanged += CbbType_TextChanged;
             txbName.TextChanged += TxbName_TextChanged;
 
-            cbbType.Items.AddRange(Type.List());
+            this.FormClosing += FrmRegister_FormClosing;
 
             btnAdd.Click += BtnAdd_Click;
             btnSave.Click += BtnSave_Click;
+
             btnSave.Enabled = false;
 
+            cbbType.Items.AddRange(Type.List());
             LoadRegister();
+        }
+
+        private void FrmRegister_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            lsvData.MouseClick -= LsvData_MouseClick;
+            cbbType.TextChanged -= CbbType_TextChanged;
+            txbName.TextChanged -= TxbName_TextChanged;
+
+            this.FormClosing -= FrmRegister_FormClosing;
+
+            btnAdd.Click -= BtnAdd_Click;
+            btnSave.Click -= BtnSave_Click;
         }
 
         private void LoadRegister()
@@ -57,8 +71,10 @@ namespace new_chart_delections.gui_new
 
                 Program.MemoryManage.Add(item.SubItems[0].Text, item.SubItems[1].Text);
             }
-
+             
             Program.MemoryManage.Save();
+
+            this.Close();
         }
 
         private void LsvData_MouseClick(object sender, MouseEventArgs e)

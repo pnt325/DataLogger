@@ -51,59 +51,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="components\Chart.cs" />
-    <Compile Include="Connect\Uart.cs" />
-    <Compile Include="data\ControlObject.cs" />
-    <Compile Include="data\Objects.cs" />
-    <Compile Include="data\SelectItem.cs" />
-    <Compile Include="GridLine\Grid.cs" />
-    <Compile Include="GridLine\RecSelect.cs" />
-    <Compile Include="gui\CtrlDoubleBuffered.cs" />
-    <Compile Include="gui\FrmConfigure.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="gui\FrmConfigure.Designer.cs">
-      <DependentUpon>FrmConfigure.cs</DependentUpon>
-    </Compile>
-    <Compile Include="gui\FrmGridEdit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="gui\FrmGridEdit.Designer.cs">
-      <DependentUpon>FrmGridEdit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="gui\FrmMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="gui\FrmMain.Designer.cs">
-      <DependentUpon>FrmMain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="gui\FrmMonitoring.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="gui\FrmMonitoring.Designer.cs">
-      <DependentUpon>FrmMonitoring.cs</DependentUpon>
-    </Compile>
-    <Compile Include="gui\FrmConfigData.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="gui\FrmConfigData.Designer.cs">
-      <DependentUpon>FrmConfigData.cs</DependentUpon>
-    </Compile>
-    <Compile Include="gui\FrmSelectItem.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="gui\FrmSelectItem.Designer.cs">
-      <DependentUpon>FrmSelectItem.cs</DependentUpon>
-    </Compile>
-    <Compile Include="gui\ListViewNF.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="gui_new\ComponentManage.cs" />
     <Compile Include="gui_new\Configure.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="gui_new\Configure.Designer.cs">
       <DependentUpon>Configure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui_new\Connection.cs" />
+    <Compile Include="gui_new\FrmConnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui_new\FrmConnection.Designer.cs">
+      <DependentUpon>FrmConnection.cs</DependentUpon>
     </Compile>
     <Compile Include="gui_new\FrmRegister.cs">
       <SubType>Form</SubType>
@@ -117,6 +77,12 @@
     <Compile Include="gui_new\FrmSelectComponent.Designer.cs">
       <DependentUpon>FrmSelectComponent.cs</DependentUpon>
     </Compile>
+    <Compile Include="gui_new\Line.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui_new\Line.Designer.cs">
+      <DependentUpon>Line.cs</DependentUpon>
+    </Compile>
     <Compile Include="gui_new\LineChartInfo.cs" />
     <Compile Include="gui_new\FrmMain.cs">
       <SubType>Form</SubType>
@@ -125,29 +91,17 @@
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="gui_new\Grid.cs" />
-    <Compile Include="gui_new\LineChart.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="gui_new\ListViewNF.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="gui_new\Memory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="gui\FrmConfigure.resx">
-      <DependentUpon>FrmConfigure.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="gui\FrmGridEdit.resx">
-      <DependentUpon>FrmGridEdit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="gui\FrmMain.resx">
-      <DependentUpon>FrmMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="gui\FrmConfigData.resx">
-      <DependentUpon>FrmConfigData.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="gui\FrmSelectItem.resx">
-      <DependentUpon>FrmSelectItem.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="gui_new\Configure.resx">
       <DependentUpon>Configure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui_new\FrmConnection.resx">
+      <DependentUpon>FrmConnection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="gui_new\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
@@ -157,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="gui_new\FrmSelectComponent.resx">
       <DependentUpon>FrmSelectComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui_new\Line.resx">
+      <DependentUpon>Line.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

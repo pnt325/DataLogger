@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace new_chart_delections.gui_new
@@ -28,13 +23,26 @@ namespace new_chart_delections.gui_new
             btnCancel.Click += BtnCancel_Click;
             btnOk.Enabled = false;
             btnOk.Click += BtnOk_Click;
+            this.FormClosing += FrmSelectComponent_FormClosing;
+        }
+
+        private void FrmSelectComponent_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            cbbComponent.TextChanged -= CbbComponent_TextChanged;
+            btnChange.Click -= BtnChange_Click;
+
+            lsvSelect.MouseClick -= LsvSelect_MouseClick;
+
+            lblColor.Click -= LblColor_Click;
+            btnCancel.Click -= BtnCancel_Click;
+            btnOk.Click -= BtnOk_Click;
         }
 
         public object SelectObject = new object();
         public ComponentType.Type SelectType = ComponentType.Type.None;
         private void BtnOk_Click(object sender, EventArgs e)
         {
-            if(cbbComponent.Text == ComponentType.ToString(ComponentType.Type.LineChart))
+            if (cbbComponent.Text == ComponentType.ToString(ComponentType.Type.LineChart))
             {
                 GraphInfo graphInfo = new GraphInfo();
                 graphInfo.Title = txbTitle.Text;
@@ -47,7 +55,7 @@ namespace new_chart_delections.gui_new
                 // add linechart info to graphinfo
                 foreach (ListViewItem item in lsvSelect.Items)
                 {
-                    lineInfos.Add(new LineInfo()
+                    graphInfo.LineInfos.Add(new LineInfo()
                     {
                         Address = Program.MemoryManage.Address[item.SubItems[1].Text],
                         Color = item.SubItems[3].BackColor,
@@ -70,16 +78,19 @@ namespace new_chart_delections.gui_new
 
         private void LblColor_Click(object sender, EventArgs e)
         {
-            if(selectedIndex < 0)
+            if (selectedIndex < 0)
             {
                 return;
             }
 
-            using(ColorDialog colorDialog = new ColorDialog())
+            using (ColorDialog colorDialog = new ColorDialog())
             {
                 if (colorDialog.ShowDialog() == DialogResult.OK)
                 {
-                    lblColor.BackColor = colorDialog.Color;
+                    if(selectedIndex >= 0)
+                    {
+                        lsvSelect.Items[selectedIndex].SubItems[3].BackColor = colorDialog.Color;
+                    }
                 }
             }
         }
@@ -101,7 +112,7 @@ namespace new_chart_delections.gui_new
         int selectedIndex = -1;
         private void LsvSelect_MouseClick(object sender, MouseEventArgs e)
         {
-            if(e.Button != MouseButtons.Left || lsvSelect.FocusedItem == null)
+            if (e.Button != MouseButtons.Left || lsvSelect.FocusedItem == null)
             {
                 return;
             }
@@ -116,7 +127,7 @@ namespace new_chart_delections.gui_new
 
         private void CbbComponent_TextChanged(object sender, EventArgs e)
         {
-            if(cbbComponent.Text == ComponentType.ToString(ComponentType.Type.LineChart))
+            if (cbbComponent.Text == ComponentType.ToString(ComponentType.Type.LineChart))
             {
                 RegisterToList();
             }
@@ -125,7 +136,7 @@ namespace new_chart_delections.gui_new
         private void RegisterToList()
         {
             lsvData.Items.Clear();
-            foreach(KeyValuePair<string, string> keyPair in Program.MemoryManage.ValueType)
+            foreach (KeyValuePair<string, string> keyPair in Program.MemoryManage.ValueType)
             {
                 bool nameExist = false;
                 foreach (ListViewItem item in lsvSelect.Items)
@@ -151,8 +162,8 @@ namespace new_chart_delections.gui_new
             if (lsvData.CheckedItems.Count == 0)
                 return;
 
-            btnAddSingle.Enabled = false;   
-            foreach(ListViewItem item in lsvData.CheckedItems)
+            btnAddSingle.Enabled = false;
+            foreach (ListViewItem item in lsvData.CheckedItems)
             {
                 string varName = item.SubItems[0].Text;
                 ListViewItem listViewItem = new ListViewItem(varName);
@@ -184,9 +195,9 @@ namespace new_chart_delections.gui_new
 
             btnRemoveSingle.Enabled = true;
 
-            if(lsvSelect.Items.Count == 0)
+            if (lsvSelect.Items.Count == 0)
             {
-                btnOk.Enabled = false;  
+                btnOk.Enabled = false;
             }
         }
     }

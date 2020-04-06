@@ -10,7 +10,7 @@ namespace new_chart_delections.gui_new
         public enum Type
         {
             None,
-            LineChart,
+            LineChart
         }
 
         public static Type GetType(string strType)
@@ -58,33 +58,32 @@ namespace new_chart_delections.gui_new
         public event EventHandler StartMonitor;
         public event EventHandler StopMonitor;
 
-        public List<ComponentArea> areaItems { get; set; }
+        public List<ComponentArea> AreaItems { get; set; }
 
         public ComponentManage()
         {
-            areaItems = new List<ComponentArea>();
+            AreaItems = new List<ComponentArea>();
         }
-
 
         public bool RemoveAreaItem(string uuid)
         {
             lock(lock_object)
             {
-                int index = this.areaItems.IndexOf(new ComponentArea() { UUID = uuid });
+                int index = this.AreaItems.IndexOf(new ComponentArea() { UUID = uuid });
                 if (index >= 0)
                 {
-                    areaItems.RemoveAt(index);
+                    AreaItems.RemoveAt(index);
                     return true;
                 }
                 return false;
             }
         }
 
-        public void AddAreadItem(ComponentArea componentArea)
+        public void AddAreaItem(ComponentArea componentArea)
         {
             lock(lock_object)
             {
-                areaItems.Add(componentArea);
+                AreaItems.Add(componentArea);
             }
         }
 

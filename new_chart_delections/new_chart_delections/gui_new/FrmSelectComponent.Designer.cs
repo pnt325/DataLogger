@@ -49,12 +49,12 @@
             this.txbName = new System.Windows.Forms.TextBox();
             this.btnOk = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.lsvSelect = new new_chart_delections.gui.ListViewNF();
+            this.lsvSelect = new new_chart_delections.gui_new.ListViewNF();
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lsvData = new new_chart_delections.gui.ListViewNF();
+            this.lsvData = new new_chart_delections.gui_new.ListViewNF();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.nudPeriod)).BeginInit();
@@ -111,7 +111,7 @@
             this.nudPeriod.Size = new System.Drawing.Size(48, 20);
             this.nudPeriod.TabIndex = 4;
             this.nudPeriod.Value = new decimal(new int[] {
-            1000,
+            10,
             0,
             0,
             0});
@@ -146,7 +146,7 @@
             this.nudSample.Size = new System.Drawing.Size(63, 20);
             this.nudSample.TabIndex = 7;
             this.nudSample.Value = new decimal(new int[] {
-            10000,
+            500,
             0,
             0,
             0});
@@ -235,7 +235,7 @@
             // 
             this.lblColor.BackColor = System.Drawing.Color.Lime;
             this.lblColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblColor.Location = new System.Drawing.Point(87, 46);
+            this.lblColor.Location = new System.Drawing.Point(47, 47);
             this.lblColor.Name = "lblColor";
             this.lblColor.Size = new System.Drawing.Size(75, 20);
             this.lblColor.TabIndex = 6;
@@ -245,9 +245,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(6, 50);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 13);
+            this.label6.Size = new System.Drawing.Size(31, 13);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Update Period";
+            this.label6.Text = "Color";
             // 
             // label7
             // 
@@ -260,9 +260,9 @@
             // 
             // txbName
             // 
-            this.txbName.Location = new System.Drawing.Point(87, 17);
+            this.txbName.Location = new System.Drawing.Point(47, 19);
             this.txbName.Name = "txbName";
-            this.txbName.Size = new System.Drawing.Size(245, 20);
+            this.txbName.Size = new System.Drawing.Size(285, 20);
             this.txbName.TabIndex = 1;
             // 
             // btnOk
@@ -388,11 +388,11 @@
         private System.Windows.Forms.NumericUpDown nudSample;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private gui.ListViewNF lsvData;
+        private gui_new.ListViewNF lsvData;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private gui.ListViewNF lsvSelect;
+        private gui_new.ListViewNF lsvSelect;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;

@@ -87,6 +87,8 @@ namespace new_chart_delections.gui_new
 
             Address = new Dictionary<string, int>();
             ValueType = new Dictionary<string, string>();
+
+            address = InitRegister();
         }
 
         public void Write(int address, object value)
@@ -185,7 +187,7 @@ namespace new_chart_delections.gui_new
             address = InitRegister();
         }
 
-        RegisterAddress address = new RegisterAddress();
+        RegisterAddress address;
         public bool Add(string key, string type)
         {
             switch (type)

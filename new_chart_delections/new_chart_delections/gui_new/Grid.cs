@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace new_chart_delections.gui_new
@@ -9,11 +10,13 @@ namespace new_chart_delections.gui_new
         #region PROPERTY
         public const int OFFSET_TOP = 24;       // px
         public const int OFFSET_BOTTOM = 22;    // px
+        public const int X_DEFAULT = 4;
+        public const int Y_DEFAULT = 4;
 
         private const int DEFAULT_GRID_SIZE = 4;
 
-        public int X { get; set; } = 4; // default value
-        public int Y { get; set; } = 4;
+        public int X { get; set; } = X_DEFAULT; // default value
+        public int Y { get; set; } = Y_DEFAULT;
         public int StepX { get; set; }
         public int StepY { get; set; }
 
@@ -33,6 +36,20 @@ namespace new_chart_delections.gui_new
         private Brush brush = new SolidBrush(Color.FromArgb(128, Color.Silver));    // color to fill rectangle
         private Rectangle rect = new Rectangle();
         private Size clientSize = new Size();
+
+        public bool SetGrid(int x, int y)
+        {
+            if(x == X && y == Y || (x < X_DEFAULT) || (y < Y_DEFAULT))
+            {
+                return false;
+            }
+
+            X = x;
+            Y = y;
+
+            UpdateGrid(clientSize);
+            return true;
+        }
 
         private void UpdateGrid(Size size)
         {
@@ -207,6 +224,44 @@ namespace new_chart_delections.gui_new
             selectEndPoint.X = x;
             selectEndPoint.Y = y;
 
+            // rectangle collision detect
+            foreach (ComponentArea component in Program.ComponentManage.AreaItems)
+            {
+                Rectangle rec1 = new Rectangle();
+                rec1.X = selectStartPoint.X;
+                rec1.Y = selectStartPoint.Y;
+                rec1.Width = selectEndPoint.X - selectStartPoint.X;
+                rec1.Height = selectEndPoint.Y - selectStartPoint.Y;
+
+                Rectangle rec2 = new Rectangle();
+                rec2.X = component.StartPoint.X;
+                rec2.Y = component.StartPoint.Y;
+                rec2.Width = component.EndPoint.X - component.StartPoint.X;
+                rec2.Height = component.EndPoint.Y - component.StartPoint.Y;
+
+                float disSubX = (rec1.X + (rec1.Width / 2.0f)) - (rec2.X + (rec2.Width / 2.0f));
+                if (disSubX < 0) { disSubX = (-1) * disSubX; }
+
+                float disW = (rec1.Width + rec2.Width) / 2.0f;
+
+                float disSubY = (rec1.Y + (rec1.Height / 2.0f)) - (rec2.Y + (rec2.Height / 2.0f));
+                if (disSubY < 0) { disSubY = (-1) * disSubY; }
+
+                float disH = (rec1.Height + rec2.Height) / 2.0f;
+
+                if(disSubX < disW && disSubY < disH)
+                {
+                    Cursor.Current = Cursors.No;
+                    return;
+                }
+                else
+                {
+                    // Do nothing
+                }
+            }
+
+            Cursor.Current = Cursors.Default;
+
             frm.Invalidate();
         }
 
@@ -218,7 +273,7 @@ namespace new_chart_delections.gui_new
                 // reset mouse-down.
                 mouseDown = false;
 
-                if (selectStartPoint.X != selectEndPoint.X && selectStartPoint.Y != selectEndPoint.Y)
+                if (selectStartPoint.X != selectEndPoint.X && selectStartPoint.Y != selectEndPoint.Y && Cursor.Current != Cursors.No)
                 {
                     AreaSelected?.Invoke(selectStartPoint, selectEndPoint);
                 }

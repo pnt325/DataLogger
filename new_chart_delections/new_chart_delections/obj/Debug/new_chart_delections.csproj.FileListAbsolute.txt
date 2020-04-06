@@ -45,11 +45,6 @@ C:\Users\phatn\Downloads\DataLogger\new_chart_delections\new_chart_delections\bi
 C:\Users\phatn\Downloads\DataLogger\new_chart_delections\new_chart_delections\bin\Debug\zh-cn\ZedGraph.resources.dll
 C:\Users\phatn\Downloads\DataLogger\new_chart_delections\new_chart_delections\bin\Debug\zh-tw\ZedGraph.resources.dll
 C:\Users\phatn\Downloads\DataLogger\new_chart_delections\new_chart_delections\obj\Debug\new_chart_delections.csprojAssemblyReference.cache
-C:\Users\phatn\Downloads\DataLogger\new_chart_delections\new_chart_delections\obj\Debug\new_chart_delections.gui.FrmConfigure.resources
-C:\Users\phatn\Downloads\DataLogger\new_chart_delections\new_chart_delections\obj\Debug\new_chart_delections.gui.FrmGridEdit.resources
-C:\Users\phatn\Downloads\DataLogger\new_chart_delections\new_chart_delections\obj\Debug\new_chart_delections.FrmMain.resources
-C:\Users\phatn\Downloads\DataLogger\new_chart_delections\new_chart_delections\obj\Debug\new_chart_delections.gui.FrmConfigData.resources
-C:\Users\phatn\Downloads\DataLogger\new_chart_delections\new_chart_delections\obj\Debug\new_chart_delections.gui.FrmSelectItem.resources
 C:\Users\phatn\Downloads\DataLogger\new_chart_delections\new_chart_delections\obj\Debug\new_chart_delections.Properties.Resources.resources
 C:\Users\phatn\Downloads\DataLogger\new_chart_delections\new_chart_delections\obj\Debug\new_chart_delections.csproj.GenerateResource.cache
 C:\Users\phatn\Downloads\DataLogger\new_chart_delections\new_chart_delections\obj\Debug\new_chart_delections.csproj.CopyComplete
@@ -58,3 +53,7 @@ C:\Users\phatn\Downloads\DataLogger\new_chart_delections\new_chart_delections\ob
 C:\Users\phatn\Downloads\DataLogger\new_chart_delections\new_chart_delections\obj\Debug\new_chart_delections.gui_new.FrmMain.resources
 C:\Users\phatn\Downloads\DataLogger\new_chart_delections\new_chart_delections\obj\Debug\new_chart_delections.gui_new.FrmSelectComponent.resources
 C:\Users\phatn\Downloads\DataLogger\new_chart_delections\new_chart_delections\obj\Debug\new_chart_delections.gui_new.FrmRegister.resources
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\new_chart_delections\obj\Debug\new_chart_delections.gui_new.Configure.resources
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\new_chart_delections\obj\Debug\new_chart_delections.csproj.CoreCompileInputs.cache
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\new_chart_delections\obj\Debug\new_chart_delections.gui_new.FrmConnection.resources
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\new_chart_delections\obj\Debug\new_chart_delections.gui_new.LineChart.resources

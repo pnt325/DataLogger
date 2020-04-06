@@ -8,17 +8,10 @@ namespace new_chart_delections
 {
     static class Program
     {
-        // System variable
-        public static List<data.Objects> DataObjs = new List<data.Objects>();
-        public static List<data.ControlObject> ControlObjs = new List<data.ControlObject>();
-        public static GridLine.Grid FGrid = new GridLine.Grid();
-
-
-
-
         public static gui_new.Grid Grid;
         public static gui_new.ComponentManage ComponentManage;
         public static gui_new.MemoryManage MemoryManage;
+        public static gui_new.Uart Uart;
 
         /// <summary>
         /// The main entry point for the application.

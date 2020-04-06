@@ -1,4 +1,5 @@
-﻿using System;
+﻿//using new_chart_delections.gui;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,9 +29,17 @@ namespace new_chart_delections.gui_new
             Program.Grid = new Grid(this);
             Program.ComponentManage = new ComponentManage();
             Program.MemoryManage = new MemoryManage();
+            Program.Uart = new Uart();
             Program.MemoryManage.Load();
 
+            Program.Grid.GridChanged += Grid_GridChanged;
+
             Program.Grid.AreaSelected = AreaSelected;
+        }
+
+        private void Grid_GridChanged(object sender, EventArgs e)
+        {
+            this.Invalidate();
         }
 
         private void registerToolStripMenuItem_Click(object sender, EventArgs e)
@@ -48,7 +57,7 @@ namespace new_chart_delections.gui_new
 
         private void AreaSelected(Point start, Point end)
         {
-            GraphInfo lineData = new GraphInfo();
+            GraphInfo graphInfo = new GraphInfo();
             ComponentType.Type type = ComponentType.Type.None;
             using(FrmSelectComponent frm =new FrmSelectComponent())
             {
@@ -59,14 +68,27 @@ namespace new_chart_delections.gui_new
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
                     type = frm.SelectType;
-                    lineData = (GraphInfo)frm.SelectObject;
+                    graphInfo = (GraphInfo)frm.SelectObject;
                 }
             }
 
-            if(type == ComponentType.Type.LineChart)
+            string uuid = Guid.NewGuid().ToString();
+            if (type == ComponentType.Type.LineChart)
             {
-                LineChart lineChart = new LineChart(start, end, lineData);
+                LineChart lineChart = new LineChart(start, end, graphInfo);
+                lineChart.UUID = uuid;
+
                 this.Controls.Add(lineChart);
+
+                // Add ComponentManage.   
+                ComponentArea component = new ComponentArea()
+                {
+                    StartPoint = start,
+                    EndPoint = end,
+                    UUID = uuid
+                };
+
+                Program.ComponentManage.AddAreaItem(component);
             }
         }
 
@@ -82,7 +104,26 @@ namespace new_chart_delections.gui_new
 
         private void configureToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // configure
+            using(Configure frm = new Configure())
+            {
+                frm.StartPosition = FormStartPosition.Manual;
+                frm.Top = this.Top + (this.Size.Height - frm.Size.Height) / 2;
+                frm.Left = this.Left + (this.Size.Width - frm.Size.Width) / 2;
+                frm.ShowDialog();
+            }
+        }
+
+        private void connectionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Connection.
+            using(FrmConnection frm = new FrmConnection())
+            {
+                frm.StartPosition = FormStartPosition.Manual;
+                frm.Top = this.Top + (this.Size.Height - frm.Size.Height) / 2;
+                frm.Left = this.Left + (this.Size.Width - frm.Size.Width) / 2;
+                frm.ShowDialog();
+            }
+
         }
     }
 }
