@@ -7,10 +7,12 @@ namespace new_chart_delections.gui_new
     public class ComponentType
     {
         const string strLineChart = "Line Chart";
+        const string strLabel = "Label";
         public enum Type
         {
             None,
-            LineChart
+            LineChart,
+            Label
         }
 
         public static Type GetType(string strType)
@@ -21,6 +23,9 @@ namespace new_chart_delections.gui_new
                 case strLineChart:
                     vType = Type.LineChart;
                     break;
+                case strLabel:
+                    vType = Type.Label;
+                    break;
                 default:
                     break;
             }
@@ -29,7 +34,7 @@ namespace new_chart_delections.gui_new
 
         public static string[] GetNames()
         {
-            return new string[] { strLineChart };
+            return new string[] { strLineChart, strLabel };
         }
 
         public static string ToString(Type vType)
@@ -43,6 +48,9 @@ namespace new_chart_delections.gui_new
                     break;
                 case gui_new.ComponentType.Type.LineChart:
                     strType = strLineChart;
+                    break;
+                case gui_new.ComponentType.Type.Label:
+                    strType = strLabel;
                     break;
                 default:
                     break;

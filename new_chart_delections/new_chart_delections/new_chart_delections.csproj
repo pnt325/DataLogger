@@ -51,6 +51,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="gui_new\CLabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="gui_new\ComponentManage.cs" />
     <Compile Include="gui_new\Configure.cs">
       <SubType>Form</SubType>
@@ -77,12 +80,7 @@
     <Compile Include="gui_new\FrmSelectComponent.Designer.cs">
       <DependentUpon>FrmSelectComponent.cs</DependentUpon>
     </Compile>
-    <Compile Include="gui_new\Line.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="gui_new\Line.Designer.cs">
-      <DependentUpon>Line.cs</DependentUpon>
-    </Compile>
+    <Compile Include="gui_new\LabelInfo.cs" />
     <Compile Include="gui_new\LineChartInfo.cs" />
     <Compile Include="gui_new\FrmMain.cs">
       <SubType>Form</SubType>
@@ -91,12 +89,24 @@
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="gui_new\Grid.cs" />
+    <Compile Include="gui_new\LineChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="gui_new\ListViewNF.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="gui_new\Memory.cs" />
+    <Compile Include="gui_new\XLabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="gui_new\XLabel.Designer.cs">
+      <DependentUpon>XLabel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="gui_new\CLabel.resx">
+      <DependentUpon>CLabel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="gui_new\Configure.resx">
       <DependentUpon>Configure.cs</DependentUpon>
     </EmbeddedResource>
@@ -112,8 +122,11 @@
     <EmbeddedResource Include="gui_new\FrmSelectComponent.resx">
       <DependentUpon>FrmSelectComponent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="gui_new\Line.resx">
-      <DependentUpon>Line.cs</DependentUpon>
+    <EmbeddedResource Include="gui_new\LineChart.resx">
+      <DependentUpon>LineChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui_new\XLabel.resx">
+      <DependentUpon>XLabel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

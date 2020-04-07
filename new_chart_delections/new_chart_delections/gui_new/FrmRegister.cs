@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace new_chart_delections.gui_new
@@ -47,7 +41,7 @@ namespace new_chart_delections.gui_new
 
         private void LoadRegister()
         {
-            foreach(KeyValuePair<string, string> type in Program.MemoryManage.ValueType)
+            foreach (KeyValuePair<string, string> type in Program.MemoryManage.ValueType)
             {
                 ListViewItem item = new ListViewItem(type.Key);
                 item.SubItems.Add(type.Value); // get type
@@ -64,14 +58,14 @@ namespace new_chart_delections.gui_new
             Program.MemoryManage.Clear();
 
             // Query listview to add new register./.
-            foreach(ListViewItem item in lsvData.Items)
+            foreach (ListViewItem item in lsvData.Items)
             {
                 string key = item.SubItems[0].Text;
                 string type = item.SubItems[1].Text;    // string type.
 
                 Program.MemoryManage.Add(item.SubItems[0].Text, item.SubItems[1].Text);
             }
-             
+
             Program.MemoryManage.Save();
 
             this.Close();

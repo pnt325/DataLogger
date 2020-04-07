@@ -21,7 +21,10 @@ namespace new_chart_delections.gui_new
             InitializeComponent();
 
             nudX.ValueChanged += NudX_ValueChanged;
-            nudY.ValueChanged += NudY_ValueChanged;
+            nudY.ValueChanged += NudX_ValueChanged;
+
+            nudX.Value = Program.Grid.X;
+            nudY.Value = Program.Grid.Y;
 
             currentX = (int)nudX.Value;
             currentY = (int)nudY.Value;
@@ -40,11 +43,10 @@ namespace new_chart_delections.gui_new
                 nudY.Value = currentY;
             }
         }
-
-        private void NudY_ValueChanged(object sender, EventArgs e)
-        {
-            UpdateGrid();
-        }
+        //private void NudY_ValueChanged(object sender, EventArgs e)
+        //{
+        //    UpdateGrid();
+        //}
 
         private void NudX_ValueChanged(object sender, EventArgs e)
         {

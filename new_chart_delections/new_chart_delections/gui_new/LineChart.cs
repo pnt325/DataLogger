@@ -1,73 +1,67 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Diagnostics;
 using ZedGraph;
 using System.Threading;
 
 namespace new_chart_delections.gui_new
 {
-    public partial class LineChart : UserControl
+    public class LineChart : ZedGraphControl
     {
         public string UUID { get; set; }
+
         Point startPoint;
         Point endPoint;
         GraphInfo graphInfo;
+
         int delayTime;
         bool isStart = false;
         int valueCount = 0;
 
-        public LineChart(Point start, Point end, GraphInfo graph)
+        public LineChart(Point start, Point end, GraphInfo graphInfo)
         {
-            InitializeComponent();
+            this.startPoint = start;
+            this.endPoint = end;
+            this.graphInfo = graphInfo;
 
-            startPoint = start;
-            endPoint = end;
-            graphInfo = graph;
-
-            delayTime = 1000 / graph.Period;
+            delayTime = 1000 / this.graphInfo.Period;
 
             this.Location = Program.Grid.GetLocation(startPoint);
             this.Size = Program.Grid.GetSize(startPoint, endPoint);
 
             // Zedgraph init
-            zedGraphControl1.GraphPane.Title.Text = graph.Title;
-            zedGraphControl1.GraphPane.XAxis.Title.IsVisible = false;
-            zedGraphControl1.GraphPane.YAxis.Title.IsVisible = false;
-            zedGraphControl1.GraphPane.XAxis.MajorGrid.IsVisible = true;
-            zedGraphControl1.GraphPane.YAxis.MajorGrid.IsVisible = true;
-            zedGraphControl1.GraphPane.IsFontsScaled = false;
-            zedGraphControl1.GraphPane.XAxis.Title.FontSpec.Size = 8.5f;
-            zedGraphControl1.GraphPane.YAxis.Title.FontSpec.Size = 8.5f;
+            this.GraphPane.Title.Text = this.graphInfo.Title;
+            this.GraphPane.XAxis.Title.IsVisible = false;
+            this.GraphPane.YAxis.Title.IsVisible = false;
+            this.GraphPane.XAxis.MajorGrid.IsVisible = true;
+            this.GraphPane.YAxis.MajorGrid.IsVisible = true;
+            this.GraphPane.IsFontsScaled = false;
+            this.GraphPane.XAxis.Title.FontSpec.Size = 8.5f;
+            this.GraphPane.YAxis.Title.FontSpec.Size = 8.5f;
 
-            zedGraphControl1.GraphPane.XAxis.Scale.Min = 0;
-            zedGraphControl1.GraphPane.YAxis.Scale.Max = 100;
-            zedGraphControl1.GraphPane.XAxis.Scale.MajorStepAuto = true;
+            this.GraphPane.XAxis.Scale.Min = 0;
+            this.GraphPane.YAxis.Scale.Max = 100;
+            this.GraphPane.XAxis.Scale.MajorStepAuto = true;
 
-            foreach(LineInfo lineInfo in graph.LineInfos)
+            foreach (LineInfo lineInfo in graphInfo.LineInfos)
             {
-                RollingPointPairList rollingPointPairList = new RollingPointPairList(graph.Sample);
-                ZedGraph.LineItem lineItem = zedGraphControl1.GraphPane.AddCurve(lineInfo.Name, rollingPointPairList, lineInfo.Color, SymbolType.None);
+                RollingPointPairList rollingPointPairList = new RollingPointPairList(graphInfo.Sample);
+                ZedGraph.LineItem lineItem = this.GraphPane.AddCurve(lineInfo.Name, rollingPointPairList, lineInfo.Color, SymbolType.None);
             }
 
-            zedGraphControl1.AxisChange();
-            zedGraphControl1.Invalidate();
+            this.AxisChange();
+            this.Invalidate();
 
             EventInit();
         }
 
-
-        #region PRIVATE METHOD
         private void EventInit()
         {
             Program.Grid.GridChanged += Grid_GridChanged;
-            zedGraphControl1.DoubleClick += ZedGraphControl1_DoubleClick;
+            this.DoubleClick += ZedGraphControl1_DoubleClick;
             Program.ComponentManage.StartMonitor += ComponentManage_StartMonitor;
             Program.ComponentManage.StopMonitor += ComponentManage_StopMonitor;
         }
@@ -75,11 +69,10 @@ namespace new_chart_delections.gui_new
         private void EventDeInit()
         {
             Program.Grid.GridChanged -= Grid_GridChanged;
-            zedGraphControl1.DoubleClick -= ZedGraphControl1_DoubleClick;
+            this.DoubleClick -= ZedGraphControl1_DoubleClick;
             Program.ComponentManage.StartMonitor -= ComponentManage_StartMonitor;
             Program.ComponentManage.StopMonitor -= ComponentManage_StopMonitor;
         }
-
         private void ComponentManage_StopMonitor(object sender, EventArgs e)
         {
             Stop();
@@ -95,7 +88,7 @@ namespace new_chart_delections.gui_new
             Stop();
             Program.ComponentManage.RemoveAreaItem(UUID);
             EventDeInit();
-            zedGraphControl1.Dispose();
+            this.Dispose();
             this.Dispose();
         }
 
@@ -110,12 +103,13 @@ namespace new_chart_delections.gui_new
             if (isStart)
                 return;
 
+            // remap address.
             for (int i = 0; i < graphInfo.LineInfos.Count; i++)
             {
                 int value = 0;
-                if(Program.MemoryManage.Address.TryGetValue(graphInfo.LineInfos[i].Name, out value))
+                if (Program.MemoryManage.Address.TryGetValue(graphInfo.LineInfos[i].Name, out value))
                 {
-                    graphInfo.LineInfos[i].Address = value; 
+                    graphInfo.LineInfos[i].Address = value;
                 }
                 else
                 {
@@ -128,29 +122,29 @@ namespace new_chart_delections.gui_new
 
             Thread th = new Thread(() =>
             {
-                while(isStart)
+                while (isStart)
                 {
-                    for (int i = 0; i < zedGraphControl1.GraphPane.CurveList.Count; i++)
+                    for (int i = 0; i < this.GraphPane.CurveList.Count; i++)
                     {
                         double value = (float)Program.MemoryManage.Read(graphInfo.LineInfos[i].Address);
 
-                        LineItem lineItem = zedGraphControl1.GraphPane.CurveList[i] as LineItem;
+                        LineItem lineItem = this.GraphPane.CurveList[i] as LineItem;
                         IPointListEdit list = lineItem.Points as IPointListEdit;
 
                         list.Add(valueCount, value);
-                        //zedGraphControl1.GraphPane.CurveList[i].AddPoint(valueCount, value);
+                        //this.GraphPane.CurveList[i].AddPoint(valueCount, value);
                         valueCount++;
                     }
 
                     // scale exist
-                    if(valueCount > zedGraphControl1.GraphPane.XAxis.Scale.Max)
+                    if (valueCount > this.GraphPane.XAxis.Scale.Max)
                     {
-                        zedGraphControl1.GraphPane.XAxis.Scale.Max = valueCount;
-                        zedGraphControl1.GraphPane.XAxis.Scale.Min = valueCount - graphInfo.Sample;
+                        this.GraphPane.XAxis.Scale.Max = valueCount;
+                        this.GraphPane.XAxis.Scale.Min = valueCount - graphInfo.Sample;
                     }
 
-                    zedGraphControl1.AxisChange();
-                    zedGraphControl1.Invalidate();
+                    this.AxisChange();
+                    this.Invalidate();
 
                     Thread.Sleep(delayTime);
                 }
@@ -164,6 +158,17 @@ namespace new_chart_delections.gui_new
             isStart = false;
         }
 
-        #endregion
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // LineChart
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.Name = "LineChart";
+            this.Size = new System.Drawing.Size(347, 173);
+            this.ResumeLayout(false);
+
+        }
     }
 }

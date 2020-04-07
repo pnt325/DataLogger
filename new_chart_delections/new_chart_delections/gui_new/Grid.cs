@@ -38,8 +38,18 @@ namespace new_chart_delections.gui_new
         private Size clientSize = new Size();
 
         public bool SetGrid(int x, int y)
-        {
-            if(x == X && y == Y || (x < X_DEFAULT) || (y < Y_DEFAULT))
+        { 
+            // Check with component management
+            foreach(ComponentArea area in Program.ComponentManage.AreaItems)
+            {
+               if(x < area.EndPoint.X || y < area.EndPoint.Y)
+                {
+                    return false;
+                }
+            }
+
+            // check condition to set grid value
+            if (x == X && y == Y || (x < X_DEFAULT) || (y < Y_DEFAULT))
             {
                 return false;
             }
@@ -90,7 +100,7 @@ namespace new_chart_delections.gui_new
 
             if (mouseDown)
             {
-                if(selectStartPoint.X == selectEndPoint.X || selectStartPoint.Y == selectEndPoint.Y)
+                if (selectStartPoint.X == selectEndPoint.X || selectStartPoint.Y == selectEndPoint.Y)
                 {
                     return;
                 }
@@ -249,7 +259,7 @@ namespace new_chart_delections.gui_new
 
                 float disH = (rec1.Height + rec2.Height) / 2.0f;
 
-                if(disSubX < disW && disSubY < disH)
+                if (disSubX < disW && disSubY < disH)
                 {
                     Cursor.Current = Cursors.No;
                     return;

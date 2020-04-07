@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO.Ports;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace new_chart_delections.gui_new
@@ -27,7 +19,7 @@ namespace new_chart_delections.gui_new
             this.FormClosing += FrmConnection_FormClosing;
 
             if (Program.Uart.Status)
-            { 
+            {
                 cbbPort.Items.Add(Program.Uart.PortName);
                 cbbPort.SelectedIndex = 0;
 
@@ -59,7 +51,11 @@ namespace new_chart_delections.gui_new
         private void Uart_Disconnected(object sender, EventArgs e)
         {
             cbbPort.Enabled = true;
+
+            numericUpDown1.Invoke((MethodInvoker)delegate
+            {
             numericUpDown1.Enabled = true;
+            });
         }
 
         private void BtnConnect_Click(object sender, EventArgs e)
@@ -67,7 +63,7 @@ namespace new_chart_delections.gui_new
             Program.Uart.PortName = cbbPort.Text;
             Program.Uart.BaudRate = (int)numericUpDown1.Value;
 
-            if(btnConnect.Text == "Connect")
+            if (btnConnect.Text == "Connect")
             {
                 if (Program.Uart.Connect())
                 {
@@ -78,7 +74,7 @@ namespace new_chart_delections.gui_new
                     this.Close();
                 }
             }
-            else if(btnConnect.Text == "Disconnect")
+            else if (btnConnect.Text == "Disconnect")
             {
                 Program.Uart.Disconnect();
                 cbbPort.Enabled = true;
@@ -89,7 +85,7 @@ namespace new_chart_delections.gui_new
 
         private void CbbPort_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cbbPort.Text != "")
+            if (cbbPort.Text != "")
             {
                 btnConnect.Enabled = true;
             }

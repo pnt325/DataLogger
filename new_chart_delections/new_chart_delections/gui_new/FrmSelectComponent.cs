@@ -21,9 +21,29 @@ namespace new_chart_delections.gui_new
 
             lblColor.Click += LblColor_Click;
             btnCancel.Click += BtnCancel_Click;
-            btnOk.Enabled = false;
+            //btnOk.Enabled = false;
             btnOk.Click += BtnOk_Click;
             this.FormClosing += FrmSelectComponent_FormClosing;
+
+            lsvData.ItemCheck += LsvData_ItemCheck;
+
+            RegisterToList();
+        }
+
+        private void LsvData_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            if(cbbComponent.Text == ComponentType.ToString(ComponentType.Type.LineChart))
+            {
+                return;
+            }
+
+            for (int i = 0; i < lsvData.Items.Count; i++)
+            {
+                if (i != e.Index)
+                {
+                    lsvData.Items[i].Checked = false;
+                }
+            }
         }
 
         private void FrmSelectComponent_FormClosing(object sender, FormClosingEventArgs e)
@@ -44,11 +64,15 @@ namespace new_chart_delections.gui_new
         {
             if (cbbComponent.Text == ComponentType.ToString(ComponentType.Type.LineChart))
             {
+                if(lsvSelect.Items.Count == 0)
+                {
+                    return;
+                }
+
                 GraphInfo graphInfo = new GraphInfo();
                 graphInfo.Title = txbTitle.Text;
                 graphInfo.Period = (int)nudPeriod.Value;
                 graphInfo.Sample = (int)nudSample.Value;
-                graphInfo.UUID = Guid.NewGuid().ToString();
 
                 List<LineInfo> lineInfos = new List<LineInfo>();
 
@@ -65,6 +89,23 @@ namespace new_chart_delections.gui_new
                 }
                 SelectType = ComponentType.Type.LineChart;
                 SelectObject = graphInfo;
+            }
+            else if(cbbComponent.Text == ComponentType.ToString(ComponentType.Type.Label))
+            {
+                if(lsvData.CheckedItems.Count == 0)
+                {
+                    MessageBox.Show("No Variabel select to shown", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                LabelInfo labelInfo = new LabelInfo();
+                labelInfo.Name = txbTitle.Text;
+                labelInfo.Period = (int)nudPeriod.Value;
+                labelInfo.VarName = lsvData.CheckedItems[0].SubItems[0].Text;
+                labelInfo.Address = Program.MemoryManage.Address[labelInfo.VarName];
+
+                SelectType = ComponentType.Type.Label;
+                SelectObject = labelInfo;
             }
 
             this.DialogResult = DialogResult.OK;
@@ -129,6 +170,15 @@ namespace new_chart_delections.gui_new
         {
             if (cbbComponent.Text == ComponentType.ToString(ComponentType.Type.LineChart))
             {
+                btnAddSingle.Enabled = true;
+                btnRemoveSingle.Enabled = true;
+            }
+            else
+            {
+                btnAddSingle.Enabled = false;
+                btnRemoveSingle.Enabled = false;
+
+                lsvSelect.Items.Clear();
                 RegisterToList();
             }
         }

@@ -1,14 +1,7 @@
-﻿using Microsoft.Win32;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Diagnostics;
 using System.IO.Ports;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace new_chart_delections.gui_new
 {
@@ -30,7 +23,7 @@ namespace new_chart_delections.gui_new
         private SerialPort serialPort;
 
         public string PortName { get; set; } = "";
-        public int BaudRate { get; set; } =  9600;  // default value.
+        public int BaudRate { get; set; } = 9600;  // default value.
 
         public event EventHandler Disconnected;
         #endregion
@@ -54,7 +47,7 @@ namespace new_chart_delections.gui_new
             serialPort.DiscardOutBuffer();
 
             string msg = "";
-            while(true)
+            while (true)
             {
                 try
                 {
@@ -92,7 +85,7 @@ namespace new_chart_delections.gui_new
 
             if (isError)
             {
-                if(Disconnected != null)
+                if (Disconnected != null)
                 {
                     Disconnected(null, null);
                 }
@@ -113,9 +106,9 @@ namespace new_chart_delections.gui_new
             }
             catch
             {
-                return false;   
+                return false;
             }
-            return true;   
+            return true;
         }
 
         public void Disconnect()

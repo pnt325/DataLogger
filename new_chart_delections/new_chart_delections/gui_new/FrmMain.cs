@@ -16,7 +16,12 @@ namespace new_chart_delections.gui_new
     {
         public FrmMain()
         {
+            Program.Grid = new Grid(this);
+            Program.ComponentManage = new ComponentManage();
+            Program.MemoryManage = new MemoryManage();
+            Program.Uart = new Uart();
             InitializeComponent();
+
 
             // graphics config
             this.DoubleBuffered = true;
@@ -26,16 +31,19 @@ namespace new_chart_delections.gui_new
             true);
 
             // Init static variable from Program.
-            Program.Grid = new Grid(this);
-            Program.ComponentManage = new ComponentManage();
-            Program.MemoryManage = new MemoryManage();
-            Program.Uart = new Uart();
+
             Program.MemoryManage.Load();
-
             Program.Grid.GridChanged += Grid_GridChanged;
-
             Program.Grid.AreaSelected = AreaSelected;
+
+            //this.Shown += FrmMain_Shown;
         }
+
+        //private void FrmMain_Shown(object sender, EventArgs e)
+        //{
+        //    XLabel lbl = new XLabel(new Point(0, 0), new Point(1, 1), new LabelInfo() { Name = "test" });
+        //    this.Controls.Add(lbl);
+        //}
 
         private void Grid_GridChanged(object sender, EventArgs e)
         {
@@ -57,8 +65,8 @@ namespace new_chart_delections.gui_new
 
         private void AreaSelected(Point start, Point end)
         {
-            GraphInfo graphInfo = new GraphInfo();
             ComponentType.Type type = ComponentType.Type.None;
+            object selectObject = null;
             using(FrmSelectComponent frm =new FrmSelectComponent())
             {
                 frm.StartPosition = FormStartPosition.Manual;
@@ -68,25 +76,34 @@ namespace new_chart_delections.gui_new
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
                     type = frm.SelectType;
-                    graphInfo = (GraphInfo)frm.SelectObject;
+                    selectObject = frm.SelectObject;
                 }
             }
 
             string uuid = Guid.NewGuid().ToString();
+
+            //ComponentManage.   
+            ComponentArea component = new ComponentArea()
+            {
+                StartPoint = start,
+                EndPoint = end,
+                UUID = uuid
+            };
+
             if (type == ComponentType.Type.LineChart)
             {
-                LineChart lineChart = new LineChart(start, end, graphInfo);
+                LineChart lineChart = new LineChart(start, end, (GraphInfo)selectObject);
                 lineChart.UUID = uuid;
 
                 this.Controls.Add(lineChart);
 
-                // Add ComponentManage.   
-                ComponentArea component = new ComponentArea()
-                {
-                    StartPoint = start,
-                    EndPoint = end,
-                    UUID = uuid
-                };
+                Program.ComponentManage.AddAreaItem(component);
+            }
+            else if(type == ComponentType.Type.Label)
+            {
+                XLabel lbl = new XLabel(start, end, (LabelInfo)selectObject);
+                lbl.UUID = uuid;
+                this.Controls.Add(lbl);
 
                 Program.ComponentManage.AddAreaItem(component);
             }
