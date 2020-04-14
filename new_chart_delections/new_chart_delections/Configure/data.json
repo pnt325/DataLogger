@@ -1,0 +1,60 @@
+﻿{
+  "memory": [
+    {
+      "name": "variable",
+      "type": "uint8"
+    }
+  ],
+  "connection": {
+    "uart": {
+      "port": "COM1",
+      "baudrate": 15200
+    }
+  },
+  "component": [
+    {
+      "type": "chart",
+      "start_point": {
+        "x": 1,
+        "y": 2
+      },
+      "end_point": {
+        "x": 1,
+        "y": 2
+      },
+      "period": 123,
+      "component": {
+        "title": "abc",
+        "sample": 123,
+        "lines": [
+          {
+            "name": "abc",
+            "var_name": "abc",
+            "var_adr": 123,
+            "var_type": "uint8",
+            "color": "123,124,235"
+          }
+        ]
+      }
+    },
+    {
+      "type": "label",
+      "start_point": {
+        "x": 1,
+        "y": 2
+      },
+      "end_point": {
+        "x": 1,
+        "y": 2
+      },
+      "period": 123,
+      "component": {
+        "title": "abc",
+        "var_name": "abc",
+        "var_type": "abc",
+        "var_adr": 123
+      }
+    }
+  ]
+
+}

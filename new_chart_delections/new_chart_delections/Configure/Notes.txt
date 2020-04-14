@@ -1,0 +1,14 @@
+﻿// Grid configure
+// Memory
+// Component
+// Nextwork
+
+layout_profile.plf
+Memory:[
+	{
+		name: "abc",	// string
+		type: "type",	// string
+	}
+
+]
+

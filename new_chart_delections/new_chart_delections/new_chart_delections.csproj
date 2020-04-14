@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -51,82 +54,78 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="gui_new\CLabel.cs">
+    <Compile Include="Components\Chart.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="gui_new\ComponentManage.cs" />
-    <Compile Include="gui_new\Configure.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="gui_new\Configure.Designer.cs">
-      <DependentUpon>Configure.cs</DependentUpon>
-    </Compile>
-    <Compile Include="gui_new\Connection.cs" />
-    <Compile Include="gui_new\FrmConnection.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="gui_new\FrmConnection.Designer.cs">
-      <DependentUpon>FrmConnection.cs</DependentUpon>
-    </Compile>
-    <Compile Include="gui_new\FrmRegister.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="gui_new\FrmRegister.Designer.cs">
-      <DependentUpon>FrmRegister.cs</DependentUpon>
-    </Compile>
-    <Compile Include="gui_new\FrmSelectComponent.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="gui_new\FrmSelectComponent.Designer.cs">
-      <DependentUpon>FrmSelectComponent.cs</DependentUpon>
-    </Compile>
-    <Compile Include="gui_new\LabelInfo.cs" />
-    <Compile Include="gui_new\LineChartInfo.cs" />
-    <Compile Include="gui_new\FrmMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="gui_new\FrmMain.Designer.cs">
-      <DependentUpon>FrmMain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="gui_new\Grid.cs" />
-    <Compile Include="gui_new\LineChart.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="gui_new\ListViewNF.cs">
+    <Compile Include="Components\ListViewNF.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="gui_new\Memory.cs" />
-    <Compile Include="gui_new\XLabel.cs">
+    <Compile Include="Components\Table.cs" />
+    <Compile Include="Components\Type.cs" />
+    <Compile Include="Components\Label.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="gui_new\XLabel.Designer.cs">
-      <DependentUpon>XLabel.cs</DependentUpon>
+    <Compile Include="Components\Label.Designer.cs">
+      <DependentUpon>Label.cs</DependentUpon>
     </Compile>
+    <Compile Include="Configure\ChartInfo.cs" />
+    <Compile Include="Configure\Component.cs" />
+    <Compile Include="Configure\LabelInfo.cs" />
+    <Compile Include="Configure\Memory.cs" />
+    <Compile Include="Configure\Save.cs" />
+    <Compile Include="Core\Component.cs" />
+    <Compile Include="Core\Grid.cs" />
+    <Compile Include="Core\Memory.cs" />
+    <Compile Include="Layout\FrmConfigure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\FrmConfigure.Designer.cs">
+      <DependentUpon>FrmConfigure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\FrmConnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\FrmConnection.Designer.cs">
+      <DependentUpon>FrmConnection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\FrmRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\FrmRegister.Designer.cs">
+      <DependentUpon>FrmRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\FrmSelectComponent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\FrmSelectComponent.Designer.cs">
+      <DependentUpon>FrmSelectComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Network\Uart.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="gui_new\CLabel.resx">
-      <DependentUpon>CLabel.cs</DependentUpon>
+    <EmbeddedResource Include="Components\Label.resx">
+      <DependentUpon>Label.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="gui_new\Configure.resx">
-      <DependentUpon>Configure.cs</DependentUpon>
+    <EmbeddedResource Include="Layout\FrmConfigure.resx">
+      <DependentUpon>FrmConfigure.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="gui_new\FrmConnection.resx">
+    <EmbeddedResource Include="Layout\FrmConnection.resx">
       <DependentUpon>FrmConnection.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="gui_new\FrmMain.resx">
+    <EmbeddedResource Include="Layout\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="gui_new\FrmRegister.resx">
+    <EmbeddedResource Include="Layout\FrmRegister.resx">
       <DependentUpon>FrmRegister.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="gui_new\FrmSelectComponent.resx">
+    <EmbeddedResource Include="Layout\FrmSelectComponent.resx">
       <DependentUpon>FrmSelectComponent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="gui_new\LineChart.resx">
-      <DependentUpon>LineChart.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="gui_new\XLabel.resx">
-      <DependentUpon>XLabel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -137,6 +136,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Configure\data.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -152,7 +152,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Configure\Notes.txt" />
     <Content Include="License-LGPL.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

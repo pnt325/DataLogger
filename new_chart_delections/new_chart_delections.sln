@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "new_chart_delections", "new_chart_delections\new_chart_delections.csproj", "{94ED28BA-29F5-4EAB-BCEE-6F776AA65045}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{A5EAB19E-D90F-46D3-A2B2-CD09BEE6C54E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{94ED28BA-29F5-4EAB-BCEE-6F776AA65045}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94ED28BA-29F5-4EAB-BCEE-6F776AA65045}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94ED28BA-29F5-4EAB-BCEE-6F776AA65045}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5EAB19E-D90F-46D3-A2B2-CD09BEE6C54E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5EAB19E-D90F-46D3-A2B2-CD09BEE6C54E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5EAB19E-D90F-46D3-A2B2-CD09BEE6C54E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5EAB19E-D90F-46D3-A2B2-CD09BEE6C54E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
