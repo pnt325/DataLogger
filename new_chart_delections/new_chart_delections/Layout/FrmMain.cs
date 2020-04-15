@@ -1,6 +1,7 @@
 ﻿//using new_chart_delections.gui;
 using System;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace new_chart_delections.Layout
@@ -30,6 +31,19 @@ namespace new_chart_delections.Layout
         {
             Core.Grid.SizeChanged += Grid_SizeChanged;
             Core.Component.AddControl += Component_AddControl;
+            this.Shown += FrmMain_Shown;
+        }
+
+        private void FrmMain_Shown(object sender, EventArgs e)
+        {
+            // check to open file setting
+            if(Program.FileName != "")
+            {
+                if(File.Exists(Program.FileName))
+                {
+                    Configure.Load.FromFile(Program.FileName);
+                }
+            }
         }
 
         private void Component_AddControl(Control control)
