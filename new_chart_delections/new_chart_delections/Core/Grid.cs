@@ -13,8 +13,8 @@ namespace new_chart_delections.Core
         public const int X_DEFAULT = 4;         // Default grid number
         public const int Y_DEFAULT = 4;
 
-        public static int X { get; set; }       // Grid size
-        public static int Y { get; set; }
+        public static int X { get;  set; }       // Grid size
+        public static int Y { get;  set; }
         public static int StepX { get; set; }              // Step size
         public static int StepY { get; set; }
 
@@ -35,7 +35,6 @@ namespace new_chart_delections.Core
         #region EVENT
         public static event EventHandler SizeChanged;
         public delegate void AreaSelectedEvent(Point start, Point end);
-        //public static event AreaSelectedEvent AreaSelected;
         #endregion
 
         #region ATTRIBUTE
@@ -284,12 +283,9 @@ namespace new_chart_delections.Core
             Form frm = (Form)sender;
             if (e.Button == MouseButtons.Left)
             {
-                // reset mouse-down.
                 mouseDown = false;
-
                 if (selectStartPoint.X != selectEndPoint.X && selectStartPoint.Y != selectEndPoint.Y && Cursor.Current != Cursors.No)
                 {
-                    //AreaSelected?.Invoke(selectStartPoint, selectEndPoint);
                     using (Layout.FrmSelectComponent f = new Layout.FrmSelectComponent())
                     {
                         f.StartPosition = FormStartPosition.Manual;
@@ -300,26 +296,7 @@ namespace new_chart_delections.Core
                         {
                             f.SelectComponent.StartPoint = selectStartPoint;
                             f.SelectComponent.EndPoint = selectEndPoint;
-
-                            switch (f.SelectComponent.Type)
-                            {
-                                case Components.Types.None:
-                                    break;
-                                case Components.Types.Chart:
-                                    Components.Chart chart = new Components.Chart(selectStartPoint, selectEndPoint, f.SelectComponent);
-                                    frm.Controls.Add(chart);
-                                    Component.Add(f.SelectComponent);
-                                    break;
-                                case Components.Types.Label:
-                                    Components.Label label = new Components.Label(selectStartPoint, selectEndPoint, f.SelectComponent);
-                                    frm.Controls.Add(label);
-                                    Component.Add(f.SelectComponent);
-                                    break;
-                                case Components.Types.Table:
-                                    break;
-                                default:
-                                    break;
-                            }
+                            Core.Component.Add(f.SelectComponent);
                         }
                     }
                 }

@@ -59,3 +59,7 @@ C:\Users\phatn\Downloads\DataLogger\new_chart_delections\new_chart_delections\ob
 C:\Users\phatn\Downloads\DataLogger\new_chart_delections\new_chart_delections\bin\Debug\Newtonsoft.Json.dll
 C:\Users\phatn\Downloads\DataLogger\new_chart_delections\new_chart_delections\bin\Debug\Newtonsoft.Json.xml
 C:\Users\phatn\Downloads\DataLogger\new_chart_delections\new_chart_delections\obj\Debug\new_chart_delections.csprojAssemblyReference.cache
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\new_chart_delections\bin\Debug\new_chart_delections.exe.manifest
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\new_chart_delections\bin\Debug\new_chart_delections.application
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\new_chart_delections\obj\Debug\new_chart_delections.exe.manifest
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\new_chart_delections\obj\Debug\new_chart_delections.application

@@ -22,8 +22,8 @@ namespace new_chart_delections.Core
         public static uint Uint32Size { get; set; } = DEFAULT_SIZE;
         public static uint FloatSize { get; set; } = DEFAULT_SIZE;
 
-        public static Dictionary<string, uint> VarAddress { get; set; }       // = new Dictionary<string, uint>();
-        public static Dictionary<string, MemoryTypes> VarTypes { get; set; }  // = new Dictionary<string, MemoryTypes>();
+        public static Dictionary<string, uint> Address { get; private set; }       // = new Dictionary<string, uint>();
+        public static Dictionary<string, MemoryTypes> Types { get; private set; }  // = new Dictionary<string, MemoryTypes>();
 
         private static byte[] memBit;
         private static sbyte[] memInt8;
@@ -63,8 +63,8 @@ namespace new_chart_delections.Core
             uint32_Index = 0;
             float_Index = 0;
 
-            VarTypes = new Dictionary<string, MemoryTypes>();
-            VarAddress = new Dictionary<string, uint>();
+            Types = new Dictionary<string, MemoryTypes>();
+            Address = new Dictionary<string, uint>();
         }
 
         /// <summary>
@@ -83,8 +83,8 @@ namespace new_chart_delections.Core
             float_Index = 0;
 
             // clear items
-            VarAddress.Clear();
-            VarTypes.Clear();
+            Address.Clear();
+            Types.Clear();
         }
 
         /// <summary>
@@ -109,8 +109,8 @@ namespace new_chart_delections.Core
                     }
                     else
                     {
-                        VarTypes.Add(name, type);
-                        VarAddress.Add(name, bit_Index);
+                        Types.Add(name, type);
+                        Address.Add(name, bit_Index);
 
                         adr = bit_Index;
                         bit_Index++;
@@ -123,8 +123,8 @@ namespace new_chart_delections.Core
                     }
                     else
                     {
-                        VarAddress.Add(name, int8_Index);
-                        VarTypes.Add(name, type);
+                        Address.Add(name, int8_Index);
+                        Types.Add(name, type);
 
                         adr = int8_Index;
                         int8_Index++;
@@ -137,8 +137,8 @@ namespace new_chart_delections.Core
                     }
                     else
                     {
-                        VarAddress.Add(name, uint8_Index);
-                        VarTypes.Add(name, type);
+                        Address.Add(name, uint8_Index);
+                        Types.Add(name, type);
 
                         adr = uint8_Index;
                         uint8_Index++;
@@ -151,8 +151,8 @@ namespace new_chart_delections.Core
                     }
                     else
                     {
-                        VarAddress.Add(name, int16_Index);
-                        VarTypes.Add(name, type);
+                        Address.Add(name, int16_Index);
+                        Types.Add(name, type);
 
                         adr = int16_Index;
                         int16_Index++;
@@ -165,8 +165,8 @@ namespace new_chart_delections.Core
                     }
                     else
                     {
-                        VarAddress.Add(name, uint16_Index);
-                        VarTypes.Add(name, type);
+                        Address.Add(name, uint16_Index);
+                        Types.Add(name, type);
 
                         adr = uint16_Index;
                         uint16_Index++;
@@ -179,8 +179,8 @@ namespace new_chart_delections.Core
                     }
                     else
                     {
-                        VarAddress.Add(name, int32_Index);
-                        VarTypes.Add(name, type);
+                        Address.Add(name, int32_Index);
+                        Types.Add(name, type);
 
                         adr = int32_Index;
                         int32_Index++;
@@ -193,8 +193,8 @@ namespace new_chart_delections.Core
                     }
                     else
                     {
-                        VarAddress.Add(name, uint32_Index);
-                        VarTypes.Add(name, type);
+                        Address.Add(name, uint32_Index);
+                        Types.Add(name, type);
 
                         adr = uint32_Index;
                         uint32_Index++;
@@ -207,8 +207,8 @@ namespace new_chart_delections.Core
                     }
                     else
                     {
-                        VarAddress.Add(name, float_Index);
-                        VarTypes.Add(name, type);
+                        Address.Add(name, float_Index);
+                        Types.Add(name, type);
 
                         adr = float_Index;
                         float_Index++;
@@ -222,19 +222,6 @@ namespace new_chart_delections.Core
 
             return result;
         }
-
-        //public static bool Remove(string name)
-        //{
-        //    uint value;
-        //    bool result = false;
-        //    if (VarAddress.TryGetValue(name, out value))
-        //    {
-        //        VarAddress.Remove(name);
-        //        result = true;
-        //    }
-
-        //    return result;
-        //}
 
         /// <summary>
         /// Read value store on memory
@@ -390,7 +377,7 @@ namespace new_chart_delections.Core
         /// Get list of type name
         /// </summary>
         /// <returns>string[]</returns>
-        public static string[] GetNames()
+        public static string[] Names()
         {
             return new string[] { STR_BIT, STR_INT8, STR_UINT8, 
                 STR_INT16, STR_UINT16, STR_INT32, 

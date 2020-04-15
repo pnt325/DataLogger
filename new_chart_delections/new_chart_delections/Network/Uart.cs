@@ -9,7 +9,6 @@ namespace new_chart_delections.Network
     {
         #region PROPERTY
         private SerialPort serialPort;
-
         public string PortName { get; set; } = "";
         public int BaudRate { get; set; } = 9600;  // default value.
 
@@ -58,21 +57,18 @@ namespace new_chart_delections.Network
                 try
                 {
                     object value = float.Parse(datas[1]);
-                    if (!Core.Memory.VarAddress.ContainsKey(datas[0]))
+                    if (!Core.Memory.Address.ContainsKey(datas[0]))
                     {
                         continue;
                     }
-                    Core.Memory.Write(Core.Memory.VarAddress[datas[0]], Core.Memory.VarTypes[datas[0]], value);
+                    Core.Memory.Write(Core.Memory.Address[datas[0]], Core.Memory.Types[datas[0]], value);
                 }
                 catch { }
             }
 
             if (isError)
             {
-                if (Disconnected != null)
-                {
-                    Disconnected(null, null);
-                }
+                Disconnected?.Invoke(null, null);
             }
         }
 

@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Newtonsoft.Json.Linq;
 using System.Drawing;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-using Newtonsoft;
-using Newtonsoft.Json.Linq;
 
 namespace new_chart_delections.Configure
 {
@@ -19,7 +12,7 @@ namespace new_chart_delections.Configure
             obj["sample"] = info.Sample;
 
             JArray lines = new JArray();
-            foreach(Components.Line line in info.Lines)
+            foreach (Components.ChartLine line in info.Lines)
             {
                 lines.Add(LineInfo.Dump(line));
             }
@@ -34,7 +27,7 @@ namespace new_chart_delections.Configure
             info.Title = obj["title"].ToString();
             info.Sample = obj["sample"].Value<int>();
 
-            foreach(var li in obj["lines"])
+            foreach (var li in obj["lines"])
             {
                 info.Lines.Add(LineInfo.Load((JObject)li));
             }
@@ -45,7 +38,7 @@ namespace new_chart_delections.Configure
 
     public class LineInfo
     {
-        public static JObject Dump(Components.Line line)
+        public static JObject Dump(Components.ChartLine line)
         {
             JObject obj = new JObject();
 
@@ -58,9 +51,9 @@ namespace new_chart_delections.Configure
             return obj;
         }
 
-        public static Components.Line Load(JObject obj)
+        public static Components.ChartLine Load(JObject obj)
         {
-            Components.Line line = new Components.Line();
+            Components.ChartLine line = new Components.ChartLine();
             line.Name = obj["name"].Value<string>();
             line.VarName = obj["var_name"].Value<string>();
             line.VarAddress = obj["var_adr"].Value<uint>();

@@ -14,14 +14,12 @@ namespace ConsoleApp1
         {
             JObject job = new JObject();
 
-            job["color"] = Color.IndianRed.ToArgb();
-
-            Color s = Color.FromArgb(job["color"].Value<int>());
+            job["title"] = "test";
+            job["location"] = new JObject();
+            job["location"]["x"] = 123;
+            job["location"]["y"] = 456;
 
             Console.WriteLine(job);
-
-            Console.WriteLine(Guid.NewGuid());
-            Console.WriteLine(Guid.NewGuid());
 
             Console.ReadLine();
         }

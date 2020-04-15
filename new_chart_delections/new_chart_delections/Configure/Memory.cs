@@ -1,9 +1,5 @@
 ﻿using Newtonsoft.Json.Linq;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace new_chart_delections.Configure
 {
@@ -27,7 +23,11 @@ namespace new_chart_delections.Configure
         {
             string name = "";
             Core.MemoryTypes type;
-            foreach(var j in jArray)
+
+            // clear memory
+            Core.Memory.Clear();
+
+            foreach (var j in jArray)
             {
                 name = j["name"].Value<string>();
                 type = Core.MemoryType.ToType(j["type"].Value<string>());

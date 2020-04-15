@@ -1,13 +1,5 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Net.Http.Headers;
-using System.Runtime.ExceptionServices;
-using System.Text;
-using System.Threading.Tasks;
-using ZedGraph;
 
 namespace new_chart_delections.Configure
 {
@@ -31,22 +23,21 @@ namespace new_chart_delections.Configure
 
             switch (item.Type)
             {
-                case Components.Types.None:
+                case Components.ComponentTypes.None:
                     break;
-                case Components.Types.Chart:
+                case Components.ComponentTypes.Chart:
                     obj["info"] = ChartInfo.Dump((Components.ChartInfo)item.Info);
                     break;
-                case Components.Types.Label:
+                case Components.ComponentTypes.Label:
                     obj["info"] = LabelInfo.Dump((Components.LabelInfo)item.Info);
                     break;
-                case Components.Types.Table:
+                case Components.ComponentTypes.Table:
                     break;
                 default:
                     break;
             }
             return obj;
         }
-
 
         public static Core.ComponentItem Load(JObject obj)
         {
@@ -59,18 +50,19 @@ namespace new_chart_delections.Configure
                 obj["end_point"]["y"].Value<int>());
 
             item.Type = Components.Type.ToType(obj["type"].Value<string>());
+            item.UpdatePeriod = obj["period"].Value<int>();
 
             switch (item.Type)
             {
-                case Components.Types.None:
+                case Components.ComponentTypes.None:
                     break;
-                case Components.Types.Chart:
+                case Components.ComponentTypes.Chart:
                     item.Info = ChartInfo.Load((JObject)obj["info"]);
                     break;
-                case Components.Types.Label:
+                case Components.ComponentTypes.Label:
                     item.Info = LabelInfo.Load((JObject)obj["info"]);
                     break;
-                case Components.Types.Table:
+                case Components.ComponentTypes.Table:
                     break;
                 default:
                     break;

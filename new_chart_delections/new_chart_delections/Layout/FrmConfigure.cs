@@ -15,17 +15,16 @@ namespace new_chart_delections.Layout
         int currentX;
         int currentY;
 
-
         public FrmConfigure()
         {
             InitializeComponent();
 
-            nudX.ValueChanged += NudX_ValueChanged;
-            nudY.ValueChanged += NudX_ValueChanged;
-
             // Get value from grid...
             nudX.Value = Core.Grid.X;
             nudY.Value = Core.Grid.Y;
+
+            nudX.ValueChanged += NudX_ValueChanged;
+            nudY.ValueChanged += NudX_ValueChanged;
 
             currentX = (int)nudX.Value;
             currentY = (int)nudY.Value;

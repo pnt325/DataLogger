@@ -6,24 +6,24 @@
         const string STR_LABEL = "Label";
         const string STR_TABLE = "Table";
 
-        public static string[] GetNames()
+        public static string[] Names()
         {
             return new string[] { STR_CHART, STR_LABEL, STR_TABLE };
         }
 
-        public static Types ToType(string strType)
+        public static ComponentTypes ToType(string strType)
         {
-            Types type = Types.None;
+            ComponentTypes type = ComponentTypes.None;
             switch (strType)
             {
                 case STR_CHART:
-                    type = Types.Chart;
+                    type = ComponentTypes.Chart;
                     break;
                 case STR_LABEL:
-                    type = Types.Label;
+                    type = ComponentTypes.Label;
                     break;
                 case STR_TABLE:
-                    type = Types.Table;
+                    type = ComponentTypes.Table;
                     break;
                 default:
                     break;
@@ -32,21 +32,21 @@
             return type;
         }
 
-        public static string ToString(Types type)
+        public static string ToString(ComponentTypes type)
         {
             string strType = "";
             switch (type)
             {
-                case Types.None:
+                case ComponentTypes.None:
                     strType = "None";
                     break;
-                case Types.Chart:
+                case ComponentTypes.Chart:
                     strType = STR_CHART;
                     break;
-                case Types.Label:
+                case ComponentTypes.Label:
                     strType = STR_LABEL;
                     break;
-                case Types.Table:
+                case ComponentTypes.Table:
                     strType = STR_TABLE;
                     break;
                 default:
@@ -57,7 +57,7 @@
         }
     }
 
-    public enum Types
+    public enum ComponentTypes
     {
         None,
         Chart,

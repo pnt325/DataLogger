@@ -1,21 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
 using System.Threading;
-using System.Runtime.CompilerServices;
+using System.Windows.Forms;
 
 namespace new_chart_delections.Components
 {
     public partial class Label : UserControl
     {
-        public string UUID { get; set; } = "";
+        private string UUID { get; set; } = "";
 
         private int delayTime;
         private Point startPoint;
@@ -23,7 +15,7 @@ namespace new_chart_delections.Components
         private LabelInfo labelInfo;
         private bool isStart = false;
 
-        public Label(Point start, Point end, Core.ComponentItem info)
+        public Label(Core.ComponentItem info)
         {
             startPoint = new Point();
             endPoint = new Point();
@@ -32,8 +24,8 @@ namespace new_chart_delections.Components
             InitializeComponent();
 
             this.UUID = info.Uuid;
-            this.startPoint = start;
-            this.endPoint = end;
+            this.startPoint = info.StartPoint;
+            this.endPoint = info.EndPoint;
             labelInfo = (LabelInfo)info.Info;
 
             lblName.Text = labelInfo.Title;
@@ -43,11 +35,11 @@ namespace new_chart_delections.Components
             this.Location = Core.Grid.GetPoint(this.startPoint);
             this.Size = Core.Grid.GetSize(this.startPoint, this.endPoint);
 
-            EventInit();
-            Grid_GridChanged(null, null);
+            InitEvent();
+            Grid_SizeChanged(null, null);
         }
 
-        private void EventInit()
+        private void InitEvent()
         {
             lblName.DoubleClick += LblName_DoubleClick;
             lblValue.DoubleClick += LblName_DoubleClick;
@@ -57,38 +49,7 @@ namespace new_chart_delections.Components
             Core.Grid.SizeChanged += Grid_SizeChanged;
         }
 
-        private void Component_RemoveComponent(string uuid)
-        {
-            if(uuid == UUID)
-            {
-                Stop();
-                EventDeInit();
-                this.Dispose();
-            }
-        }
-
-        private void Grid_SizeChanged(object sender, EventArgs e)
-        {
-            Grid_GridChanged(null, null);
-        }
-
-        private void Component_StopComponent(string uuid)
-        {
-            if(uuid == UUID)
-            {
-                Stop();
-            }
-        }
-
-        private void Component_StartComponent(string uuid)
-        {
-            if(uuid == UUID)
-            {
-                Start();
-            }
-        }
-
-        private void EventDeInit()
+        private void DeInitEvent()
         {
             lblName.DoubleClick -= LblName_DoubleClick;
             lblValue.DoubleClick -= LblName_DoubleClick;
@@ -98,12 +59,17 @@ namespace new_chart_delections.Components
             Core.Grid.SizeChanged -= Grid_SizeChanged;
         }
 
-        private void LblName_DoubleClick(object sender, EventArgs e)
+        private void Component_RemoveComponent(string uuid)
         {
-            Core.Component.Remove(UUID);
+            if (uuid == UUID)
+            {
+                Stop();
+                DeInitEvent();
+                this.Dispose();
+            }
         }
 
-        private void Grid_GridChanged(object sender, EventArgs e)
+        private void Grid_SizeChanged(object sender, EventArgs e)
         {
             this.Location = Core.Grid.GetPoint(this.startPoint);
             this.Size = Core.Grid.GetSize(this.startPoint, this.endPoint);
@@ -120,9 +86,30 @@ namespace new_chart_delections.Components
             LabelFontScale(lblName);
         }
 
+        private void Component_StopComponent(string uuid)
+        {
+            if (uuid == UUID)
+            {
+                Stop();
+            }
+        }
+
+        private void Component_StartComponent(string uuid)
+        {
+            if (uuid == UUID)
+            {
+                Start();
+            }
+        }
+
+        private void LblName_DoubleClick(object sender, EventArgs e)
+        {
+            Core.Component.Remove(UUID);
+        }
+
         private void LabelFontScale(System.Windows.Forms.Label lbl)
         {
-            float fac = (lbl.Height / 23.0f)* 9.0f;
+            float fac = (lbl.Height / 23.0f) * 9.0f;
 
             lbl.Font = new Font(lbl.Font.FontFamily, fac, lbl.Font.Style);
         }
@@ -134,26 +121,28 @@ namespace new_chart_delections.Components
 
             // remap
             uint address = 0;
-            if (Core.Memory.VarAddress.TryGetValue(labelInfo.VarName, out address))
+            if (Core.Memory.Address.TryGetValue(labelInfo.VarName, out address))
             {
                 labelInfo.VarAddress = address;
-                labelInfo.VarType = Core.Memory.VarTypes[labelInfo.VarName];
+                labelInfo.VarType = Core.Memory.Types[labelInfo.VarName];
             }
 
             isStart = true;
-
+            Core.Component.SetStatus(UUID, Core.ComponentStaus.Running);
             Thread th = new Thread(() =>
             {
-                while(isStart)
+                string strValue = "";
+                while (isStart)
                 {
-                    float v = (float)Core.Memory.Read(labelInfo.VarAddress, labelInfo.VarType);
+                    strValue = Math.Round((float)Core.Memory.Read(labelInfo.VarAddress, labelInfo.VarType), 2).ToString();
                     lblValue.Invoke((MethodInvoker)delegate
                     {
-                        lblValue.Text = string.Format("{0:00}", v);
+                        lblValue.Text = strValue;
                     });
 
                     Thread.Sleep(delayTime);
                 }
+                Core.Component.SetStatus(UUID, Core.ComponentStaus.Stoped);
             });
             th.IsBackground = true;
             th.Start();

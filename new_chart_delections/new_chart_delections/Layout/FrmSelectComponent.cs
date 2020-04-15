@@ -1,6 +1,7 @@
 ﻿using new_chart_delections.Components;
 using new_chart_delections.Core;
 using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
@@ -15,11 +16,12 @@ namespace new_chart_delections.Layout
             InitializeComponent();
 
             // Combobox
-            cbbComponent.Items.AddRange(Components.Type.GetNames());
+            cbbComponent.Items.AddRange(Components.Type.Names());
             btnChange.Enabled = false;
             btnOk.Enabled = false;
 
             InitEvent();
+            NormalSize();
         }
 
         private void InitEvent()
@@ -62,7 +64,7 @@ namespace new_chart_delections.Layout
 
         private void LsvData_ItemCheck(object sender, ItemCheckEventArgs e)
         {
-            if (cbbComponent.Text != Components.Type.ToString(Components.Types.Label))
+            if (cbbComponent.Text != Components.Type.ToString(Components.ComponentTypes.Label))
             {
                 return;
             }
@@ -90,21 +92,21 @@ namespace new_chart_delections.Layout
 
             switch (SelectComponent.Type)
             {
-                case Components.Types.None:
+                case Components.ComponentTypes.None:
                     this.DialogResult = DialogResult.None;
                     break;
-                case Components.Types.Chart:
+                case Components.ComponentTypes.Chart:
                     Components.ChartInfo chartInfo = new Components.ChartInfo();
                     chartInfo.Sample = (int)nudSample.Value;
                     chartInfo.Title = txbTitle.Text;
                     
                     foreach(ListViewItem item in lsvSelect.Items)
                     {
-                        Components.Line line = new Line();
+                        Components.ChartLine line = new ChartLine();
                         line.Name = item.SubItems[0].Text;
                         line.VarName = item.SubItems[1].Text;
                         line.VarType = Core.MemoryType.ToType(item.SubItems[2].Text);
-                        line.VarAddress = Core.Memory.VarAddress[line.VarName];
+                        line.VarAddress = Core.Memory.Address[line.VarName];
                         line.Color = item.SubItems[3].BackColor;
 
                         chartInfo.Lines.Add(line);
@@ -113,27 +115,33 @@ namespace new_chart_delections.Layout
                     SelectComponent.Info = chartInfo;
                     this.DialogResult = DialogResult.OK;
                     break;
-                case Components.Types.Label:
+                case Components.ComponentTypes.Label:
                     Components.LabelInfo labelInfo = new LabelInfo();
                     labelInfo.Title = txbTitle.Text;
                     labelInfo.VarName = lsvData.CheckedItems[0].SubItems[0].Text;
                     labelInfo.VarType = Core.MemoryType.ToType(lsvData.CheckedItems[0].SubItems[1].Text);
-                    labelInfo.VarAddress = Core.Memory.VarAddress[labelInfo.VarName];
+                    labelInfo.VarAddress = Core.Memory.Address[labelInfo.VarName];
 
                     SelectComponent.Info = labelInfo;
                     this.DialogResult = DialogResult.OK;
                     break;
-                case Components.Types.Table:
+                case Components.ComponentTypes.Table:
                     break;
                 default:
                     break;
             }
+
+            if(SelectComponent.Type == ComponentTypes.None)
+            {
+                this.DialogResult = DialogResult.None;
+            }
+
             this.Close();
         }
 
         private void InputVerify()
         {
-            if(cbbComponent.Text == Components.Type.ToString(Components.Types.Label) && txbTitle.Text != "")
+            if(cbbComponent.Text == Components.Type.ToString(Components.ComponentTypes.Label) && txbTitle.Text != "")
             {
                 if(lsvData.CheckedItems.Count == 1)
                 {
@@ -214,23 +222,33 @@ namespace new_chart_delections.Layout
 
         private void CbbComponent_TextChanged(object sender, EventArgs e)
         {
-            if (cbbComponent.Text != Components.Type.ToString(Components.Types.Label))
+            if (cbbComponent.Text != Components.Type.ToString(Components.ComponentTypes.Label))
             {
-                this.Size = new Size(706, 416);
+                ExternSize();
             }
             else
             {
-                this.Size = new Size(304, 416);
+                NormalSize();
                 lsvSelect.Items.Clear();
             }
 
             UpdateVarList();
         }
 
+        private void NormalSize()
+        {
+            this.Size = new Size(304, 416);
+        }
+
+        private void ExternSize()
+        {
+            this.Size = new Size(706, 416);
+        }
+
         private void UpdateVarList()
         {
             lsvData.Items.Clear();
-            foreach (KeyValuePair<string, Core.MemoryTypes> keyPair in Core.Memory.VarTypes)
+            foreach (KeyValuePair<string, Core.MemoryTypes> keyPair in Core.Memory.Types)
             {
                 bool nameExist = false;
                 foreach (ListViewItem item in lsvSelect.Items)

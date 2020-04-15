@@ -13,6 +13,22 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\phatn\Desktop\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,6 +48,21 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>AB21DD30E0AF1571F35BD5F9AC33BBDE41E245BC</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>new_chart_delections_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>iconfinder_utilities-system-monitor_118829.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -57,10 +88,9 @@
     <Compile Include="Components\Chart.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Components\ListViewNF.cs">
+    <Compile Include="Components\Table.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Components\Table.cs" />
     <Compile Include="Components\Type.cs" />
     <Compile Include="Components\Label.cs">
       <SubType>UserControl</SubType>
@@ -71,6 +101,7 @@
     <Compile Include="Configure\ChartInfo.cs" />
     <Compile Include="Configure\Component.cs" />
     <Compile Include="Configure\LabelInfo.cs" />
+    <Compile Include="Configure\Load.cs" />
     <Compile Include="Configure\Memory.cs" />
     <Compile Include="Configure\Save.cs" />
     <Compile Include="Core\Component.cs" />
@@ -106,6 +137,9 @@
     <Compile Include="Layout\FrmSelectComponent.Designer.cs">
       <DependentUpon>FrmSelectComponent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Layout\ListViewNF.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Network\Uart.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -136,7 +170,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Configure\data.json" />
+    <None Include="Configure\data.cfg" />
+    <None Include="new_chart_delections_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -152,9 +187,35 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Configure\Notes.txt" />
+    <Content Include="iconfinder_utilities-system-monitor_118829.ico" />
     <Content Include="License-LGPL.txt" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <FileAssociation Include=".ico">
+      <Visible>False</Visible>
+      <Description>short cut icon</Description>
+      <Progid>1</Progid>
+      <DefaultIcon>iconfinder_utilities-system-monitor_118829.ico</DefaultIcon>
+    </FileAssociation>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="iconfinder_utilities-system-monitor_118829.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -11,12 +11,11 @@ namespace new_chart_delections.Layout
             InitializeComponent();
 
             btnAdd.Enabled = false;
+            btnSave.Enabled = false;
+
+            cbbType.Items.AddRange(Core.MemoryType.Names());
 
             InitEvent();
-
-            btnSave.Enabled = false;
-            cbbType.Items.AddRange(Core.MemoryType.GetNames());
-
             MemToList();
         }
 
@@ -48,7 +47,7 @@ namespace new_chart_delections.Layout
         private void MemToList()
         {
             lsvData.Items.Clear();
-            foreach(KeyValuePair<string, Core.MemoryTypes> varType in Core.Memory.VarTypes)
+            foreach(KeyValuePair<string, Core.MemoryTypes> varType in Core.Memory.Types)
             {
                 ListViewItem item = new ListViewItem(varType.Key);
                 item.SubItems.Add(Core.MemoryType.ToString(varType.Value));
@@ -68,6 +67,8 @@ namespace new_chart_delections.Layout
             {
                 Core.Memory.Add(item.SubItems[0].Text, (Core.MemoryTypes)item.Tag, out adr);
             }
+
+            this.Close();
         }
 
         private void LsvData_MouseClick(object sender, MouseEventArgs e)

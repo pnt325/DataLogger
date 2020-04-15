@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace new_chart_delections.Components
+namespace new_chart_delections.Layout
 {
-    class ListViewNF : ListView
+    public class ListViewNF : ListView
     {
         public ListViewNF()
         {

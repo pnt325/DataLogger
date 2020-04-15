@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace new_chart_delections.Components
 {
-    public class Table
+    public class Table: Layout.ListViewNF
     {
+
     }
 }

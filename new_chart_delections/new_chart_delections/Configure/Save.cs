@@ -1,13 +1,5 @@
 ﻿using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Net.NetworkInformation;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms.VisualStyles;
 
 namespace new_chart_delections.Configure
 {
@@ -18,7 +10,7 @@ namespace new_chart_delections.Configure
             JObject save_config = new JObject();
 
             // memory;
-            save_config["memory"] = Memory.Dump(Core.Memory.VarTypes);
+            save_config["memory"] = Memory.Dump(Core.Memory.Types);
 
             // grid
             save_config["grid"] = new JObject();
@@ -28,7 +20,7 @@ namespace new_chart_delections.Configure
             // component
             JArray js = new JArray();
 
-            foreach(Core.ComponentItem item in Core.Component.Items)
+            foreach (Core.ComponentItem item in Core.Component.Items)
             {
                 js.Add(ComponentItem.Dump(item));
             }
@@ -42,7 +34,7 @@ namespace new_chart_delections.Configure
 
             save_config["connection"] = jConnection;
 
-            using(StreamWriter sw = new StreamWriter(filename))
+            using (StreamWriter sw = new StreamWriter(filename))
             {
                 sw.Write(save_config.ToString());
             }

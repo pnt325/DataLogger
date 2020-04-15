@@ -1,30 +1,24 @@
-﻿using Microsoft.SqlServer.Server;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ZedGraph;
 using System.Threading;
-using new_chart_delections.Core;
-using System.Diagnostics.Eventing.Reader;
+using ZedGraph;
 
 namespace new_chart_delections.Components
 {
-    public class Chart: ZedGraphControl
+    public class Chart : ZedGraphControl
     {
-        public string UUID { get; set; }
+        private string UUID { get; set; }
 
         private Point startPoint;
         private Point endPoint;
         private ChartInfo chartInfo;
 
-        private int delayTime;
-        private bool isStart = false;
-        private int valueCount = 0;
+        private int delayTime;              // delay time convert from hz to ms
+        private bool isStart = false;       // component run status
+        private int valueCount = 0;         // value index data logger
 
-        public Chart(Point start, Point end, ComponentItem info)
+        public Chart(Core.ComponentItem info)
         {
             // Init object 
             startPoint = new Point();
@@ -34,13 +28,13 @@ namespace new_chart_delections.Components
             chartInfo = (ChartInfo)info.Info;
             UUID = info.Uuid;
 
-            this.startPoint = start;
-            this.endPoint = end;
+            this.startPoint = info.StartPoint;
+            this.endPoint = info.EndPoint;
 
             delayTime = 1000 / info.UpdatePeriod;
 
-            this.Location = Core.Grid.GetPoint(start);
-            this.Size = Core.Grid.GetSize(start, end);
+            this.Location = Core.Grid.GetPoint(startPoint);
+            this.Size = Core.Grid.GetSize(startPoint, endPoint);
 
             // Zedgraph init
             this.GraphPane.Title.Text = chartInfo.Title;
@@ -56,7 +50,7 @@ namespace new_chart_delections.Components
             this.GraphPane.YAxis.Scale.Max = 100;
             this.GraphPane.XAxis.Scale.MajorStepAuto = true;
 
-            foreach(Line item in chartInfo.Lines)
+            foreach (ChartLine item in chartInfo.Lines)
             {
                 RollingPointPairList rollingPointPairList = new RollingPointPairList(chartInfo.Sample);
                 ZedGraph.LineItem lineItem = this.GraphPane.AddCurve(item.Name, rollingPointPairList, item.Color, SymbolType.None);
@@ -65,16 +59,24 @@ namespace new_chart_delections.Components
             this.AxisChange();
             this.Invalidate();
 
-            EventInit();
+            InitEvent();
         }
 
-        private void EventInit()
+        private void InitEvent()
         {
             Core.Component.Start += Component_StartComponent;
             Core.Component.Stop += Component_StopComponent;
             Core.Component.Removed += Component_RemoveComponent;
             Core.Grid.SizeChanged += Grid_SizeChanged;
             this.DoubleClick += ZedGraphControl1_DoubleClick;
+        }
+        private void DeInitEvent()
+        {
+            Core.Component.Start -= Component_StartComponent;
+            Core.Component.Stop -= Component_StopComponent;
+            Core.Component.Removed -= Component_RemoveComponent;
+            this.DoubleClick -= ZedGraphControl1_DoubleClick;
+            Core.Grid.SizeChanged -= Grid_SizeChanged;
         }
 
         private void Grid_SizeChanged(object sender, EventArgs e)
@@ -85,10 +87,10 @@ namespace new_chart_delections.Components
 
         private void Component_RemoveComponent(string uuid)
         {
-            if(uuid == UUID)
+            if (uuid == UUID)
             {
                 Stop();
-                EventDeInit();
+                DeInitEvent();
                 this.Dispose();
             }
         }
@@ -109,25 +111,9 @@ namespace new_chart_delections.Components
             }
         }
 
-        private void EventDeInit()
-        {
-            Core.Component.Start -= Component_StartComponent;
-            Core.Component.Stop -= Component_StopComponent;
-            Core.Component.Removed -= Component_RemoveComponent;
-            this.DoubleClick -= ZedGraphControl1_DoubleClick;
-            Core.Grid.SizeChanged -= Grid_SizeChanged;
-        }
-
         private void ZedGraphControl1_DoubleClick(object sender, EventArgs e)
         {
-            // Request remove component
             Core.Component.Remove(UUID);
-        }
-
-        private void Grid_GridChanged(object sender, EventArgs e)
-        {
-            this.Location = Core.Grid.GetPoint(startPoint);
-            this.Size = Core.Grid.GetSize(startPoint, endPoint);
         }
 
         private void Start()
@@ -139,21 +125,24 @@ namespace new_chart_delections.Components
             for (int i = 0; i < chartInfo.Lines.Count; i++)
             {
                 uint value;
-                if(Core.Memory.VarAddress.TryGetValue(chartInfo.Lines[i].VarName, out value))
+                if (Core.Memory.Address.TryGetValue(chartInfo.Lines[i].VarName, out value))
                 {
                     chartInfo.Lines[i].VarAddress = value;
-                    chartInfo.Lines[i].VarType = Core.Memory.VarTypes[chartInfo.Lines[i].VarName];
+                    chartInfo.Lines[i].VarType = Core.Memory.Types[chartInfo.Lines[i].VarName];
                 }
             }
 
             isStart = true;
+            Core.Component.SetStatus(UUID, Core.ComponentStaus.Running);
+
             Thread th = new Thread(() =>
             {
+                double value = 0;
                 while (isStart)
                 {
                     for (int i = 0; i < this.GraphPane.CurveList.Count; i++)
                     {
-                        double value = (float)Core.Memory.Read(chartInfo.Lines[i].VarAddress, chartInfo.Lines[i].VarType);
+                        value = (float)Core.Memory.Read(chartInfo.Lines[i].VarAddress, chartInfo.Lines[i].VarType);
 
                         LineItem lineItem = this.GraphPane.CurveList[i] as LineItem;
                         IPointListEdit list = lineItem.Points as IPointListEdit;
@@ -174,6 +163,8 @@ namespace new_chart_delections.Components
 
                     Thread.Sleep(delayTime);
                 }
+
+                Core.Component.SetStatus(UUID, Core.ComponentStaus.Stoped);
             });
             th.IsBackground = true;
             th.Start();
@@ -185,19 +176,20 @@ namespace new_chart_delections.Components
         }
     }
 
+
     public class ChartInfo
     {
         public string Title { get; set; }
         public int Sample { get; set; }
-        public List<Line> Lines { get; set; }
+        public List<ChartLine> Lines { get; set; }
 
         public ChartInfo()
         {
-            Lines = new List<Line>();
+            Lines = new List<ChartLine>();
         }
     }
 
-    public class Line
+    public class ChartLine
     {
         public string Name { get; set; }
         public string VarName { get; set; }
@@ -205,10 +197,10 @@ namespace new_chart_delections.Components
         public Core.MemoryTypes VarType { get; set; }
         public Color Color { get; set; }
 
-        public Line()
+        public ChartLine()
         {
             Color = new Color();
-            VarType = new MemoryTypes();
+            VarType = new Core.MemoryTypes();
         }
     }
 }

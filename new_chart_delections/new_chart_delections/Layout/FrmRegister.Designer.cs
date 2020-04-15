@@ -36,7 +36,7 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lsvData = new new_chart_delections.Components.ListViewNF();
+            this.lsvData = new ListViewNF();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -196,8 +196,8 @@
         private System.Windows.Forms.TextBox txbName;
         private System.Windows.Forms.ComboBox cbbType;
         private System.Windows.Forms.GroupBox groupBox1;
-        private Components.ListViewNF lsvData;
         private System.Windows.Forms.GroupBox groupBox2;
+        private ListViewNF lsvData;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.ColumnHeader columnHeader1;
