@@ -102,6 +102,7 @@
     <Compile Include="Configure\Component.cs" />
     <Compile Include="Configure\LabelInfo.cs" />
     <Compile Include="Configure\Load.cs" />
+    <Compile Include="Configure\Md5Hash.cs" />
     <Compile Include="Configure\Memory.cs" />
     <Compile Include="Configure\Save.cs" />
     <Compile Include="Core\Component.cs" />

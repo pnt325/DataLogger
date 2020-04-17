@@ -95,12 +95,25 @@ namespace new_chart_delections.Layout
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Stop connection.
-            //Program.Uart.Disconnect();
+            Program.Uart.Disconnect();
 
             // Stop component update
-            //Program.ComponentManage.StopAll();
+            foreach(Core.ComponentItem item in Core.Component.Items)
+            {
+                Core.Component.SetStop(item.Uuid);
+            }
 
             // Save current layout
+            if (Core.Component.Items.Count > 0)
+            {
+                if (MessageBox.Show("Do you want to save current layout?", "Info", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    saveAsToolStripMenuItem_Click(null, null);
+                }
+            }
+
+            // Close form
+            this.Close();
         }
 
         private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)

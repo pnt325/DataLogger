@@ -15,6 +15,7 @@ namespace new_chart_delections
         [STAThread]
         static void Main(string[] args)
         {
+            // Get input file.
             if(args.Length > 0)
             {
                 FileName = args[0];

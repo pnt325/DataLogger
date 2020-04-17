@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="new_chart_delections.exe" size="337888">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="new_chart_delections.exe" size="339424">
       <assemblyIdentity name="new_chart_delections" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>d5LE/x69K3SLAK9uON1EeK4WHH2ub9PsPhzjAJ3cJTk=</dsig:DigestValue>
+        <dsig:DigestValue>GVGOImKxPO1i75a29TRjvnY2kW0BzqNCtDyQrcxfI/Y=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

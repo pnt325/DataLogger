@@ -17,7 +17,7 @@ namespace new_chart_delections.Core
         public static event AddControlEvent AddControl;
         #endregion
 
-        public static List<ComponentItem> Items { get; private set; } = new List<ComponentItem>();
+        public static List<ComponentItem> Items { get; set; } = new List<ComponentItem>();
 
         /// <summary>
         /// Start comonent log data
