@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace new_chart_delections.Layout
+namespace DataLogger.Layout
 {
     public partial class FrmRegister : Form
     {

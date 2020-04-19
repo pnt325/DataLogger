@@ -62,4 +62,3 @@ C:\Users\phatn\Downloads\DataLogger\new_chart_delections\new_chart_delections\bi
 C:\Users\phatn\Downloads\DataLogger\new_chart_delections\new_chart_delections\bin\Debug\new_chart_delections.application
 C:\Users\phatn\Downloads\DataLogger\new_chart_delections\new_chart_delections\obj\Debug\new_chart_delections.exe.manifest
 C:\Users\phatn\Downloads\DataLogger\new_chart_delections\new_chart_delections\obj\Debug\new_chart_delections.application
-C:\Users\phatn\Downloads\DataLogger\new_chart_delections\new_chart_delections\obj\Debug\new_chart_delections.csprojAssemblyReference.cache

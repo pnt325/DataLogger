@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 
-namespace new_chart_delections.Configure
+namespace DataLogger.Configure
 {
     public class Memory
     {

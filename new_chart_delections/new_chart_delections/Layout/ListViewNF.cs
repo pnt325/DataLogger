@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace new_chart_delections.Layout
+namespace DataLogger.Layout
 {
     public class ListViewNF : ListView
     {

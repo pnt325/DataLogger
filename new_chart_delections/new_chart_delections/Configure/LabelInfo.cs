@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace new_chart_delections.Configure
+namespace DataLogger.Configure
 {
     public class LabelInfo
     {

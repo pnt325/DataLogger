@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace new_chart_delections.Properties {
+namespace DataLogger.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace new_chart_delections.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("new_chart_delections.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DataLogger.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -63,9 +63,9 @@ namespace new_chart_delections.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap baseline_assignment_black_36dp {
+        internal static System.Drawing.Bitmap about_img {
             get {
-                object obj = ResourceManager.GetObject("baseline_assignment_black_36dp", resourceCulture);
+                object obj = ResourceManager.GetObject("about_img", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace new_chart_delections.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap baseline_exit_to_app_black_36dp {
+        internal static System.Drawing.Bitmap com_img {
             get {
-                object obj = ResourceManager.GetObject("baseline_exit_to_app_black_36dp", resourceCulture);
+                object obj = ResourceManager.GetObject("com_img", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace new_chart_delections.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap baseline_help_outline_black_36dp {
+        internal static System.Drawing.Bitmap component_item_img {
             get {
-                object obj = ResourceManager.GetObject("baseline_help_outline_black_36dp", resourceCulture);
+                object obj = ResourceManager.GetObject("component_item_img", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace new_chart_delections.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap baseline_import_export_black_36dp {
+        internal static System.Drawing.Bitmap exit_img {
             get {
-                object obj = ResourceManager.GetObject("baseline_import_export_black_36dp", resourceCulture);
+                object obj = ResourceManager.GetObject("exit_img", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace new_chart_delections.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap baseline_open_in_new_black_36dp {
+        internal static System.Drawing.Bitmap new_img {
             get {
-                object obj = ResourceManager.GetObject("baseline_open_in_new_black_36dp", resourceCulture);
+                object obj = ResourceManager.GetObject("new_img", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace new_chart_delections.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap baseline_pause_black_36dp {
+        internal static System.Drawing.Bitmap reg_img {
             get {
-                object obj = ResourceManager.GetObject("baseline_pause_black_36dp", resourceCulture);
+                object obj = ResourceManager.GetObject("reg_img", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace new_chart_delections.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap baseline_play_arrow_black_36dp {
+        internal static System.Drawing.Bitmap save_img {
             get {
-                object obj = ResourceManager.GetObject("baseline_play_arrow_black_36dp", resourceCulture);
+                object obj = ResourceManager.GetObject("save_img", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +133,9 @@ namespace new_chart_delections.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap baseline_save_black_36dp {
+        internal static System.Drawing.Bitmap setting_img {
             get {
-                object obj = ResourceManager.GetObject("baseline_save_black_36dp", resourceCulture);
+                object obj = ResourceManager.GetObject("setting_img", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +143,9 @@ namespace new_chart_delections.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap baseline_settings_black_36dp {
+        internal static System.Drawing.Bitmap start_img {
             get {
-                object obj = ResourceManager.GetObject("baseline_settings_black_36dp", resourceCulture);
+                object obj = ResourceManager.GetObject("start_img", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +153,9 @@ namespace new_chart_delections.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Register_ico {
+        internal static System.Drawing.Bitmap stop_img {
             get {
-                object obj = ResourceManager.GetObject("Register_ico", resourceCulture);
+                object obj = ResourceManager.GetObject("stop_img", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

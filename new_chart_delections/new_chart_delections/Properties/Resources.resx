@@ -118,34 +118,34 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="baseline_exit_to_app_black_36dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resource\exit_to_app-black-36dp\1x\baseline_exit_to_app_black_36dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="baseline_assignment_black_36dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resource\assignment-black-36dp\1x\baseline_assignment_black_36dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="baseline_help_outline_black_36dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resource\help_outline-black-36dp\1x\baseline_help_outline_black_36dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="baseline_save_black_36dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resource\save-black-36dp\1x\baseline_save_black_36dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="baseline_pause_black_36dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resource\pause-black-36dp\1x\baseline_pause_black_36dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="baseline_settings_black_36dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resource\settings-black-36dp\1x\baseline_settings_black_36dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="baseline_play_arrow_black_36dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resource\play_arrow-black-36dp\1x\baseline_play_arrow_black_36dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="baseline_open_in_new_black_36dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resource\open_in_new-black-36dp\1x\baseline_open_in_new_black_36dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="baseline_import_export_black_36dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="com_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resource\import_export-black-36dp\1x\baseline_import_export_black_36dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Register_ico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="exit_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\exit_to_app-black-36dp\1x\baseline_exit_to_app_black_36dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="save_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\save-black-36dp\1x\baseline_save_black_36dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stop_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\pause-black-36dp\1x\baseline_pause_black_36dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="setting_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\settings-black-36dp\1x\baseline_settings_black_36dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="reg_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resource\assignment-black-36dp\1x\baseline_assignment_black_36dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\open_in_new-black-36dp\1x\baseline_open_in_new_black_36dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="about_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\help_outline-black-36dp\1x\baseline_help_outline_black_36dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="start_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\play_arrow-black-36dp\1x\baseline_play_arrow_black_36dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="component_item_img" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resource\category-black-24dp\1x\baseline_category_black_24dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

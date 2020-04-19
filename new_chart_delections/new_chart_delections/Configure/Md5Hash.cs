@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Security.Cryptography;
 
-namespace new_chart_delections.Configure
+namespace DataLogger.Configure
 {
     public class Md5Hash
     {

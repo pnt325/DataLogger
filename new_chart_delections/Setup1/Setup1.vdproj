@@ -46,12 +46,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_846377B148D05B1B1435D1F9CC1FEF1B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_57E9926A133E45FEBFE341A0A79DE0FB"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -67,6 +61,12 @@
         "OwnerKey" = "8:_588433611959EDF43922A29DFFC76B30"
         "MsmSig" = "8:_UNDEFINED"
         }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_846377B148D05B1B1435D1F9CC1FEF1B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
     }
     "Configurations"
     {
@@ -75,7 +75,7 @@
         "DisplayName" = "8:Debug"
         "IsDebugOnly" = "11:TRUE"
         "IsReleaseOnly" = "11:FALSE"
-        "OutputFilename" = "8:Debug\\Setup1.msi"
+        "OutputFilename" = "8:Debug\\Setup.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -85,13 +85,29 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.5.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5.2"
+                    }
+                }
+            }
         }
         "Release"
         {
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:Release\\Setup1.msi"
+        "OutputFilename" = "8:Release\\Setup.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -101,6 +117,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.5.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5.2"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -122,7 +154,7 @@
                 {
                 "Name" = "8:.NET Framework"
                 "Message" = "8:[VSDNETMSG]"
-                "FrameworkVersion" = "8:.NETFramework,Version=v4.7.2"
+                "FrameworkVersion" = "8:.NETFramework,Version=v4.5.2"
                 "AllowLaterVersions" = "11:FALSE"
                 "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=863262"
                 }
@@ -300,7 +332,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Data Logger"
         "ProductCode" = "8:{94C01BF7-C8B6-409C-A415-9884BEC22792}"
-        "PackageCode" = "8:{7AF18F14-A83B-406E-A791-B7653AB59ECA}"
+        "PackageCode" = "8:{ACD3D0A3-9D2B-4167-9518-1E496B76CA55}"
         "UpgradeCode" = "8:{3450BE62-905E-4770-9931-164A34620CC1}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -308,15 +340,15 @@
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
         "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:pnt325"
+        "Manufacturer" = "8:Pnt325"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:Setup"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:pnt325"
+        "ARPCONTACT" = "8:PhatNguyen"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:Data logger"
-        "ARPURLINFOABOUT" = "8:"
+        "ARPURLINFOABOUT" = "8:pdiystudio.com"
         "ARPPRODUCTICON" = "8:_002E65E8D7F6485ABB3E247C9F50B982"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
@@ -422,7 +454,7 @@
         {
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_378E2B98DE814D63AD05845C14CC2FC0"
             {
-            "Name" = "8:Datalogger Desktop"
+            "Name" = "8:Data Logger"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -436,7 +468,7 @@
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_783E221C171745468BB2493E52C0CE39"
             {
-            "Name" = "8:Datalogger Program"
+            "Name" = "8:Data Logger"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -849,7 +881,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_57E9926A133E45FEBFE341A0A79DE0FB"
             {
-            "SourcePath" = "8:..\\new_chart_delections\\obj\\Debug\\new_chart_delections.exe"
+            "SourcePath" = "8:..\\new_chart_delections\\obj\\Debug\\DataLogger.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_6C8B362FA5B9486184543FC8C0FE1954"

@@ -1,4 +1,4 @@
-﻿namespace new_chart_delections.Layout
+﻿namespace DataLogger.Layout
 {
     partial class FrmConnection
     {

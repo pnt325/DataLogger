@@ -1,4 +1,4 @@
-﻿namespace new_chart_delections.Layout
+﻿namespace DataLogger.Layout
 {
     partial class FrmSelectComponent
     {
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSelectComponent));
             this.label1 = new System.Windows.Forms.Label();
             this.txbTitle = new System.Windows.Forms.TextBox();
             this.cbbComponent = new System.Windows.Forms.ComboBox();
@@ -37,12 +38,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.nudSample = new System.Windows.Forms.NumericUpDown();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lsvData = new ListViewNF();
+            this.lsvData = new DataLogger.Layout.ListViewNF();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.lsvSelect = new ListViewNF();
+            this.lsvSelect = new DataLogger.Layout.ListViewNF();
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -363,7 +364,10 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmSelectComponent";
             this.Text = "Select Component";
             ((System.ComponentModel.ISupportInitialize)(this.nudPeriod)).EndInit();

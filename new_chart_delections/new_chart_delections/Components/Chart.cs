@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Threading;
 using ZedGraph;
 
-namespace new_chart_delections.Components
+namespace DataLogger.Components
 {
     public class Chart : ZedGraphControl
     {

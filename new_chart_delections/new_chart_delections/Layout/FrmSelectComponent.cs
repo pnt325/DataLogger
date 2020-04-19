@@ -1,5 +1,5 @@
-﻿using new_chart_delections.Components;
-using new_chart_delections.Core;
+﻿using DataLogger.Components;
+using DataLogger.Core;
 using System;
 using System.CodeDom;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace new_chart_delections.Layout
+namespace DataLogger.Layout
 {
     public partial class FrmSelectComponent : Form
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO.Ports;
 using System.Threading;
 
-namespace new_chart_delections.Network
+namespace DataLogger.Network
 {
     public class Uart
     {

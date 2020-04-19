@@ -1,4 +1,4 @@
-﻿namespace new_chart_delections.Components
+﻿namespace DataLogger.Components
 {
     partial class Label
     {

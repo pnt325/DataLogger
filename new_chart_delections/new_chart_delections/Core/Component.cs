@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace new_chart_delections.Core
+namespace DataLogger.Core
 {
     // static method
     public static class Component

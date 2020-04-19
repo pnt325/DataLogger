@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace new_chart_delections.Components
+namespace DataLogger.Components
 {
     public partial class Label : UserControl
     {

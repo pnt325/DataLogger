@@ -1,4 +1,4 @@
-﻿namespace new_chart_delections.Layout
+﻿namespace DataLogger.Layout
 {
     partial class FrmRegister
     {
@@ -37,7 +37,7 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lsvData = new new_chart_delections.Layout.ListViewNF();
+            this.lsvData = new DataLogger.Layout.ListViewNF();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);

@@ -8,7 +8,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace new_chart_delections.Core
+namespace DataLogger.Core
 {
     public static class Memory
     {

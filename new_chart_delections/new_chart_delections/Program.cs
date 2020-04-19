@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 
-namespace new_chart_delections
+namespace DataLogger
 {
     static class Program
     {

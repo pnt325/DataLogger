@@ -5,7 +5,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
 
-namespace new_chart_delections.Configure
+namespace DataLogger.Configure
 {
     public class Save
     {
