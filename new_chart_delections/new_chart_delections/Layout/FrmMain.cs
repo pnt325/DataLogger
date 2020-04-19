@@ -118,42 +118,12 @@ namespace new_chart_delections.Layout
 
         private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string filename = "";
-            using (SaveFileDialog sfd = new SaveFileDialog())
-            {
-                sfd.Filter = "Grid layout (*.cfg)|*.cfg";
-                if (sfd.ShowDialog() == DialogResult.OK)
-                {
-                    filename = sfd.FileName;
-                }
-            }
-
-            if (filename == "")
-            {
-                return;
-            }
-
-            Configure.Save.Dump(filename);
+            Configure.Save.Show();
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string filename = "";
-            using (OpenFileDialog ofd = new OpenFileDialog())
-            {
-                ofd.Filter = "Grid layout (*.cfg)|*.cfg";
-                if (ofd.ShowDialog() == DialogResult.OK)
-                {
-                    filename = ofd.FileName;
-                }
-            }
-
-            if (filename == "")
-            {
-                return;
-            }
-
-            Configure.Load.FromFile(filename);
+            Configure.Load.Show();
 
         }
 

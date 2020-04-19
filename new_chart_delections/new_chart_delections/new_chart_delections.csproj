@@ -170,6 +170,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Configure\data.cfg" />
     <None Include="new_chart_delections_TemporaryKey.pfx" />
@@ -190,6 +191,19 @@
   <ItemGroup>
     <Content Include="iconfinder_utilities-system-monitor_118829.ico" />
     <Content Include="License-LGPL.txt" />
+    <None Include="Resources\Register_Ico.png" />
+    <None Include="Resources\Icon1.ico" />
+    <None Include="Resources\Register_ico1.png" />
+    <None Include="Resources\Register_ico.ico" />
+    <None Include="Resource\import_export-black-36dp\1x\baseline_import_export_black_36dp.png" />
+    <None Include="Resource\settings-black-36dp\1x\baseline_settings_black_36dp.png" />
+    <None Include="Resource\assignment-black-36dp\1x\baseline_assignment_black_36dp.png" />
+    <None Include="Resource\help_outline-black-36dp\1x\baseline_help_outline_black_36dp.png" />
+    <None Include="Resource\pause-black-36dp\1x\baseline_pause_black_36dp.png" />
+    <None Include="Resource\play_arrow-black-36dp\1x\baseline_play_arrow_black_36dp.png" />
+    <None Include="Resource\exit_to_app-black-36dp\1x\baseline_exit_to_app_black_36dp.png" />
+    <None Include="Resource\save-black-36dp\1x\baseline_save_black_36dp.png" />
+    <None Include="Resource\open_in_new-black-36dp\1x\baseline_open_in_new_black_36dp.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
@@ -218,5 +232,6 @@
       <FileType>File</FileType>
     </PublishFile>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

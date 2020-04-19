@@ -15,7 +15,7 @@ namespace new_chart_delections.Configure
             FileName = "";  // reset filename
             using(OpenFileDialog ofd = new OpenFileDialog())
             {
-                ofd.Filter = "Grid layout (*.cfg)|*.cfg";
+                ofd.Filter = "Grid layout (*.logcfg)|*.logcfg";
                 if(ofd.ShowDialog() == DialogResult.OK)
                 {
                     FileName = ofd.FileName;

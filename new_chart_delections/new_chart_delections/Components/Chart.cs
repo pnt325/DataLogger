@@ -70,6 +70,7 @@ namespace new_chart_delections.Components
             Core.Grid.SizeChanged += Grid_SizeChanged;
             this.DoubleClick += ZedGraphControl1_DoubleClick;
         }
+
         private void DeInitEvent()
         {
             Core.Component.Start -= Component_StartComponent;
