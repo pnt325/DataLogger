@@ -131,6 +131,10 @@ namespace DataLogger.Components
                     chartInfo.Lines[i].VarAddress = value;
                     chartInfo.Lines[i].VarType = Core.Memory.Types[chartInfo.Lines[i].VarName];
                 }
+                else
+                {
+                    return;
+                }
             }
 
             isStart = true;
