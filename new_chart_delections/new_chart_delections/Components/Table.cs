@@ -12,7 +12,6 @@ namespace DataLogger.Components
 {
     public class Table : Layout.ListViewNF
     {
-        private TableInfo info;
         private List<TableInfo> items;
         private Point startPoint;
         private Point endPoint;
@@ -34,7 +33,6 @@ namespace DataLogger.Components
 
             time_delay = 1000 / item.UpdatePeriod;  // ms
 
-
             foreach(TableInfo i in items)
             {
                 ListViewItem listViewItem = new ListViewItem(i.Name);
@@ -43,8 +41,12 @@ namespace DataLogger.Components
 
                 this.Items.Add(listViewItem);
             }
-        }
+            this.View = View.Details;
+            this.GridLines = true;
 
+            Grid_SizeChanged(null, null);
+            InitEvent();
+        }
 
         #region PRIVATE FUNCTION
         private void InitEvent()
@@ -54,6 +56,15 @@ namespace DataLogger.Components
             Core.Component.Stop += Component_Stop;
             Core.Component.Removed += Component_Removed;
             this.MouseDoubleClick += Table_MouseDoubleClick;
+        }
+
+        private void DeInitEvent()
+        {
+            Core.Grid.SizeChanged -= Grid_SizeChanged;
+            Core.Component.Start -= Component_Start;
+            Core.Component.Stop -= Component_Stop;
+            Core.Component.Removed -= Component_Removed;
+            this.MouseDoubleClick -= Table_MouseDoubleClick;
         }
 
         private void Component_Removed(string uuid)
@@ -90,15 +101,6 @@ namespace DataLogger.Components
             }
         }
 
-        private void DeInitEvent()
-        {
-            Core.Grid.SizeChanged -= Grid_SizeChanged;
-            Core.Component.Start -= Component_Start;
-            Core.Component.Stop -= Component_Stop;
-            Core.Component.Removed -= Component_Removed;
-            this.MouseDoubleClick -= Table_MouseDoubleClick;
-        }
-
         private void Grid_SizeChanged(object sender, EventArgs e)
         {
             this.Location = Core.Grid.GetPoint(startPoint);
@@ -106,11 +108,10 @@ namespace DataLogger.Components
 
             // scale column size.
             // [name][value][uint]
-            // [50% ][25%  ][25% ]     
+            // [50% ][25%  ][25% ]   
             this.Columns[0].Width = (int)((0.5) * this.Width);
             this.Columns[1].Width = (int)((0.25) * this.Width);
-            this.Columns[2].Width = (int)((0.25) * this.Width);
-
+            this.Columns[2].Width = (int)((0.25) * this.Width - 10);
         }
 
         private bool isStart = false;

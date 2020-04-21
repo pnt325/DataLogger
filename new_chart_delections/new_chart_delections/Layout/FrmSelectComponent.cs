@@ -126,6 +126,21 @@ namespace DataLogger.Layout
                     this.DialogResult = DialogResult.OK;
                     break;
                 case Components.ComponentTypes.Table:
+                    List<Components.TableInfo> tableInfos = new List<TableInfo>();
+
+                    foreach (ListViewItem item in lsvSelect.Items)
+                    {
+                        Components.TableInfo tableInfo = new TableInfo();
+                        tableInfo.Name = item.SubItems[0].Text;
+                        tableInfo.VarName = item.SubItems[1].Text;
+                        tableInfo.VarType = Core.MemoryType.ToType(item.SubItems[2].Text);
+                        tableInfo.VarAddress = Core.Memory.Address[tableInfo.VarName];
+
+                        tableInfos.Add(tableInfo);
+                    }
+
+                    SelectComponent.Info = tableInfos;
+                    this.DialogResult = DialogResult.OK;
                     break;
                 default:
                     break;

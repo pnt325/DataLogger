@@ -86,6 +86,9 @@ namespace DataLogger.Core
                     Items.Add(item);
                     break;
                 case Components.ComponentTypes.Table:
+                    Components.Table table = new Components.Table(item);
+                    AddControl?.Invoke(table);
+                    Items.Add(item);
                     break;
                 default:
                     break;
