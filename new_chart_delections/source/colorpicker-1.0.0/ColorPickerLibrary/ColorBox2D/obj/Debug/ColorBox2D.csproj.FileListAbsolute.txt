@@ -1,0 +1,6 @@
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorPickerLibrary\ColorBox2D\bin\Debug\ColorBox2D.dll
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorPickerLibrary\ColorBox2D\bin\Debug\ColorBox2D.pdb
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorPickerLibrary\ColorBox2D\obj\Debug\ColorBox2D.dll
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorPickerLibrary\ColorBox2D\obj\Debug\ColorBox2D.pdb
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorPickerLibrary\ColorBox2D\obj\Debug\MechanikaDesign.WinForms.UI.ColorPicker.ColorSlider.resources
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorPickerLibrary\ColorBox2D\obj\Debug\ColorBox2D.csproj.GenerateResource.Cache

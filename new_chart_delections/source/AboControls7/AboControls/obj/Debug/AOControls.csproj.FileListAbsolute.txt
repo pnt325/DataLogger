@@ -1,0 +1,37 @@
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\BSF Controls\bin\Debug\AOControls.exe.config
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\BSF Controls\obj\Debug\Interop.WMPLib.dll
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\BSF Controls\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\BSF Controls\obj\Debug\AOControls.csproj.ResolveComReference.cache
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\BSF Controls\bin\Debug\AOControls.exe
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\BSF Controls\bin\Debug\AOControls.pdb
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\BSF Controls\bin\Debug\Interop.WMPLib.dll
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\BSF Controls\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\BSF Controls\obj\Debug\AOControls.Other.CustomDialog.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\BSF Controls\obj\Debug\AOControls.TestingForm.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\BSF Controls\obj\Debug\AOControls.UserControls.CompactWebBrowser.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\BSF Controls\obj\Debug\AOControls.UserControls.LockingMech.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\BSF Controls\obj\Debug\AOControls.Properties.Resources.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\BSF Controls\obj\Debug\AOControls.UserControls.NumberedRTB.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\BSF Controls\obj\Debug\AOControls.UserControls.Switch.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\BSF Controls\obj\Debug\AOControls.csproj.GenerateResource.Cache
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\BSF Controls\obj\Debug\AOControls.exe
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\BSF Controls\obj\Debug\AOControls.pdb
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\AOControls\bin\Debug\AOControls.exe.config
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\AOControls\obj\Debug\Interop.WMPLib.dll
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\AOControls\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\AOControls\obj\Debug\AOControls.csproj.ResolveComReference.cache
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\AOControls\obj\Debug\AOControls.exe
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\AOControls\obj\Debug\AOControls.pdb
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\AOControls\bin\Debug\AOControls.exe
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\AOControls\bin\Debug\AOControls.pdb
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\AOControls\bin\Debug\Interop.WMPLib.dll
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\AOControls\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\AOControls\obj\Debug\AOControls.Other.CustomDialog.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\AOControls\obj\Debug\AOControls.TestingForm.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\AOControls\obj\Debug\AOControls.UserControls.CompactWebBrowser.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\AOControls\obj\Debug\AOControls.UserControls.LockingMech.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\AOControls\obj\Debug\AOControls.Properties.Resources.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\AOControls\obj\Debug\AOControls.UserControls.NumberedRTB.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\AOControls\obj\Debug\AOControls.UserControls.Switch.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\AOControls\obj\Debug\AOControls.csproj.GenerateResource.Cache
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\AOControls\obj\Debug\AOControls.csprojResolveAssemblyReference.cache

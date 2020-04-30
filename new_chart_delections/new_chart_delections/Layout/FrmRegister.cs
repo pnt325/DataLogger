@@ -21,22 +21,46 @@ namespace DataLogger.Layout
 
         private void InitEvent()
         {
+            // List view
             lsvData.MouseClick += LsvData_MouseClick;
+
+            // Combobox
             cbbType.TextChanged += CbbType_TextChanged;
+
+            // TextBox
             txbName.TextChanged += TxbName_TextChanged;
+
+            // Button
             btnAdd.Click += BtnAdd_Click;
             btnSave.Click += BtnSave_Click;
-            this.FormClosing += FrmRegister_FormClosing;
+            btnCancel.Click += BtnCancel_Click;
 
+            // Form
+            this.FormClosing += FrmRegister_FormClosing;
         }
+
         private void DeInitEvent()
         {
+            // List view
             lsvData.MouseClick -= LsvData_MouseClick;
+
+            // Combobox
             cbbType.TextChanged -= CbbType_TextChanged;
+
+            // Textbox
             txbName.TextChanged -= TxbName_TextChanged;
+
+            // Button
             btnAdd.Click -= BtnAdd_Click;
             btnSave.Click -= BtnSave_Click;
+
+            // Form
             this.FormClosing -= FrmRegister_FormClosing;
+        }
+
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void FrmRegister_FormClosing(object sender, FormClosingEventArgs e)
@@ -61,7 +85,7 @@ namespace DataLogger.Layout
 
             Core.Memory.Clear();
 
-            //// Query listview to add new register./.
+            // Query listview to add new register./.
             uint adr = 0;
             foreach (ListViewItem item in lsvData.Items)
             {

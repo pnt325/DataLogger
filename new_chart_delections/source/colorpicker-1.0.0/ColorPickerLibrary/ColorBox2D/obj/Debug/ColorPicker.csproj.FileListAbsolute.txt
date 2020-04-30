@@ -1,0 +1,15 @@
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorPickerLibrary\ColorBox2D\obj\Debug\ColorPicker.csproj.GenerateResource.Cache
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorPickerLibrary\ColorBox2D\bin\Debug\ColorPicker.dll
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorPickerLibrary\ColorBox2D\bin\Debug\ColorPicker.pdb
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorPickerLibrary\ColorBox2D\obj\Debug\ColorPicker.dll
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorPickerLibrary\ColorBox2D\obj\Debug\ColorPicker.pdb
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorPickerLibrary\ColorBox2D\obj\Debug\MechanikaDesign.WinForms.UI.ColorPicker.ColorSliderVertical.resources
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorPickerLibrary\ColorBox2D\obj\Debug\ColorPicker.csprojResolveAssemblyReference.cache
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\colorpicker-1.0.0\ColorPickerLibrary\ColorBox2D\bin\Debug\ColorPicker.dll
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\colorpicker-1.0.0\ColorPickerLibrary\ColorBox2D\bin\Debug\ColorPicker.pdb
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\colorpicker-1.0.0\ColorPickerLibrary\ColorBox2D\obj\Debug\ColorPicker.csprojAssemblyReference.cache
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\colorpicker-1.0.0\ColorPickerLibrary\ColorBox2D\obj\Debug\MechanikaDesign.WinForms.UI.ColorPicker.ColorSliderVertical.resources
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\colorpicker-1.0.0\ColorPickerLibrary\ColorBox2D\obj\Debug\ColorPicker.csproj.GenerateResource.cache
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\colorpicker-1.0.0\ColorPickerLibrary\ColorBox2D\obj\Debug\ColorPicker.csproj.CoreCompileInputs.cache
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\colorpicker-1.0.0\ColorPickerLibrary\ColorBox2D\obj\Debug\ColorPicker.dll
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\colorpicker-1.0.0\ColorPickerLibrary\ColorBox2D\obj\Debug\ColorPicker.pdb

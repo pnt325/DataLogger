@@ -1,0 +1,11 @@
+c:\users\warren\documents\visual studio 2013\Projects\ColorHexagon\ColorHexagon.Demo\obj\Debug\ColorHexagon.Demo.csprojResolveAssemblyReference.cache
+c:\users\warren\documents\visual studio 2013\Projects\ColorHexagon\ColorHexagon.Demo\obj\Debug\ColorHexagon.Demo.Form1.resources
+c:\users\warren\documents\visual studio 2013\Projects\ColorHexagon\ColorHexagon.Demo\obj\Debug\ColorHexagon.Demo.Properties.Resources.resources
+c:\users\warren\documents\visual studio 2013\Projects\ColorHexagon\ColorHexagon.Demo\obj\Debug\ColorHexagon.Demo.csproj.GenerateResource.Cache
+c:\users\warren\documents\visual studio 2013\Projects\ColorHexagon\ColorHexagon.Demo\bin\Debug\ColorHexagon.Demo.exe.config
+c:\users\warren\documents\visual studio 2013\Projects\ColorHexagon\ColorHexagon.Demo\bin\Debug\ColorHexagon.Demo.exe
+c:\users\warren\documents\visual studio 2013\Projects\ColorHexagon\ColorHexagon.Demo\bin\Debug\ColorHexagon.Demo.pdb
+c:\users\warren\documents\visual studio 2013\Projects\ColorHexagon\ColorHexagon.Demo\bin\Debug\ColorHexagon.dll
+c:\users\warren\documents\visual studio 2013\Projects\ColorHexagon\ColorHexagon.Demo\bin\Debug\ColorHexagon.pdb
+c:\users\warren\documents\visual studio 2013\Projects\ColorHexagon\ColorHexagon.Demo\obj\Debug\ColorHexagon.Demo.exe
+c:\users\warren\documents\visual studio 2013\Projects\ColorHexagon\ColorHexagon.Demo\obj\Debug\ColorHexagon.Demo.pdb

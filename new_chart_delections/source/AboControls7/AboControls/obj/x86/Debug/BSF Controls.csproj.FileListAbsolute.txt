@@ -1,0 +1,64 @@
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\bin\x86\Debug\BSF Controls.exe.config
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\obj\x86\Debug\Interop.WMPLib.dll
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\obj\x86\Debug\AxInterop.WMPLib.dll
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\obj\x86\Debug\BSF Controls.csproj.ResolveComReference.cache
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\bin\x86\Debug\BSF Controls.exe
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\bin\x86\Debug\BSF Controls.pdb
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\bin\x86\Debug\Interop.WMPLib.dll
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\bin\x86\Debug\AxInterop.WMPLib.dll
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\obj\x86\Debug\BSFControls.Other.CustomDialog.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\obj\x86\Debug\BSFControls.Other.TestingForm.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\obj\x86\Debug\BSFControls.UserControls.BatteryStatus.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\obj\x86\Debug\BSFControls.UserControls.ColorPickerControl.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\obj\x86\Debug\BSFControls.UserControls.CompactWebBrowser.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\obj\x86\Debug\BSFControls.UserControls.InterchangablePictureBox.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\obj\x86\Debug\BSFControls.UserControls.LockingMech.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\obj\x86\Debug\BSFControls.Properties.Resources.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\obj\x86\Debug\BSFControls.RolloverButton.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\obj\x86\Debug\BSFControls.UserControls.StatusIndicator.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\obj\x86\Debug\BSFControls.UserControls.Switch.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\obj\x86\Debug\BSF Controls.exe
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\obj\x86\Debug\BSF Controls.pdb
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\Developer Tools\BSF Controls\bin\x86\Debug\BSF Controls.exe.config
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\Developer Tools\BSF Controls\obj\x86\Debug\Interop.WMPLib.dll
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\Developer Tools\BSF Controls\obj\x86\Debug\AxInterop.WMPLib.dll
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\Developer Tools\BSF Controls\obj\x86\Debug\BSF Controls.csproj.ResolveComReference.cache
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\Developer Tools\BSF Controls\obj\x86\Debug\BSF Controls.exe
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\Developer Tools\BSF Controls\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\Developer Tools\BSF Controls\obj\x86\Debug\BSFControls.Other.CustomDialog.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\Developer Tools\BSF Controls\obj\x86\Debug\BSFControls.Other.TestingForm.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\Developer Tools\BSF Controls\obj\x86\Debug\BSFControls.UserControls.CompactWebBrowser.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\Developer Tools\BSF Controls\obj\x86\Debug\BSFControls.UserControls.InterchangablePictureBox.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\Developer Tools\BSF Controls\obj\x86\Debug\BSFControls.UserControls.LockingMech.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\Developer Tools\BSF Controls\obj\x86\Debug\BSFControls.Properties.Resources.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\Developer Tools\BSF Controls\obj\x86\Debug\BSFControls.UserControls.Switch.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\Developer Tools\BSF Controls\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\Developer Tools\BSF Controls\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\Developer Tools\BSF Controls\bin\x86\Debug\BSF Controls.exe
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\Developer Tools\BSF Controls\bin\x86\Debug\BSF Controls.pdb
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\Developer Tools\BSF Controls\bin\x86\Debug\Interop.WMPLib.dll
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\Developer Tools\BSF Controls\bin\x86\Debug\AxInterop.WMPLib.dll
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\Developer Tools\BSF Controls\obj\x86\Debug\BSF Controls.pdb
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\Developer Tools\BSF Controls\obj\x86\Debug\BSFControls.UserControls.NumberedRTB.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\BSF Controls\bin\x86\Debug\Interop.WMPLib.dll
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\BSF Controls\bin\x86\Debug\AxInterop.WMPLib.dll
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\BSF Controls\obj\x86\Debug\Interop.WMPLib.dll
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\BSF Controls\obj\x86\Debug\AxInterop.WMPLib.dll
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\BSF Controls\obj\x86\Debug\BSF Controls.csproj.ResolveComReference.cache
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\BSF Controls\obj\x86\Debug\BSFControls.Other.CustomDialog.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\BSF Controls\obj\x86\Debug\BSFControls.TestingForm.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\BSF Controls\obj\x86\Debug\BSFControls.UserControls.CompactWebBrowser.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\BSF Controls\obj\x86\Debug\BSFControls.UserControls.LockingMech.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\BSF Controls\obj\x86\Debug\BSFControls.Properties.Resources.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\BSF Controls\obj\x86\Debug\BSFControls.UserControls.NumberedRTB.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\BSF Controls\obj\x86\Debug\BSFControls.UserControls.Switch.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\BSF Controls\obj\x86\Debug\BSF Controls.csproj.GenerateResource.Cache
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\BSF Controls\obj\x86\Debug\BSF Controls.csprojResolveAssemblyReference.cache
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\BSF Controls\bin\x86\Debug\AOControls.exe.config
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\BSF Controls\bin\x86\Debug\AOControls.exe
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\BSF Controls\bin\x86\Debug\AOControls.pdb
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\BSF Controls\obj\x86\Debug\AOControls.exe
+C:\Users\Brian Ferguson\Documents\Visual Studio 2012\Projects\Developer Tools\BSF Controls\obj\x86\Debug\AOControls.pdb

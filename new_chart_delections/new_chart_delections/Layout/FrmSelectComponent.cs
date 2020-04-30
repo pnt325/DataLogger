@@ -22,6 +22,8 @@ namespace DataLogger.Layout
 
             InitEvent();
             NormalSize();
+
+            lsvData.HideSelection = true;
         }
 
         private void InitEvent()
@@ -29,12 +31,13 @@ namespace DataLogger.Layout
             cbbComponent.TextChanged += CbbComponent_TextChanged;
             btnChange.Click += BtnChange_Click;
             lsvSelect.MouseClick += LsvSelect_MouseClick;
-            lblColor.Click += LblColor_Click;
             btnCancel.Click += BtnCancel_Click;
             btnOk.Click += BtnOk_Click;
             this.FormClosing += FrmSelectComponent_FormClosing;
             lsvData.ItemCheck += LsvData_ItemCheck;
             lsvData.ItemChecked += LsvData_ItemChecked;
+
+
             txbTitle.TextChanged += TxbTitle_TextChanged;
         }
 
@@ -53,7 +56,7 @@ namespace DataLogger.Layout
             cbbComponent.TextChanged -= CbbComponent_TextChanged;
             btnChange.Click -= BtnChange_Click;
             lsvSelect.MouseClick -= LsvSelect_MouseClick;
-            lblColor.Click -= LblColor_Click;
+            //lblColor.Click -= LblColor_Click;
             btnCancel.Click -= BtnCancel_Click;
             btnOk.Click -= BtnOk_Click;
             this.FormClosing -= FrmSelectComponent_FormClosing;
@@ -200,7 +203,7 @@ namespace DataLogger.Layout
                     {
                         lsvSelect.Items[selectedIndex].SubItems[3].BackColor = colorDialog.Color;
                     }
-                    lblColor.BackColor = colorDialog.Color;
+                    //lblColor.BackColor = colorDialog.Color;
                 }
             }
         }
@@ -210,12 +213,12 @@ namespace DataLogger.Layout
             if (lsvSelect.FocusedItem != null)
             {
                 lsvSelect.Items[selectedIndex].SubItems[0].Text = txbName.Text;
-                lsvSelect.Items[selectedIndex].SubItems[3].BackColor = lblColor.BackColor;
+                //lsvSelect.Items[selectedIndex].SubItems[3].BackColor = lblColor.BackColor;
             }
             selectedIndex = -1; // reset selected
-            grbEdit.Text = "Edit";
+            //grbEdit.Text = "Edit";
             txbName.Text = "";
-            lblColor.BackColor = Color.White;
+            //lblColor.BackColor = Color.White;
             btnChange.Enabled = false;
         }
 
@@ -229,9 +232,9 @@ namespace DataLogger.Layout
 
             txbName.Text = lsvSelect.FocusedItem.SubItems[0].Text;
             selectedIndex = lsvSelect.FocusedItem.Index;
-            lblColor.BackColor = lsvSelect.FocusedItem.SubItems[3].BackColor;
+            //lblColor.BackColor = lsvSelect.FocusedItem.SubItems[3].BackColor;
 
-            grbEdit.Text = "Edit [" + txbName.Text + "]";
+            //grbEdit.Text = "Edit [" + txbName.Text + "]";
             btnChange.Enabled = true;
         }
 
@@ -252,12 +255,16 @@ namespace DataLogger.Layout
 
         private void NormalSize()
         {
-            this.Size = new Size(304, 416);
+            this.Size = new Size(246, 421);
+            btnAddSingle.Hide();
+            btnRemoveSingle.Hide();
         }
 
         private void ExternSize()
         {
-            this.Size = new Size(706, 416);
+            this.Size = new Size(886, 421);
+            btnAddSingle.Show();
+            btnRemoveSingle.Show();
         }
 
         private void UpdateVarList()
@@ -320,10 +327,17 @@ namespace DataLogger.Layout
             }
 
             UpdateVarList();
-
-            btnRemoveSingle.Enabled = true;
-
             InputVerify();
+            btnRemoveSingle.Enabled = true;
+            selectedIndex = -1;
+        }
+
+        private void colorHexagon1_ColorChanged(object sender, ColorChangedEventArgs args)
+        {
+            if(selectedIndex >= 0)
+            {
+                lsvSelect.Items[selectedIndex].SubItems[3].BackColor = args.SelectedColor;
+            }
         }
     }
 }

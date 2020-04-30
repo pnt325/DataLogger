@@ -1,0 +1,8 @@
+C:\Users\Warren\Documents\visual studio 2013\Projects\ColorHexagon\ColorHexagon\bin\Debug\ColorHexagon.dll
+C:\Users\Warren\Documents\visual studio 2013\Projects\ColorHexagon\ColorHexagon\bin\Debug\ColorHexagon.pdb
+C:\Users\Warren\Documents\visual studio 2013\Projects\ColorHexagon\ColorHexagon\obj\Debug\ColorHexagon.dll
+C:\Users\Warren\Documents\visual studio 2013\Projects\ColorHexagon\ColorHexagon\obj\Debug\ColorHexagon.pdb
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorPickerLibrary\ColorHexagon\bin\Debug\ColorHexagon.dll
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorPickerLibrary\ColorHexagon\bin\Debug\ColorHexagon.pdb
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorPickerLibrary\ColorHexagon\obj\Debug\ColorHexagon.dll
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorPickerLibrary\ColorHexagon\obj\Debug\ColorHexagon.pdb

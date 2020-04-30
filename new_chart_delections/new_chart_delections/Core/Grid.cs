@@ -272,7 +272,6 @@ namespace DataLogger.Core
                 }
             }
 
-
             Cursor.Current = Cursors.Default;
 
             frm.Invalidate();
@@ -289,8 +288,8 @@ namespace DataLogger.Core
                     using (Layout.FrmSelectComponent f = new Layout.FrmSelectComponent())
                     {
                         f.StartPosition = FormStartPosition.Manual;
-                        f.Top = frm.Top + (frm.Size.Height - frm.Size.Height) / 2;
-                        f.Left = frm.Left + (frm.Size.Width - frm.Size.Width) / 2;
+                        f.Top = frm.Top + (frm.Size.Height - f.Size.Height) / 2;
+                        f.Left = frm.Left + (frm.Size.Width - f.Size.Width) / 2;
 
                         if (f.ShowDialog() == DialogResult.OK)
                         {

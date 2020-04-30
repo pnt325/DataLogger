@@ -1,0 +1,8 @@
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorHexagon\ColorWheel\bin\Debug\ColorWheel.dll
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorHexagon\ColorWheel\bin\Debug\ColorWheel.pdb
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorHexagon\ColorWheel\obj\Debug\ColorWheel.dll
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorHexagon\ColorWheel\obj\Debug\ColorWheel.pdb
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorPickerLibrary\ColorWheel\bin\Debug\ColorWheel.dll
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorPickerLibrary\ColorWheel\bin\Debug\ColorWheel.pdb
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorPickerLibrary\ColorWheel\obj\Debug\ColorWheel.dll
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorPickerLibrary\ColorWheel\obj\Debug\ColorWheel.pdb

@@ -1,0 +1,44 @@
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorHexagon\ColorHexagon.Demo\bin\Debug\ColorHexagon.Demo.exe.config
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorHexagon\ColorHexagon.Demo\bin\Debug\ColorHexagon.Demo.exe
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorHexagon\ColorHexagon.Demo\bin\Debug\ColorHexagon.Demo.pdb
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorHexagon\ColorHexagon.Demo\bin\Debug\ColorHexagon.dll
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorHexagon\ColorHexagon.Demo\bin\Debug\ColorHexagon.pdb
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorHexagon\ColorHexagon.Demo\obj\Debug\ColorPicker.Demo.csprojResolveAssemblyReference.cache
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorHexagon\ColorHexagon.Demo\obj\Debug\ColorHexagon.Demo.Properties.Resources.resources
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorHexagon\ColorHexagon.Demo\obj\Debug\ColorPicker.Demo.csproj.GenerateResource.Cache
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorHexagon\ColorHexagon.Demo\obj\Debug\ColorHexagon.Demo.exe
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorHexagon\ColorHexagon.Demo\obj\Debug\ColorHexagon.Demo.pdb
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorHexagon\ColorHexagon.Demo\bin\Debug\ColorWheel.dll
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorHexagon\ColorHexagon.Demo\bin\Debug\ColorWheel.pdb
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorHexagon\ColorHexagon.Demo\obj\Debug\ColorHexagon.Demo.FormColorPickerDemo.resources
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorPickerLibrary\ColorHexagon.Demo\bin\Debug\ColorHexagon.Demo.exe.config
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorPickerLibrary\ColorHexagon.Demo\obj\Debug\ColorHexagon.Demo.exe
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorPickerLibrary\ColorHexagon.Demo\obj\Debug\ColorHexagon.Demo.pdb
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorPickerLibrary\ColorHexagon.Demo\bin\Debug\ColorPicker.Demo.exe.config
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorPickerLibrary\ColorPicker.Demo\obj\Debug\ColorPicker.Demo.csprojResolveAssemblyReference.cache
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorPickerLibrary\ColorPicker.Demo\obj\Debug\ColorHexagon.Demo.FormColorPickerDemo.resources
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorPickerLibrary\ColorPicker.Demo\obj\Debug\ColorPicker.Demo.Properties.Resources.resources
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorPickerLibrary\ColorPicker.Demo\obj\Debug\ColorPicker.Demo.csproj.GenerateResource.Cache
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorPickerLibrary\ColorPicker.Demo\bin\Debug\ColorPicker.Demo.exe.config
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorPickerLibrary\ColorPicker.Demo\bin\Debug\ColorPicker.Demo.exe
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorPickerLibrary\ColorPicker.Demo\bin\Debug\ColorPicker.Demo.pdb
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorPickerLibrary\ColorPicker.Demo\bin\Debug\ColorPicker.dll
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorPickerLibrary\ColorPicker.Demo\bin\Debug\ColorPicker.pdb
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorPickerLibrary\ColorPicker.Demo\obj\Debug\ColorPicker.Demo.exe
+C:\Users\Warren\Documents\Visual Studio 2013\Projects\ColorPickerLibrary\ColorPicker.Demo\obj\Debug\ColorPicker.Demo.pdb
+C:\Users\Warren\Dropbox\Source Code\ColorPickerLibrary\ColorPicker.Demo\bin\Debug\ColorPicker.Demo.exe.config
+C:\Users\Warren\Dropbox\Source Code\ColorPickerLibrary\ColorPicker.Demo\obj\Debug\ColorPicker.Demo.exe
+C:\Users\Warren\Dropbox\Source Code\ColorPickerLibrary\ColorPicker.Demo\obj\Debug\ColorPicker.Demo.pdb
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\colorpicker-1.0.0\ColorPickerLibrary\ColorPicker.Demo\bin\Debug\ColorPicker.Demo.exe.config
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\colorpicker-1.0.0\ColorPickerLibrary\ColorPicker.Demo\bin\Debug\ColorPicker.Demo.exe
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\colorpicker-1.0.0\ColorPickerLibrary\ColorPicker.Demo\bin\Debug\ColorPicker.Demo.pdb
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\colorpicker-1.0.0\ColorPickerLibrary\ColorPicker.Demo\bin\Debug\ColorPicker.dll
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\colorpicker-1.0.0\ColorPickerLibrary\ColorPicker.Demo\bin\Debug\ColorPicker.pdb
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\colorpicker-1.0.0\ColorPickerLibrary\ColorPicker.Demo\obj\Debug\ColorPicker.Demo.csprojAssemblyReference.cache
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\colorpicker-1.0.0\ColorPickerLibrary\ColorPicker.Demo\obj\Debug\ColorHexagon.Demo.FormColorPickerDemo.resources
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\colorpicker-1.0.0\ColorPickerLibrary\ColorPicker.Demo\obj\Debug\ColorPicker.Demo.Properties.Resources.resources
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\colorpicker-1.0.0\ColorPickerLibrary\ColorPicker.Demo\obj\Debug\ColorPicker.Demo.csproj.GenerateResource.cache
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\colorpicker-1.0.0\ColorPickerLibrary\ColorPicker.Demo\obj\Debug\ColorPicker.Demo.csproj.CoreCompileInputs.cache
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\colorpicker-1.0.0\ColorPickerLibrary\ColorPicker.Demo\obj\Debug\ColorPicker.Demo.csproj.CopyComplete
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\colorpicker-1.0.0\ColorPickerLibrary\ColorPicker.Demo\obj\Debug\ColorPicker.Demo.exe
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\colorpicker-1.0.0\ColorPickerLibrary\ColorPicker.Demo\obj\Debug\ColorPicker.Demo.pdb

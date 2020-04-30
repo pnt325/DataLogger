@@ -44,6 +44,7 @@
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSave = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -52,7 +53,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 24);
+            this.label1.Location = new System.Drawing.Point(11, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 0;
@@ -62,16 +63,16 @@
             // 
             this.txbName.Location = new System.Drawing.Point(52, 20);
             this.txbName.Name = "txbName";
-            this.txbName.Size = new System.Drawing.Size(100, 20);
+            this.txbName.Size = new System.Drawing.Size(196, 20);
             this.txbName.TabIndex = 1;
             // 
             // cbbType
             // 
             this.cbbType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbType.FormattingEnabled = true;
-            this.cbbType.Location = new System.Drawing.Point(195, 20);
+            this.cbbType.Location = new System.Drawing.Point(52, 46);
             this.cbbType.Name = "cbbType";
-            this.cbbType.Size = new System.Drawing.Size(73, 21);
+            this.cbbType.Size = new System.Drawing.Size(111, 21);
             this.cbbType.TabIndex = 2;
             // 
             // groupBox1
@@ -83,14 +84,14 @@
             this.groupBox1.Controls.Add(this.cbbType);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(376, 53);
+            this.groupBox1.Size = new System.Drawing.Size(254, 77);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Config";
+            this.groupBox1.Text = "Configure";
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(283, 19);
+            this.btnAdd.Location = new System.Drawing.Point(173, 44);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 3;
@@ -100,7 +101,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(158, 24);
+            this.label2.Location = new System.Drawing.Point(15, 49);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(31, 13);
             this.label2.TabIndex = 0;
@@ -109,9 +110,9 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.lsvData);
-            this.groupBox2.Location = new System.Drawing.Point(12, 71);
+            this.groupBox2.Location = new System.Drawing.Point(12, 95);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(376, 293);
+            this.groupBox2.Size = new System.Drawing.Size(254, 221);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Data";
@@ -127,7 +128,7 @@
             this.lsvData.HideSelection = false;
             this.lsvData.Location = new System.Drawing.Point(3, 16);
             this.lsvData.Name = "lsvData";
-            this.lsvData.Size = new System.Drawing.Size(370, 274);
+            this.lsvData.Size = new System.Drawing.Size(248, 202);
             this.lsvData.TabIndex = 4;
             this.lsvData.UseCompatibleStateImageBehavior = false;
             this.lsvData.View = System.Windows.Forms.View.Details;
@@ -135,12 +136,12 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "Name";
-            this.columnHeader1.Width = 239;
+            this.columnHeader1.Width = 166;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Type";
-            this.columnHeader3.Width = 101;
+            this.columnHeader3.Width = 69;
             // 
             // contextMenuStrip1
             // 
@@ -165,18 +166,28 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(300, 371);
+            this.btnSave.Location = new System.Drawing.Point(181, 319);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(85, 23);
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(90, 319);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(85, 23);
+            this.btnCancel.TabIndex = 6;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            // 
             // FrmRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 406);
+            this.ClientSize = new System.Drawing.Size(276, 352);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -210,5 +221,6 @@
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

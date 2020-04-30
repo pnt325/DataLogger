@@ -1,4 +1,5 @@
 ﻿//using new_chart_delections.gui;
+using DataLogger.Core;
 using System;
 using System.Drawing;
 using System.IO;
@@ -17,11 +18,12 @@ namespace DataLogger.Layout
             Core.Grid.Init(this);
 
             // graphics Settings
-            this.DoubleBuffered = true;
             this.SetStyle(ControlStyles.AllPaintingInWmPaint |
             ControlStyles.UserPaint |
             ControlStyles.DoubleBuffer | ControlStyles.OptimizedDoubleBuffer | ControlStyles.ResizeRedraw,
             true);
+
+            this.DoubleBuffered = true;
 
             // Event
             InitEvent();
@@ -54,6 +56,8 @@ namespace DataLogger.Layout
         private void Grid_SizeChanged(object sender, EventArgs e)
         {
             this.Invalidate();
+
+            toolStripStatusLblGrid.Text = string.Format("Grid: {0}x{1}", Grid.X, Grid.Y);
         }
 
         private void registerToolStripMenuItem_Click(object sender, EventArgs e)

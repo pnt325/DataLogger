@@ -1,0 +1,89 @@
+C:\Users\Brian Ferguson\Documents\Visual Studio 2008\Projects\BSF Controls\bin\Debug\BSF Controls.dll
+C:\Users\Brian Ferguson\Documents\Visual Studio 2008\Projects\BSF Controls\bin\Debug\BSF Controls.pdb
+C:\Users\Brian Ferguson\Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Brian Ferguson\Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF Controls.csproj.GenerateResource.Cache
+C:\Users\Brian Ferguson\Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF Controls.dll
+C:\Users\Brian Ferguson\Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF Controls.pdb
+C:\Users\Brian Ferguson\Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF_Controls.Properties.Resources.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF_Controls.DuelStateButton.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF_Controls.Switch.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF_Controls.testBoard.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF_Controls.RolloverButton.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF_Controls.CompactWebBrowser.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF_Controls.RolloverButtonBase.resources
+C:\Documents and Settings\Gobbles\My Documents\Visual Studio 2008\Projects\BSF Controls\bin\Debug\BSF Controls.dll.config
+C:\Documents and Settings\Gobbles\My Documents\Visual Studio 2008\Projects\BSF Controls\bin\Debug\BSF Controls.dll
+C:\Documents and Settings\Gobbles\My Documents\Visual Studio 2008\Projects\BSF Controls\bin\Debug\BSF Controls.pdb
+C:\Documents and Settings\Gobbles\My Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Gobbles\My Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF_Controls.CompactWebBrowser.resources
+C:\Documents and Settings\Gobbles\My Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF_Controls.DigitalClock.resources
+C:\Documents and Settings\Gobbles\My Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF_Controls.DropShadowLabel.resources
+C:\Documents and Settings\Gobbles\My Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF_Controls.LockingMech.resources
+C:\Documents and Settings\Gobbles\My Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF_Controls.Marquee.resources
+C:\Documents and Settings\Gobbles\My Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF_Controls.Properties.Resources.resources
+C:\Documents and Settings\Gobbles\My Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF_Controls.RolloverButtonBase.resources
+C:\Documents and Settings\Gobbles\My Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF_Controls.Switch.resources
+C:\Documents and Settings\Gobbles\My Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF Controls.csproj.GenerateResource.Cache
+C:\Documents and Settings\Gobbles\My Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF Controls.dll
+C:\Documents and Settings\Gobbles\My Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF Controls.pdb
+C:\Documents and Settings\Gobbles\My Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF_Controls.InterchangablePictureBox.resources
+C:\Documents and Settings\Gobbles\My Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF_Controls.StatusIndicator.resources
+C:\Documents and Settings\Gobbles\My Documents\Visual Studio 2008\Projects\BSF Code Library\BSF Controls\bin\Debug\BSF Controls.dll.config
+C:\Documents and Settings\Gobbles\My Documents\Visual Studio 2008\Projects\BSF Code Library\BSF Controls\bin\Debug\BSF Controls.dll
+C:\Documents and Settings\Gobbles\My Documents\Visual Studio 2008\Projects\BSF Code Library\BSF Controls\bin\Debug\BSF Controls.pdb
+C:\Documents and Settings\Gobbles\My Documents\Visual Studio 2008\Projects\BSF Code Library\BSF Controls\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Gobbles\My Documents\Visual Studio 2008\Projects\BSF Code Library\BSF Controls\obj\Debug\BSF_Controls.CompactWebBrowser.resources
+C:\Documents and Settings\Gobbles\My Documents\Visual Studio 2008\Projects\BSF Code Library\BSF Controls\obj\Debug\BSF_Controls.DigitalClock.resources
+C:\Documents and Settings\Gobbles\My Documents\Visual Studio 2008\Projects\BSF Code Library\BSF Controls\obj\Debug\BSF_Controls.DropShadowLabel.resources
+C:\Documents and Settings\Gobbles\My Documents\Visual Studio 2008\Projects\BSF Code Library\BSF Controls\obj\Debug\BSF_Controls.InterchangablePictureBox.resources
+C:\Documents and Settings\Gobbles\My Documents\Visual Studio 2008\Projects\BSF Code Library\BSF Controls\obj\Debug\BSF_Controls.LockingMech.resources
+C:\Documents and Settings\Gobbles\My Documents\Visual Studio 2008\Projects\BSF Code Library\BSF Controls\obj\Debug\BSF_Controls.Marquee.resources
+C:\Documents and Settings\Gobbles\My Documents\Visual Studio 2008\Projects\BSF Code Library\BSF Controls\obj\Debug\BSF_Controls.Properties.Resources.resources
+C:\Documents and Settings\Gobbles\My Documents\Visual Studio 2008\Projects\BSF Code Library\BSF Controls\obj\Debug\BSF_Controls.RolloverButtonBase.resources
+C:\Documents and Settings\Gobbles\My Documents\Visual Studio 2008\Projects\BSF Code Library\BSF Controls\obj\Debug\BSF_Controls.StatusIndicator.resources
+C:\Documents and Settings\Gobbles\My Documents\Visual Studio 2008\Projects\BSF Code Library\BSF Controls\obj\Debug\BSF_Controls.Switch.resources
+C:\Documents and Settings\Gobbles\My Documents\Visual Studio 2008\Projects\BSF Code Library\BSF Controls\obj\Debug\BSF Controls.csproj.GenerateResource.Cache
+C:\Documents and Settings\Gobbles\My Documents\Visual Studio 2008\Projects\BSF Code Library\BSF Controls\obj\Debug\BSF Controls.dll
+C:\Documents and Settings\Gobbles\My Documents\Visual Studio 2008\Projects\BSF Code Library\BSF Controls\obj\Debug\BSF Controls.pdb
+C:\Documents and Settings\Gobbles\My Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF_Controls.User_Controls.BatteryStatus.resources
+C:\Documents and Settings\Gobbles\My Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF_Controls.User_Controls.SuperProgressBar.resources
+C:\Documents and Settings\Brian Ferguson\My Documents\Visual Studio 2008\Projects\BSF Controls\bin\Debug\BSF Controls.dll.config
+C:\Documents and Settings\Brian Ferguson\My Documents\Visual Studio 2008\Projects\BSF Controls\bin\Debug\BSF Controls.dll
+C:\Documents and Settings\Brian Ferguson\My Documents\Visual Studio 2008\Projects\BSF Controls\bin\Debug\BSF Controls.pdb
+C:\Documents and Settings\Brian Ferguson\My Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Brian Ferguson\My Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF_Controls.User_Controls.BatteryStatus.resources
+C:\Documents and Settings\Brian Ferguson\My Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF_Controls.CompactWebBrowser.resources
+C:\Documents and Settings\Brian Ferguson\My Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF_Controls.DigitalClock.resources
+C:\Documents and Settings\Brian Ferguson\My Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF_Controls.DropShadowLabel.resources
+C:\Documents and Settings\Brian Ferguson\My Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF_Controls.InterchangablePictureBox.resources
+C:\Documents and Settings\Brian Ferguson\My Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF_Controls.LockingMech.resources
+C:\Documents and Settings\Brian Ferguson\My Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF_Controls.Marquee.resources
+C:\Documents and Settings\Brian Ferguson\My Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF_Controls.Properties.Resources.resources
+C:\Documents and Settings\Brian Ferguson\My Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF_Controls.RolloverButtonBase.resources
+C:\Documents and Settings\Brian Ferguson\My Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF_Controls.StatusIndicator.resources
+C:\Documents and Settings\Brian Ferguson\My Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF_Controls.User_Controls.SuperProgressBar.resources
+C:\Documents and Settings\Brian Ferguson\My Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF_Controls.Switch.resources
+C:\Documents and Settings\Brian Ferguson\My Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF Controls.csproj.GenerateResource.Cache
+C:\Documents and Settings\Brian Ferguson\My Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF Controls.dll
+C:\Documents and Settings\Brian Ferguson\My Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF Controls.pdb
+C:\Documents and Settings\Brian Ferguson\My Documents\Visual Studio 2008\Projects\BSF Controls\obj\Debug\BSF_Controls.User_Controls.Tester.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\bin\Debug\BSF Controls.exe.config
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\bin\Debug\BSF Controls.exe
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\bin\Debug\BSF Controls.pdb
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\obj\Debug\BSF_Controls.UserControls.BatteryStatus.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\obj\Debug\BSF_Controls.UserControls.CompactWebBrowser.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\obj\Debug\BSF_Controls.UserControls.DropShadowLabel.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\obj\Debug\BSF_Controls.UserControls.InterchangablePictureBox.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\obj\Debug\BSF_Controls.UserControls.LockingMech.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\obj\Debug\BSF_Controls.UserControls.Marquee.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\obj\Debug\BSF_Controls.Properties.Resources.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\obj\Debug\BSF_Controls.RolloverButton.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\obj\Debug\BSF_Controls.UserControls.StatusIndicator.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\obj\Debug\BSF_Controls.UserControls.SuperProgressBar.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\obj\Debug\BSF_Controls.UserControls.Switch.resources
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\obj\Debug\ResGen.read.1.tlog
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\obj\Debug\ResGen.write.1.tlog
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\obj\Debug\BSF Controls.exe
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\obj\Debug\BSF Controls.pdb
+C:\Users\Brian Ferguson\Documents\Visual Studio 2010\Projects\BSF Controls\obj\Debug\BSF_Controls.TestingForm.resources

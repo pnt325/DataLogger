@@ -14,6 +14,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
     <PublishUrl>C:\Users\phatn\Desktop\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -29,7 +30,6 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -109,6 +109,14 @@
     <Compile Include="Core\Component.cs" />
     <Compile Include="Core\Grid.cs" />
     <Compile Include="Core\Memory.cs" />
+    <Compile Include="Layout\ColorChangedEventArgs.cs" />
+    <Compile Include="Layout\ColorHexagon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Layout\ColorHexagon.Designer.cs">
+      <DependentUpon>ColorHexagon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\ColorModes.cs" />
     <Compile Include="Layout\FrmConfigure.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,14 +147,19 @@
     <Compile Include="Layout\FrmSelectComponent.Designer.cs">
       <DependentUpon>FrmSelectComponent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Layout\HslColor.cs" />
     <Compile Include="Layout\ListViewNF.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Layout\MathExtensions.cs" />
     <Compile Include="Network\Uart.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Components\Label.resx">
       <DependentUpon>Label.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\ColorHexagon.resx">
+      <DependentUpon>ColorHexagon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Layout\FrmConfigure.resx">
       <DependentUpon>FrmConfigure.cs</DependentUpon>
