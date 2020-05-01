@@ -29,6 +29,10 @@ namespace DataLogger.Layout
             InitEvent();
         }
 
+        private void Test()
+        {
+        }
+
         private void InitEvent()
         {
             Core.Grid.SizeChanged += Grid_SizeChanged;

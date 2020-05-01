@@ -36,3 +36,5 @@ C:\Users\phatn\Downloads\DataLogger\new_chart_delections\new_chart_delections\ob
 C:\Users\phatn\Downloads\DataLogger\new_chart_delections\new_chart_delections\obj\Debug\DataLogger.Layout.FrmSelectComponent.resources
 C:\Users\phatn\Downloads\DataLogger\new_chart_delections\new_chart_delections\obj\Debug\DataLogger.Layout.ColorHexagon.resources
 C:\Users\phatn\Downloads\DataLogger\new_chart_delections\new_chart_delections\obj\Debug\DataLogger.csprojAssemblyReference.cache
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\new_chart_delections\bin\Debug\ObjectListView.dll
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\new_chart_delections\bin\Debug\ObjectListView.xml

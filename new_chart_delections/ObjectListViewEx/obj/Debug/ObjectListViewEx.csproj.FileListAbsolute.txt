@@ -1,0 +1,13 @@
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\ObjectListViewEx\bin\Debug\ObjectListViewEx.exe.config
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\ObjectListViewEx\bin\Debug\ObjectListViewEx.exe
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\ObjectListViewEx\bin\Debug\ObjectListViewEx.pdb
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\ObjectListViewEx\obj\Debug\ObjectListViewEx.csprojAssemblyReference.cache
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\ObjectListViewEx\obj\Debug\ObjectListViewEx.Properties.Resources.resources
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\ObjectListViewEx\obj\Debug\ObjectListViewEx.csproj.GenerateResource.cache
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\ObjectListViewEx\obj\Debug\ObjectListViewEx.csproj.CoreCompileInputs.cache
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\ObjectListViewEx\obj\Debug\ObjectListViewEx.exe
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\ObjectListViewEx\obj\Debug\ObjectListViewEx.pdb
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\ObjectListViewEx\bin\Debug\ObjectListView.dll
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\ObjectListViewEx\bin\Debug\ObjectListView.xml
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\ObjectListViewEx\obj\Debug\ObjectListViewEx.Form1.resources
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\ObjectListViewEx\obj\Debug\ObjectListViewEx.csproj.CopyComplete

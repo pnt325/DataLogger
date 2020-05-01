@@ -1,4 +1,5 @@
-﻿using DataLogger.Components;
+﻿using BrightIdeasSoftware;
+using DataLogger.Components;
 using DataLogger.Core;
 using System;
 using System.CodeDom;
@@ -17,28 +18,40 @@ namespace DataLogger.Layout
 
             // Combobox
             cbbComponent.Items.AddRange(Components.Type.Names());
-            btnChange.Enabled = false;
+            //btnChange.Enabled = false;
             btnOk.Enabled = false;
+
+            // listview 
 
             InitEvent();
             NormalSize();
+        }
 
-            lsvData.HideSelection = true;
+        private void ObjectListView1_FormatRow(object sender, FormatRowEventArgs e)
+        {
+            e.Item.SubItems[3].BackColor = Color.Blue;
         }
 
         private void InitEvent()
         {
             cbbComponent.TextChanged += CbbComponent_TextChanged;
-            btnChange.Click += BtnChange_Click;
+            //btnChange.Click += BtnChange_Click;
             lsvSelect.MouseClick += LsvSelect_MouseClick;
             btnCancel.Click += BtnCancel_Click;
             btnOk.Click += BtnOk_Click;
             this.FormClosing += FrmSelectComponent_FormClosing;
             lsvData.ItemCheck += LsvData_ItemCheck;
             lsvData.ItemChecked += LsvData_ItemChecked;
-
-
             txbTitle.TextChanged += TxbTitle_TextChanged;
+            txbName.KeyPress += TxbName_KeyPress;
+        }
+
+        private void TxbName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Enter)
+            {
+                BtnChange_Click(null, null);
+            }
         }
 
         private void TxbTitle_TextChanged(object sender, EventArgs e)
@@ -54,7 +67,7 @@ namespace DataLogger.Layout
         private void DeInitEvent()
         {
             cbbComponent.TextChanged -= CbbComponent_TextChanged;
-            btnChange.Click -= BtnChange_Click;
+            //btnChange.Click -= BtnChange_Click;
             lsvSelect.MouseClick -= LsvSelect_MouseClick;
             //lblColor.Click -= LblColor_Click;
             btnCancel.Click -= BtnCancel_Click;
@@ -213,13 +226,10 @@ namespace DataLogger.Layout
             if (lsvSelect.FocusedItem != null)
             {
                 lsvSelect.Items[selectedIndex].SubItems[0].Text = txbName.Text;
-                //lsvSelect.Items[selectedIndex].SubItems[3].BackColor = lblColor.BackColor;
             }
             selectedIndex = -1; // reset selected
-            //grbEdit.Text = "Edit";
             txbName.Text = "";
-            //lblColor.BackColor = Color.White;
-            btnChange.Enabled = false;
+            //btnChange.Enabled = false;
         }
 
         int selectedIndex = -1;
@@ -235,7 +245,7 @@ namespace DataLogger.Layout
             //lblColor.BackColor = lsvSelect.FocusedItem.SubItems[3].BackColor;
 
             //grbEdit.Text = "Edit [" + txbName.Text + "]";
-            btnChange.Enabled = true;
+            //btnChange.Enabled = true;
         }
 
         private void CbbComponent_TextChanged(object sender, EventArgs e)
@@ -262,7 +272,7 @@ namespace DataLogger.Layout
 
         private void ExternSize()
         {
-            this.Size = new Size(886, 421);
+            this.Size = new Size(886, 425);
             btnAddSingle.Show();
             btnRemoveSingle.Show();
         }

@@ -1,0 +1,11 @@
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\Object_list_view_getting-started\examples\GettingStarted3\GettingStarted3\bin\Debug\GettingStarted1.exe
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\Object_list_view_getting-started\examples\GettingStarted3\GettingStarted3\bin\Debug\GettingStarted1.pdb
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\Object_list_view_getting-started\examples\GettingStarted3\GettingStarted3\bin\Debug\ObjectListView.dll
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\Object_list_view_getting-started\examples\GettingStarted3\GettingStarted3\obj\Debug\GettingStarted3.csprojAssemblyReference.cache
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\Object_list_view_getting-started\examples\GettingStarted3\GettingStarted3\obj\Debug\GettingStarted1.Form1.resources
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\Object_list_view_getting-started\examples\GettingStarted3\GettingStarted3\obj\Debug\GettingStarted1.Properties.Resources.resources
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\Object_list_view_getting-started\examples\GettingStarted3\GettingStarted3\obj\Debug\GettingStarted3.csproj.GenerateResource.cache
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\Object_list_view_getting-started\examples\GettingStarted3\GettingStarted3\obj\Debug\GettingStarted3.csproj.CoreCompileInputs.cache
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\Object_list_view_getting-started\examples\GettingStarted3\GettingStarted3\obj\Debug\GettingStarted3.csproj.CopyComplete
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\Object_list_view_getting-started\examples\GettingStarted3\GettingStarted3\obj\Debug\GettingStarted1.exe
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\Object_list_view_getting-started\examples\GettingStarted3\GettingStarted3\obj\Debug\GettingStarted1.pdb

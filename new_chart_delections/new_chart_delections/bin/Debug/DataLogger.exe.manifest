@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DataLogger.exe" size="675296">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DataLogger.exe" size="675808">
       <assemblyIdentity name="DataLogger" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>7T1ks+a3hTHqN4FZ4I1mIusXaXGQODUzioc4BgqZsV4=</dsig:DigestValue>
+        <dsig:DigestValue>xRWFSZcbSs3K6dufRzojfsj94RtnGkRs0WVGGYnkLRk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -63,6 +63,18 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
         <dsig:DigestValue>f5ErKKB8Im4L46z7L1fwUFOKugEA+h8L8sOfGh8dqBQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ObjectListView.dll" size="444928">
+      <assemblyIdentity name="ObjectListView" version="2.9.1.1072" publicKeyToken="B1C5BF581481BCD4" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>C5SzgkdhcjQA3ANX59SQCFpczzQV4zIVXFuNbHv7h4g=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

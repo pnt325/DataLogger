@@ -42,7 +42,6 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnAddSingle = new System.Windows.Forms.Button();
             this.btnRemoveSingle = new System.Windows.Forms.Button();
-            this.btnChange = new System.Windows.Forms.Button();
             this.txbName = new System.Windows.Forms.TextBox();
             this.btnOk = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -211,26 +210,17 @@
             this.btnRemoveSingle.UseVisualStyleBackColor = true;
             this.btnRemoveSingle.Click += new System.EventHandler(this.btnRemoveSingle_Click);
             // 
-            // btnChange
-            // 
-            this.btnChange.Location = new System.Drawing.Point(231, 17);
-            this.btnChange.Name = "btnChange";
-            this.btnChange.Size = new System.Drawing.Size(63, 23);
-            this.btnChange.TabIndex = 7;
-            this.btnChange.Text = "Change";
-            this.btnChange.UseVisualStyleBackColor = true;
-            // 
             // txbName
             // 
             this.txbName.Location = new System.Drawing.Point(6, 19);
             this.txbName.Name = "txbName";
-            this.txbName.Size = new System.Drawing.Size(219, 20);
+            this.txbName.Size = new System.Drawing.Size(288, 20);
             this.txbName.TabIndex = 1;
             // 
             // btnOk
             // 
             this.btnOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOk.Location = new System.Drawing.Point(785, 347);
+            this.btnOk.Location = new System.Drawing.Point(785, 351);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(75, 23);
             this.btnOk.TabIndex = 11;
@@ -240,7 +230,7 @@
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Location = new System.Drawing.Point(704, 347);
+            this.btnCancel.Location = new System.Drawing.Point(704, 351);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 11;
@@ -260,7 +250,6 @@
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.btnChange);
             this.groupBox6.Controls.Add(this.txbName);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox6.Location = new System.Drawing.Point(3, 3);
@@ -363,7 +352,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(870, 382);
+            this.ClientSize = new System.Drawing.Size(870, 386);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOk);
@@ -418,7 +407,6 @@
         private System.Windows.Forms.TextBox txbName;
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button btnChange;
         private ColorHexagon colorHexagon1;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox6;

@@ -1,0 +1,11 @@
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\Object_list_view_getting-started\examples\GettingStartedTree\bin\Debug\GettingStartedTree.exe
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\Object_list_view_getting-started\examples\GettingStartedTree\bin\Debug\GettingStartedTree.pdb
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\Object_list_view_getting-started\examples\GettingStartedTree\bin\Debug\ObjectListView.dll
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\Object_list_view_getting-started\examples\GettingStartedTree\obj\Debug\GettingStartedTree.csprojAssemblyReference.cache
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\Object_list_view_getting-started\examples\GettingStartedTree\obj\Debug\GettingStartedTree.Form1.resources
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\Object_list_view_getting-started\examples\GettingStartedTree\obj\Debug\GettingStartedTree.Properties.Resources.resources
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\Object_list_view_getting-started\examples\GettingStartedTree\obj\Debug\GettingStartedTree.csproj.GenerateResource.cache
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\Object_list_view_getting-started\examples\GettingStartedTree\obj\Debug\GettingStartedTree.csproj.CoreCompileInputs.cache
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\Object_list_view_getting-started\examples\GettingStartedTree\obj\Debug\GettingStartedTree.csproj.CopyComplete
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\Object_list_view_getting-started\examples\GettingStartedTree\obj\Debug\GettingStartedTree.exe
+C:\Users\phatn\Downloads\DataLogger\new_chart_delections\source\Object_list_view_getting-started\examples\GettingStartedTree\obj\Debug\GettingStartedTree.pdb
