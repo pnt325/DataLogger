@@ -5,7 +5,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Windows.Forms;
 
-namespace DataLogger.Configure
+namespace DataLogger.Configure.Ver01
 {
     public class Load
     {
@@ -29,9 +29,6 @@ namespace DataLogger.Configure
         }
         public static bool FromFile(string filename)
         {
-            // load data
-            // verify data rule
-            // modify new data.
             JObject obj;
             using (StreamReader sr = new StreamReader(filename))
             {
@@ -43,7 +40,6 @@ namespace DataLogger.Configure
                 {
                     return false;
                 }
-
             }
 
             if (obj == null)
@@ -51,7 +47,7 @@ namespace DataLogger.Configure
                 return false;
             }
 
-            /// verify
+            // verify
             var data = obj.GetValue("data");
             if (data == null)
             {
@@ -72,7 +68,23 @@ namespace DataLogger.Configure
                 }
             }
 
+            // Version
+            int version = obj["ver"].Value<int>();
+            if (version != CfgFile.Version)
+            {
+                return false;
+            }
+            else
+            {
+                if (version < CfgFile.Version)
+                {
 
+                }
+                else if (version > CfgFile.Version)
+                {
+
+                }
+            }
 
             // load memory
             Memory.Load((JArray)obj["data"]["memory"]);

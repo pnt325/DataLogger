@@ -5,7 +5,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
 
-namespace DataLogger.Configure
+namespace DataLogger.Configure.Ver01
 {
     public class Save
     {
@@ -46,6 +46,9 @@ namespace DataLogger.Configure
         {
             JObject jobj_file = new JObject();
             JObject save_config = new JObject();
+
+            // file version
+            save_config["ver"] = CfgFile.Version;
 
             // memory;
             save_config["memory"] = Memory.Dump(Core.Memory.Types);

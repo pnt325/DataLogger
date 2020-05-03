@@ -80,17 +80,18 @@ namespace DataLogger.Layout
 
         private void startToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Core.Component.SetStart(help.UUID);
         }
 
         private void stopToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            Core.Component.SetStop(help.UUID);
         }
 
         private void removeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            Core.Component.Remove(help.UUID);
+            objectListView1.RemoveObject(help);
         }
     }
 

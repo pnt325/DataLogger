@@ -102,6 +102,7 @@
     <Compile Include="Components\Label.Designer.cs">
       <DependentUpon>Label.cs</DependentUpon>
     </Compile>
+    <Compile Include="Configure\CfgFile.cs" />
     <Compile Include="Configure\ChartInfo.cs" />
     <Compile Include="Configure\Component.cs" />
     <Compile Include="Configure\LabelInfo.cs" />
@@ -110,6 +111,15 @@
     <Compile Include="Configure\Memory.cs" />
     <Compile Include="Configure\Save.cs" />
     <Compile Include="Configure\TableInfo.cs" />
+    <Compile Include="Configure\Ver01\CfgFile.cs" />
+    <Compile Include="Configure\Ver01\ChartInfo.cs" />
+    <Compile Include="Configure\Ver01\Component.cs" />
+    <Compile Include="Configure\Ver01\LabelInfo.cs" />
+    <Compile Include="Configure\Ver01\Load.cs" />
+    <Compile Include="Configure\Ver01\Md5Hash.cs" />
+    <Compile Include="Configure\Ver01\Memory.cs" />
+    <Compile Include="Configure\Ver01\Save.cs" />
+    <Compile Include="Configure\Ver01\TableInfo.cs" />
     <Compile Include="Core\Component.cs" />
     <Compile Include="Core\Grid.cs" />
     <Compile Include="Core\Memory.cs" />
@@ -209,7 +219,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Configure\data.cfg" />
     <None Include="new_chart_delections_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -261,12 +270,12 @@
   <ItemGroup>
     <PublishFile Include="iconfinder_utilities-system-monitor_118829.ico">
       <Visible>False</Visible>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
   </ItemGroup>
