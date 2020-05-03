@@ -29,10 +29,6 @@ namespace DataLogger.Layout
             InitEvent();
         }
 
-        private void Test()
-        {
-        }
-
         private void InitEvent()
         {
             Core.Grid.SizeChanged += Grid_SizeChanged;
@@ -162,6 +158,37 @@ namespace DataLogger.Layout
             {
                 startToolStripMenuItem1.Enabled = false;
                 stopToolStripMenuItem1.Enabled = false;
+            }
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(Configure.Save.Show(Configure.Save.FileName) == false)
+            {
+                if(MessageBox.Show("Do you want to save to other location?", "File name not exist", MessageBoxButtons.OKCancel, MessageBoxIcon.Error) == DialogResult.OK)
+                {
+                    Configure.Save.Show();
+                }
+            }
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using(FrmAbout frm =new FrmAbout())
+            {
+                frm.StartPosition = FormStartPosition.Manual;
+                frm.Top = this.Top + (this.Size.Height - frm.Size.Height) / 2;
+                frm.Left = this.Left + (this.Size.Width - frm.Size.Width) / 2;
+
+                frm.ShowDialog();
+            }
+        }
+
+        private void compoentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using(FrmEditComponent frm = new FrmEditComponent())
+            {
+                frm.ShowDialog();
             }
         }
     }

@@ -1,5 +1,7 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
+using System.Collections.Generic;
+using System.Runtime.Remoting.Channels;
 
 namespace DataLogger.Configure
 {
@@ -20,6 +22,7 @@ namespace DataLogger.Configure
             obj["end_point"] = pend;
             obj["type"] = Components.Type.ToString(item.Type);
             obj["period"] = item.UpdatePeriod;
+            obj["title"] = item.Title;
 
             switch (item.Type)
             {
@@ -32,6 +35,7 @@ namespace DataLogger.Configure
                     obj["info"] = LabelInfo.Dump((Components.LabelInfo)item.Info);
                     break;
                 case Components.ComponentTypes.Table:
+                    obj["info"] = TableInfo.Dump((List<Components.TableInfo>)item.Info);
                     break;
                 default:
                     break;
@@ -51,6 +55,7 @@ namespace DataLogger.Configure
 
             item.Type = Components.Type.ToType(obj["type"].Value<string>());
             item.UpdatePeriod = obj["period"].Value<int>();
+            item.Title = obj["title"].Value<string>();
 
             switch (item.Type)
             {
@@ -63,6 +68,7 @@ namespace DataLogger.Configure
                     item.Info = LabelInfo.Load((JObject)obj["info"]);
                     break;
                 case Components.ComponentTypes.Table:
+                    item.Info = TableInfo.Load((JArray)obj["info"]);
                     break;
                 default:
                     break;

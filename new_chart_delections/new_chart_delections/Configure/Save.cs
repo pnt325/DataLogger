@@ -9,25 +9,39 @@ namespace DataLogger.Configure
 {
     public class Save
     {
+        public static string FileName = "";
+
         public static void Show ()
         {
-            string filename = "";
+            //string filename = "";
             using (SaveFileDialog sfd = new SaveFileDialog())
             {
                 sfd.Filter = "Grid layout (*.logcfg)|*.logcfg";
                 if (sfd.ShowDialog() == DialogResult.OK)
                 {
-                    filename = sfd.FileName;
+                    FileName = sfd.FileName;
                 }
             }
 
-            if (filename == "")
+            if (FileName == "")
             {
                 return;
             }
 
-            Dump(filename);
+            Dump(FileName);
         }
+
+
+        public static bool Show(string filename)
+        {
+            if(File.Exists(filename) == false)
+            {
+                return false;
+            }
+
+            return Dump(filename);
+        }
+
         private static bool Dump(string filename)
         {
             JObject jobj_file = new JObject();

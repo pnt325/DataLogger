@@ -109,6 +109,7 @@
     <Compile Include="Configure\Md5Hash.cs" />
     <Compile Include="Configure\Memory.cs" />
     <Compile Include="Configure\Save.cs" />
+    <Compile Include="Configure\TableInfo.cs" />
     <Compile Include="Core\Component.cs" />
     <Compile Include="Core\Grid.cs" />
     <Compile Include="Core\Memory.cs" />
@@ -120,6 +121,12 @@
       <DependentUpon>ColorHexagon.cs</DependentUpon>
     </Compile>
     <Compile Include="Layout\ColorModes.cs" />
+    <Compile Include="Layout\FrmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\FrmAbout.Designer.cs">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </Compile>
     <Compile Include="Layout\FrmConfigure.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +138,12 @@
     </Compile>
     <Compile Include="Layout\FrmConnection.Designer.cs">
       <DependentUpon>FrmConnection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layout\FrmEditComponent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layout\FrmEditComponent.Designer.cs">
+      <DependentUpon>FrmEditComponent.cs</DependentUpon>
     </Compile>
     <Compile Include="Layout\FrmMain.cs">
       <SubType>Form</SubType>
@@ -165,11 +178,17 @@
     <EmbeddedResource Include="Layout\ColorHexagon.resx">
       <DependentUpon>ColorHexagon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Layout\FrmAbout.resx">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Layout\FrmConfigure.resx">
       <DependentUpon>FrmConfigure.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Layout\FrmConnection.resx">
       <DependentUpon>FrmConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layout\FrmEditComponent.resx">
+      <DependentUpon>FrmEditComponent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Layout\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
@@ -242,12 +261,12 @@
   <ItemGroup>
     <PublishFile Include="iconfinder_utilities-system-monitor_118829.ico">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
   </ItemGroup>

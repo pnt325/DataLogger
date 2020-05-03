@@ -39,6 +39,20 @@ namespace DataLogger.Core
             }
         }
 
+        public static ComponentStaus GetStatus(string uuid)
+        {
+            ComponentStaus status = ComponentStaus.Stoped;
+            for (int i = 0; i < Items.Count; i++)
+            {
+                if(Items[i].Uuid == uuid)
+                {
+                    status = Items[i].Status;
+                }
+            }
+
+            return status;
+        }
+
         /// <summary>
         /// Stop component log data
         /// </summary>
@@ -99,6 +113,7 @@ namespace DataLogger.Core
     public class ComponentItem
     {
         public string Uuid { get; set; }
+        public string Title { get; set; }
         public ComponentStaus Status { get; set; }  // working status
         public Point StartPoint { get; set; }
         public Point EndPoint { get; set; }

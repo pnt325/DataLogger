@@ -1,0 +1,186 @@
+{
+  "data": {
+    "memory": [
+      {
+        "name": "volt",
+        "type": "float"
+      },
+      {
+        "name": "current",
+        "type": "float"
+      },
+      {
+        "name": "speed",
+        "type": "float"
+      },
+      {
+        "name": "temperature",
+        "type": "float"
+      }
+    ],
+    "grid": {
+      "x": 4,
+      "y": 5
+    },
+    "components": [
+      {
+        "start_point": {
+          "x": 0,
+          "y": 0
+        },
+        "end_point": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "Table",
+        "period": 5,
+        "title": "Table Show All",
+        "info": [
+          {
+            "var_name": "volt",
+            "var_adr": 0,
+            "var_type": "float"
+          },
+          {
+            "var_name": "current",
+            "var_adr": 1,
+            "var_type": "float"
+          },
+          {
+            "var_name": "speed",
+            "var_adr": 2,
+            "var_type": "float"
+          },
+          {
+            "var_name": "temperature",
+            "var_adr": 3,
+            "var_type": "float"
+          }
+        ]
+      },
+      {
+        "start_point": {
+          "x": 1,
+          "y": 0
+        },
+        "end_point": {
+          "x": 2,
+          "y": 1
+        },
+        "type": "Label",
+        "period": 5,
+        "title": "Volt",
+        "info": {
+          "title": "Volt",
+          "var_name": "volt",
+          "var_adr": 0,
+          "var_type": "float"
+        }
+      },
+      {
+        "start_point": {
+          "x": 2,
+          "y": 0
+        },
+        "end_point": {
+          "x": 3,
+          "y": 1
+        },
+        "type": "Label",
+        "period": 5,
+        "title": "Current",
+        "info": {
+          "title": "Current",
+          "var_name": "current",
+          "var_adr": 1,
+          "var_type": "float"
+        }
+      },
+      {
+        "start_point": {
+          "x": 3,
+          "y": 0
+        },
+        "end_point": {
+          "x": 4,
+          "y": 1
+        },
+        "type": "Label",
+        "period": 5,
+        "title": "Speed",
+        "info": {
+          "title": "Speed",
+          "var_name": "speed",
+          "var_adr": 2,
+          "var_type": "float"
+        }
+      },
+      {
+        "start_point": {
+          "x": 0,
+          "y": 1
+        },
+        "end_point": {
+          "x": 4,
+          "y": 3
+        },
+        "type": "Chart",
+        "period": 5,
+        "title": "Temperature",
+        "info": {
+          "title": "Temperature",
+          "sample": 500,
+          "lines": [
+            {
+              "name": "temperature",
+              "var_name": "temperature",
+              "var_adr": 3,
+              "var_type": "float",
+              "color": -16117249
+            }
+          ]
+        }
+      },
+      {
+        "start_point": {
+          "x": 0,
+          "y": 3
+        },
+        "end_point": {
+          "x": 4,
+          "y": 5
+        },
+        "type": "Chart",
+        "period": 5,
+        "title": "Power",
+        "info": {
+          "title": "Power",
+          "sample": 500,
+          "lines": [
+            {
+              "name": "volt",
+              "var_name": "volt",
+              "var_adr": 0,
+              "var_type": "float",
+              "color": -8106241
+            },
+            {
+              "name": "current",
+              "var_name": "current",
+              "var_adr": 1,
+              "var_type": "float",
+              "color": -8796928
+            }
+          ]
+        }
+      }
+    ],
+    "connection": {
+      "uart": {
+        "port": "",
+        "baudrate": 9600
+      }
+    }
+  },
+  "checksum": "54bc2477a871ce9d43335de891b2c88a"
+}

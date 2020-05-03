@@ -35,7 +35,6 @@ namespace ObjectListViewEx
             this.objectListView1.FormatRow += ObjectListView1_FormatRow;
 
 
-
             this.olvColumn4.AspectToStringConverter = delegate (object obj)
             {
                 Button s = (Button)obj;

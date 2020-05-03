@@ -105,6 +105,7 @@ namespace DataLogger.Layout
             SelectComponent.Type = Components.Type.ToType(cbbComponent.Text);
             SelectComponent.UpdatePeriod = (int)nudPeriod.Value;
             SelectComponent.Uuid = Guid.NewGuid().ToString();
+            SelectComponent.Title = txbTitle.Text;
 
             switch (SelectComponent.Type)
             {
@@ -115,8 +116,8 @@ namespace DataLogger.Layout
                     Components.ChartInfo chartInfo = new Components.ChartInfo();
                     chartInfo.Sample = (int)nudSample.Value;
                     chartInfo.Title = txbTitle.Text;
-                    
-                    foreach(ListViewItem item in lsvSelect.Items)
+
+                    foreach (ListViewItem item in lsvSelect.Items)
                     {
                         Components.ChartLine line = new ChartLine();
                         line.Name = item.SubItems[0].Text;

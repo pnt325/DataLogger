@@ -1,0 +1,298 @@
+{
+  "data": {
+    "memory": [
+      {
+        "name": "volt",
+        "type": "float"
+      },
+      {
+        "name": "current",
+        "type": "float"
+      },
+      {
+        "name": "power",
+        "type": "float"
+      },
+      {
+        "name": "temperature",
+        "type": "int8"
+      },
+      {
+        "name": "speed",
+        "type": "uint16"
+      },
+      {
+        "name": "pwm",
+        "type": "uint8"
+      }
+    ],
+    "grid": {
+      "x": 6,
+      "y": 5
+    },
+    "components": [
+      {
+        "start_point": {
+          "x": 0,
+          "y": 0
+        },
+        "end_point": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "Table",
+        "period": 5,
+        "info": [
+          {
+            "var_name": "volt",
+            "var_adr": 0,
+            "var_type": "float"
+          },
+          {
+            "var_name": "current",
+            "var_adr": 1,
+            "var_type": "float"
+          },
+          {
+            "var_name": "power",
+            "var_adr": 2,
+            "var_type": "float"
+          },
+          {
+            "var_name": "temperature",
+            "var_adr": 0,
+            "var_type": "int8"
+          },
+          {
+            "var_name": "speed",
+            "var_adr": 0,
+            "var_type": "uint16"
+          },
+          {
+            "var_name": "pwm",
+            "var_adr": 0,
+            "var_type": "uint8"
+          }
+        ]
+      },
+      {
+        "start_point": {
+          "x": 1,
+          "y": 0
+        },
+        "end_point": {
+          "x": 2,
+          "y": 1
+        },
+        "type": "Label",
+        "period": 5,
+        "info": {
+          "title": "Volt",
+          "var_name": "volt",
+          "var_adr": 0,
+          "var_type": "float"
+        }
+      },
+      {
+        "start_point": {
+          "x": 2,
+          "y": 0
+        },
+        "end_point": {
+          "x": 3,
+          "y": 1
+        },
+        "type": "Label",
+        "period": 5,
+        "info": {
+          "title": "Current",
+          "var_name": "current",
+          "var_adr": 1,
+          "var_type": "float"
+        }
+      },
+      {
+        "start_point": {
+          "x": 3,
+          "y": 0
+        },
+        "end_point": {
+          "x": 4,
+          "y": 1
+        },
+        "type": "Label",
+        "period": 5,
+        "info": {
+          "title": "Power",
+          "var_name": "power",
+          "var_adr": 2,
+          "var_type": "float"
+        }
+      },
+      {
+        "start_point": {
+          "x": 4,
+          "y": 0
+        },
+        "end_point": {
+          "x": 5,
+          "y": 1
+        },
+        "type": "Label",
+        "period": 5,
+        "info": {
+          "title": "Temperature",
+          "var_name": "temperature",
+          "var_adr": 0,
+          "var_type": "int8"
+        }
+      },
+      {
+        "start_point": {
+          "x": 5,
+          "y": 0
+        },
+        "end_point": {
+          "x": 6,
+          "y": 1
+        },
+        "type": "Label",
+        "period": 5,
+        "info": {
+          "title": "Speed",
+          "var_name": "speed",
+          "var_adr": 0,
+          "var_type": "uint16"
+        }
+      },
+      {
+        "start_point": {
+          "x": 0,
+          "y": 1
+        },
+        "end_point": {
+          "x": 2,
+          "y": 3
+        },
+        "type": "Chart",
+        "period": 5,
+        "info": {
+          "title": "Temperature",
+          "sample": 500,
+          "lines": [
+            {
+              "name": "temperature",
+              "var_name": "temperature",
+              "var_adr": 0,
+              "var_type": "int8",
+              "color": -16086017
+            }
+          ]
+        }
+      },
+      {
+        "start_point": {
+          "x": 2,
+          "y": 1
+        },
+        "end_point": {
+          "x": 4,
+          "y": 3
+        },
+        "type": "Chart",
+        "period": 5,
+        "info": {
+          "title": "Speed",
+          "sample": 500,
+          "lines": [
+            {
+              "name": "speed",
+              "var_name": "speed",
+              "var_adr": 0,
+              "var_type": "uint16",
+              "color": -3858176
+            }
+          ]
+        }
+      },
+      {
+        "start_point": {
+          "x": 4,
+          "y": 1
+        },
+        "end_point": {
+          "x": 6,
+          "y": 3
+        },
+        "type": "Chart",
+        "period": 5,
+        "info": {
+          "title": "E-Parameter",
+          "sample": 500,
+          "lines": [
+            {
+              "name": "volt",
+              "var_name": "volt",
+              "var_adr": 0,
+              "var_type": "float",
+              "color": -62728
+            },
+            {
+              "name": "current",
+              "var_name": "current",
+              "var_adr": 1,
+              "var_type": "float",
+              "color": -16766523
+            },
+            {
+              "name": "power",
+              "var_name": "power",
+              "var_adr": 2,
+              "var_type": "float",
+              "color": -8796928
+            }
+          ]
+        }
+      },
+      {
+        "start_point": {
+          "x": 0,
+          "y": 3
+        },
+        "end_point": {
+          "x": 6,
+          "y": 5
+        },
+        "type": "Chart",
+        "period": 5,
+        "info": {
+          "title": "Speed-Control",
+          "sample": 500,
+          "lines": [
+            {
+              "name": "speed",
+              "var_name": "speed",
+              "var_adr": 0,
+              "var_type": "uint16",
+              "color": -8323034
+            },
+            {
+              "name": "pwm",
+              "var_name": "pwm",
+              "var_adr": 0,
+              "var_type": "uint8",
+              "color": -2038
+            }
+          ]
+        }
+      }
+    ],
+    "connection": {
+      "uart": {
+        "port": "",
+        "baudrate": 9600
+      }
+    }
+  },
+  "checksum": "91ad66d874442d2db01f9d936b50aa90"
+}
