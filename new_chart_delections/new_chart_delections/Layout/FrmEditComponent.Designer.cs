@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BrightIdeasSoftware.HeaderStateStyle headerStateStyle1 = new BrightIdeasSoftware.HeaderStateStyle();
-            BrightIdeasSoftware.HeaderStateStyle headerStateStyle2 = new BrightIdeasSoftware.HeaderStateStyle();
-            BrightIdeasSoftware.HeaderStateStyle headerStateStyle3 = new BrightIdeasSoftware.HeaderStateStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEditComponent));
             this.objectListView1 = new BrightIdeasSoftware.ObjectListView();
             this.olvTypeCol = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
@@ -39,7 +36,6 @@
             this.olvUuidCol = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvStartPCol = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvEndPCol = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.headerFormatStyle1 = new BrightIdeasSoftware.HeaderFormatStyle();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.startToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,8 +64,7 @@
             this.olvEndPCol});
             this.objectListView1.Cursor = System.Windows.Forms.Cursors.Default;
             this.objectListView1.FullRowSelect = true;
-            this.objectListView1.HeaderFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.objectListView1.HeaderFormatStyle = this.headerFormatStyle1;
+            //this.objectListView1.HeaderFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.objectListView1.HideSelection = false;
             this.objectListView1.Location = new System.Drawing.Point(12, 12);
             this.objectListView1.MultiSelect = false;
@@ -110,15 +105,6 @@
             this.olvEndPCol.AspectName = "EndPoint";
             this.olvEndPCol.Text = "EndPoint";
             this.olvEndPCol.Width = 76;
-            // 
-            // headerFormatStyle1
-            // 
-            headerStateStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerFormatStyle1.Hot = headerStateStyle1;
-            headerStateStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerFormatStyle1.Normal = headerStateStyle2;
-            headerStateStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.headerFormatStyle1.Pressed = headerStateStyle3;
             // 
             // imageList1
             // 
@@ -182,7 +168,6 @@
         private BrightIdeasSoftware.OLVColumn olvStartPCol;
         private BrightIdeasSoftware.OLVColumn olvEndPCol;
         private System.Windows.Forms.ImageList imageList1;
-        private BrightIdeasSoftware.HeaderFormatStyle headerFormatStyle1;
         private BrightIdeasSoftware.OLVColumn olvUuidCol;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem startToolStripMenuItem;

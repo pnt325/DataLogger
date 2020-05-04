@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DataLogger.exe" size="691168">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DataLogger.exe" size="695776">
       <assemblyIdentity name="DataLogger" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>FHv75/1PPj5HRIl17zRM9V4HEEyR5IW5cM86slGe3c4=</dsig:DigestValue>
+        <dsig:DigestValue>e8pFlk+yzUHUr/dpTz48meSehgZOrMznQimbcgJ5j9U=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -264,13 +264,13 @@
       <dsig:DigestValue>ALMGmVvZaDJvCPs+OI/94N7cUehW3Aa0gmhLZkDEhag=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="License-LGPL.txt" size="26423">
+  <file name="License-LGPL.txt" size="26929">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>oqjJYhaAjQO20xcfZuzoDiRY2bMRWjLe9nkQQ/wGpm8=</dsig:DigestValue>
+      <dsig:DigestValue>iRL7QXHiwgsVa4v7NiBCs2EsyLPNa+AsIWSrkpApH1A=</dsig:DigestValue>
     </hash>
   </file>
   <fileAssociation extension=".ico" description="short cut icon" progid="1" defaultIcon="iconfinder_utilities-system-monitor_118829.ico" xmlns="urn:schemas-microsoft-com:clickonce.v1" />

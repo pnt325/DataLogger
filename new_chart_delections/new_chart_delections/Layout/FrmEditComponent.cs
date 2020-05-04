@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DataLogger.Layout
@@ -21,25 +15,25 @@ namespace DataLogger.Layout
             this.objectListView1.SelectedBackColor = Color.PaleGreen;
             this.objectListView1.SelectedForeColor = Color.Black;
 
-            this.olvTypeCol.ImageGetter =  delegate (object obj)
-            {
-                string ret = "";
-                ComponentHelp componentHelp = (ComponentHelp)obj;
-                if (componentHelp.Type == Components.Type.ToString(Components.ComponentTypes.Chart))
-                {
-                    ret =  "com_chart";
-                }
-                else if (componentHelp.Type == Components.Type.ToString(Components.ComponentTypes.Label))
-                {
-                    ret = "com_label";
-                }
-                else if (componentHelp.Type == Components.Type.ToString(Components.ComponentTypes.Table))
-                {
-                    ret = "com_table";
-                }
+            this.olvTypeCol.ImageGetter = delegate (object obj)
+           {
+               string ret = "";
+               ComponentHelp componentHelp = (ComponentHelp)obj;
+               if (componentHelp.Type == Components.Type.ToString(Components.ComponentTypes.Chart))
+               {
+                   ret = "com_chart";
+               }
+               else if (componentHelp.Type == Components.Type.ToString(Components.ComponentTypes.Label))
+               {
+                   ret = "com_label";
+               }
+               else if (componentHelp.Type == Components.Type.ToString(Components.ComponentTypes.Table))
+               {
+                   ret = "com_table";
+               }
 
-                return ret;
-            };
+               return ret;
+           };
 
             foreach (Core.ComponentItem item in Core.Component.Items)
             {
@@ -52,10 +46,10 @@ namespace DataLogger.Layout
                 help.UUID = item.Uuid;
 
                 objectListView1.AddObject(help);
-                
+
             }
         }
-        
+
         ComponentHelp help;
         private void ObjectListView1_MouseClick(object sender, MouseEventArgs e)
         {
@@ -73,7 +67,7 @@ namespace DataLogger.Layout
                     startToolStripMenuItem.Enabled = true;
                     stopToolStripMenuItem.Enabled = false;
                 }
-                
+
                 contextMenuStrip1.Show(Cursor.Position);
             }
         }
