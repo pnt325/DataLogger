@@ -81,3 +81,4 @@ D:\DailyWork\DataLogger\new_chart_delections\new_chart_delections\bin\Debug\zh-t
 D:\DailyWork\DataLogger\new_chart_delections\new_chart_delections\obj\Debug\DataLogger.exe.manifest
 D:\DailyWork\DataLogger\new_chart_delections\new_chart_delections\obj\Debug\DataLogger.application
 D:\DailyWork\DataLogger\new_chart_delections\new_chart_delections\obj\Debug\DataLogger.csproj.CopyComplete
+D:\DailyWork\DataLogger\new_chart_delections\new_chart_delections\obj\Debug\DataLogger.csprojAssemblyReference.cache
