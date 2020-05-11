@@ -35,7 +35,7 @@
             // btnOk
             // 
             this.btnOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOk.Location = new System.Drawing.Point(303, 185);
+            this.btnOk.Location = new System.Drawing.Point(303, 183);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(75, 23);
             this.btnOk.TabIndex = 0;
@@ -51,7 +51,7 @@
             this.txbInfo.Multiline = true;
             this.txbInfo.Name = "txbInfo";
             this.txbInfo.ReadOnly = true;
-            this.txbInfo.Size = new System.Drawing.Size(366, 167);
+            this.txbInfo.Size = new System.Drawing.Size(366, 165);
             this.txbInfo.TabIndex = 1;
             // 
             // FrmAbout
@@ -60,10 +60,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(390, 220);
+            this.ClientSize = new System.Drawing.Size(390, 218);
             this.Controls.Add(this.txbInfo);
             this.Controls.Add(this.btnOk);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmAbout";
             this.Text = "About";
             this.ResumeLayout(false);

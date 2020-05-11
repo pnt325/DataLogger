@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Microsoft.SqlServer.Server;
+using Newtonsoft.Json.Linq;
 using System;
 using System.IO;
 using System.Security.Cryptography;
@@ -81,7 +82,7 @@ namespace DataLogger.Configure
 
             using (StreamWriter sw = new StreamWriter(filename))
             {
-                sw.Write(jobj_file.ToString());
+                sw.Write(jobj_file.ToString(Newtonsoft.Json.Formatting.None));
             }
 
             return true;

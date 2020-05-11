@@ -64,7 +64,6 @@
             this.olvEndPCol});
             this.objectListView1.Cursor = System.Windows.Forms.Cursors.Default;
             this.objectListView1.FullRowSelect = true;
-            //this.objectListView1.HeaderFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.objectListView1.HideSelection = false;
             this.objectListView1.Location = new System.Drawing.Point(12, 12);
             this.objectListView1.MultiSelect = false;
@@ -150,8 +149,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(550, 288);
             this.Controls.Add(this.objectListView1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmEditComponent";
             this.Text = "Edit Component";
             ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).EndInit();

@@ -1,0 +1,158 @@
+{
+  "data": {
+    "memory": [
+      {
+        "name": "volt",
+        "type": "int8"
+      },
+      {
+        "name": "current",
+        "type": "int8"
+      },
+      {
+        "name": "power",
+        "type": "int8"
+      }
+    ],
+    "grid": {
+      "x": 4,
+      "y": 4
+    },
+    "components": [
+      {
+        "start_point": {
+          "x": 0,
+          "y": 0
+        },
+        "end_point": {
+          "x": 4,
+          "y": 2
+        },
+        "type": "Chart",
+        "period": 5,
+        "title": "Line Chart Test",
+        "info": {
+          "title": "Line Chart Test",
+          "sample": 500,
+          "lines": [
+            {
+              "name": "volt",
+              "var_name": "volt",
+              "var_adr": 0,
+              "var_type": "int8",
+              "color": -11643905
+            },
+            {
+              "name": "current",
+              "var_name": "current",
+              "var_adr": 1,
+              "var_type": "int8",
+              "color": -3858176
+            },
+            {
+              "name": "power",
+              "var_name": "power",
+              "var_adr": 2,
+              "var_type": "int8",
+              "color": -16744189
+            }
+          ]
+        }
+      },
+      {
+        "start_point": {
+          "x": 0,
+          "y": 2
+        },
+        "end_point": {
+          "x": 1,
+          "y": 4
+        },
+        "type": "Label",
+        "period": 5,
+        "title": "VOLT",
+        "info": {
+          "title": "VOLT",
+          "var_name": "volt",
+          "var_adr": 0,
+          "var_type": "int8"
+        }
+      },
+      {
+        "start_point": {
+          "x": 1,
+          "y": 2
+        },
+        "end_point": {
+          "x": 2,
+          "y": 4
+        },
+        "type": "Label",
+        "period": 5,
+        "title": "Current",
+        "info": {
+          "title": "Current",
+          "var_name": "current",
+          "var_adr": 1,
+          "var_type": "int8"
+        }
+      },
+      {
+        "start_point": {
+          "x": 2,
+          "y": 2
+        },
+        "end_point": {
+          "x": 3,
+          "y": 4
+        },
+        "type": "Label",
+        "period": 5,
+        "title": "Power",
+        "info": {
+          "title": "Power",
+          "var_name": "power",
+          "var_adr": 2,
+          "var_type": "int8"
+        }
+      },
+      {
+        "start_point": {
+          "x": 3,
+          "y": 2
+        },
+        "end_point": {
+          "x": 4,
+          "y": 4
+        },
+        "type": "Table",
+        "period": 5,
+        "title": "Table",
+        "info": [
+          {
+            "var_name": "volt",
+            "var_adr": 0,
+            "var_type": "int8"
+          },
+          {
+            "var_name": "current",
+            "var_adr": 1,
+            "var_type": "int8"
+          },
+          {
+            "var_name": "power",
+            "var_adr": 2,
+            "var_type": "int8"
+          }
+        ]
+      }
+    ],
+    "connection": {
+      "uart": {
+        "port": "",
+        "baudrate": 9600
+      }
+    }
+  },
+  "checksum": "d985ed5c8a86b037bf726c28c031316c"
+}

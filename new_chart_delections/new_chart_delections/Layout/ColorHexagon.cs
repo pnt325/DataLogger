@@ -129,25 +129,10 @@ namespace DataLogger.Layout
         {
             Rectangle clientRectangle = base.ClientRectangle;
 
-            //clientRectangle.Offset(0, -8);
-
-            //if (clientRectangle.Height < clientRectangle.Width)
-            //{
-            //    clientRectangle.Inflate(-(clientRectangle.Width - clientRectangle.Height) / 2, 0);
-            //}
-            //else
-            //{
-            //    clientRectangle.Inflate(0, -(clientRectangle.Height - clientRectangle.Width) / 2);
-            //}
-
             int hexagonWidth = this.GetHexgaonWidth(Math.Min(clientRectangle.Height, clientRectangle.Width));
 
-            //int centerOfMiddleHexagonX = (clientRectangle.Left + clientRectangle.Right) / 2;
-            //int centerOfMiddleHexagonY = (clientRectangle.Top + clientRectangle.Bottom) / 2;
             int centerOfMiddleHexagonX = clientRectangle.Width / 2;
             int centerOfMiddleHexagonY = clientRectangle.Height / 2;
-
-            //centerOfMiddleHexagonY -= hexagonWidth;
 
             this.hexagonElements[0].CurrentColor = Color.White;
             this.hexagonElements[0].SetHexagonPoints((float)centerOfMiddleHexagonX, (float)centerOfMiddleHexagonY, hexagonWidth);
@@ -172,8 +157,6 @@ namespace DataLogger.Layout
                     }
                 }
             }
-            //clientRectangle.Y -= hexagonWidth + (hexagonWidth / 2);
-            //this.InitializeGrayscaleHexagons(ref clientRectangle, hexagonWidth, ref centerOfMiddleHexagonX, ref centerOfMiddleHexagonY, ref index);
         }
 
         #endregion
@@ -194,10 +177,9 @@ namespace DataLogger.Layout
                 {
                     this.selectedHexagonIndex = this.oldSelectedHexagonIndex;
                     this.hexagonElements[this.selectedHexagonIndex].IsSelected = true;
-                    if (this.ColorChanged != null)
-                    {
-                        this.ColorChanged(this, new ColorChangedEventArgs(this.SelectedColor));
-                    }
+
+                    this.ColorChanged?.Invoke(this, new ColorChangedEventArgs(this.SelectedColor));
+
                     base.Invalidate(this.hexagonElements[this.selectedHexagonIndex].BoundingRectangle);
                 }
             }
@@ -366,6 +348,7 @@ namespace DataLogger.Layout
             this.hexagonPoints[3] = new Point((int)Math.Floor((double)(xCoordinate + (hexagonWidth / 2))), ((int)Math.Floor((double)(yCoordinate + (num / 2f)))) + 1);
             this.hexagonPoints[4] = new Point((int)Math.Floor((double)xCoordinate), ((int)Math.Floor((double)(yCoordinate + (hexagonWidth / 2)))) + 1);
             this.hexagonPoints[5] = new Point((int)Math.Floor((double)(xCoordinate - (hexagonWidth / 2))), ((int)Math.Floor((double)(yCoordinate + (num / 2f)))) + 1);
+
             using (GraphicsPath path = new GraphicsPath())
             {
                 path.AddPolygon(this.hexagonPoints);
