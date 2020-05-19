@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataLogger.Layout;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -35,6 +36,8 @@ namespace DataLogger.Core
         #region EVENT
         public static event EventHandler SizeChanged;
         public delegate void AreaSelectedEvent(Point start, Point end);
+        public static event AreaSelectedEvent AreaSelected;
+        public static event EventHandler AreaEndSelect;
         #endregion
 
         #region ATTRIBUTE
@@ -92,6 +95,11 @@ namespace DataLogger.Core
             return true;
         }
 
+        /// <summary>
+        /// use grid reference point to calculate form pixel point of form
+        /// </summary>
+        /// <param name="startPoint"></param>
+        /// <returns></returns>
         public static Point GetPoint(Point startPoint)
         {
             Point startLocation = new Point();
@@ -107,6 +115,12 @@ namespace DataLogger.Core
             return startLocation;
         }
 
+        /// <summary>
+        /// Use grid size to calculate size by pixel
+        /// </summary>
+        /// <param name="startPoint"></param>
+        /// <param name="endPoint"></param>
+        /// <returns></returns>
         public static Size GetSize(Point startPoint, Point endPoint)
         {
             Size areaSize = new Size();
@@ -272,8 +286,8 @@ namespace DataLogger.Core
                 }
             }
 
-            Cursor.Current = Cursors.Default;
-
+            Cursor.Current = Cursors.Default;   // reset cursor
+            AreaSelected?.Invoke(selectStartPoint, selectEndPoint);
             frm.Invalidate();
         }
 
@@ -299,6 +313,8 @@ namespace DataLogger.Core
                         }
                     }
                 }
+
+                AreaEndSelect?.Invoke(null, null);
                 frm.Invalidate();
             }
         }

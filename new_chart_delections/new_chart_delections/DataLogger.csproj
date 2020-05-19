@@ -269,7 +269,7 @@
     </FileAssociation>
   </ItemGroup>
   <ItemGroup>
-    <PublishFile Include="iconfinder_utilities-system-monitor_118829.ico">
+    <PublishFile Include="app.ico">
       <Visible>False</Visible>
       <Group>
       </Group>

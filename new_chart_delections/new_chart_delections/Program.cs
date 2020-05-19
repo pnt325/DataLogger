@@ -16,9 +16,12 @@ namespace DataLogger
         static void Main(string[] args)
         {
             // Get input file.
-            if(args.Length > 0)
+            if(args != null)
             {
-                FileName = args[0];
+                if (args.Length > 0)
+                {
+                    FileName = args[0];
+                }
             }
 
             Application.EnableVisualStyles();

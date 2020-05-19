@@ -34,6 +34,19 @@ namespace DataLogger.Layout
             Core.Grid.SizeChanged += Grid_SizeChanged;
             Core.Component.AddControl += Component_AddControl;
             this.Shown += FrmMain_Shown;
+            Core.Grid.AreaSelected += Grid_AreaSelected;
+            Core.Grid.AreaEndSelect += Grid_AreaEndSelect;
+        }
+
+        private void Grid_AreaEndSelect(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Selected: 0x0";
+        }
+
+        private void Grid_AreaSelected(Point start, Point end)
+        {
+
+            toolStripStatusLabel1.Text = string.Format("Selected: {0}x{1}", end.X - start.X, end.Y - start.Y);
         }
 
         private void FrmMain_Shown(object sender, EventArgs e)

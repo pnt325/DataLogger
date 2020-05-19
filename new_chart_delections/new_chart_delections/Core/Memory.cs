@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Net.Http.Headers;
-using System.Net.NetworkInformation;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace DataLogger.Core
 {
@@ -94,7 +86,7 @@ namespace DataLogger.Core
         /// <param name="type"></param>
         /// <param name="address"></param>
         /// <returns></returns>
-        public static  bool Add(string name, MemoryTypes type, out uint address)
+        public static bool Add(string name, MemoryTypes type, out uint address)
         {
             bool result = true;
             uint adr = 0;
@@ -237,49 +229,49 @@ namespace DataLogger.Core
                 case MemoryTypes.None:
                     break;
                 case MemoryTypes.Bit:
-                    if(address < BitSize)
+                    if (address < BitSize)
                     {
                         value = memBit[address];
                     }
                     break;
                 case MemoryTypes.Int8:
-                    if(address < Int8Size)
+                    if (address < Int8Size)
                     {
                         value = memInt8[address];
                     }
                     break;
                 case MemoryTypes.Uint8:
-                    if(address < Uint8Size)
+                    if (address < Uint8Size)
                     {
                         value = memUint8[address];
                     }
                     break;
                 case MemoryTypes.Int16:
-                    if(address < Int16Size)
+                    if (address < Int16Size)
                     {
                         value = memInt16[address];
                     }
                     break;
                 case MemoryTypes.Uint16:
-                    if(address < Uint16Size)
+                    if (address < Uint16Size)
                     {
                         value = memUint16[address];
                     }
                     break;
                 case MemoryTypes.Int32:
-                    if(address < Int32Size)
+                    if (address < Int32Size)
                     {
                         value = memInt32[address];
                     }
                     break;
                 case MemoryTypes.Uint32:
-                    if(address < Uint32Size)
+                    if (address < Uint32Size)
                     {
                         value = memUint32[address];
                     }
                     break;
                 case MemoryTypes.Float:
-                    if(address < FloatSize)
+                    if (address < FloatSize)
                     {
                         value = memFloat[address];
                     }
@@ -307,7 +299,7 @@ namespace DataLogger.Core
                     result = false;
                     break;
                 case MemoryTypes.Bit:
-                    if(address < BitSize)
+                    if (address < BitSize)
                     {
                         memBit[address] = (byte)value;
                     }
@@ -361,7 +353,6 @@ namespace DataLogger.Core
             return result;
         }
     }
-
     public class MemoryType
     {
         public const string STR_BIT = "bit";
@@ -379,8 +370,8 @@ namespace DataLogger.Core
         /// <returns>string[]</returns>
         public static string[] Names()
         {
-            return new string[] { STR_BIT, STR_INT8, STR_UINT8, 
-                STR_INT16, STR_UINT16, STR_INT32, 
+            return new string[] { STR_BIT, STR_INT8, STR_UINT8,
+                STR_INT16, STR_UINT16, STR_INT32,
                 STR_UINT32, STR_FLOAT };
         }
 
@@ -427,7 +418,8 @@ namespace DataLogger.Core
         {
             MemoryTypes type = MemoryTypes.None;
 
-            switch (strType){
+            switch (strType)
+            {
                 case STR_BIT:
                     type = MemoryTypes.Bit;
                     break;
@@ -458,7 +450,11 @@ namespace DataLogger.Core
             return type;
         }
     }
-
+    public class MData
+    {
+        public uint Adr { get; set; }
+        public MemoryTypes Type { get; set; }
+    }
     public enum MemoryTypes
     {
         None,
