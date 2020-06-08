@@ -26,6 +26,8 @@ namespace DataLogger
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            /* Main gui */
             Application.Run(new Layout.FrmMain());
         }
     }

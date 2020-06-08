@@ -46,7 +46,6 @@ namespace DataLogger.Layout
                 help.UUID = item.Uuid;
 
                 objectListView1.AddObject(help);
-
             }
         }
 

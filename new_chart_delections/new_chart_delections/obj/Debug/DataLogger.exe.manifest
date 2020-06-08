@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DataLogger.exe" size="696800">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DataLogger.exe" size="699872">
       <assemblyIdentity name="DataLogger" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>AfuD6/pIPgVms5y9+LmWzJ3ryTwWjFvEAnnPM+3FUc8=</dsig:DigestValue>
+        <dsig:DigestValue>I25gqwOv49h8X+yYqJFJU2EkN2bWgkxXto0KTsWtUAY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

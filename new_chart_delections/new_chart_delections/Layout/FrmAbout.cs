@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DataLogger.Layout
@@ -16,7 +9,7 @@ namespace DataLogger.Layout
         {
             InitializeComponent();
 
-            // Buttion Initialization
+            /* Button */
             btnOk.Click += BtnOk_Click;
 
             KeyPreview = true;
@@ -25,7 +18,7 @@ namespace DataLogger.Layout
 
         private void FrmAbout_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(e.KeyChar == (char)Keys.Escape)
+            if (e.KeyChar == (char)Keys.Escape)
             {
                 BtnOk_Click(null, null);
             }

@@ -11,9 +11,9 @@ namespace DataLogger.Core
         public delegate void TriggerEvent(string uuid);
         public delegate void AddControlEvent(Control control);
 
-        public static event TriggerEvent Start;
-        public static event TriggerEvent Stop;
-        public static event TriggerEvent Removed;
+        public static event TriggerEvent Start;         // start log data to window
+        public static event TriggerEvent Stop;          // stop load data to window
+        public static event TriggerEvent Removed;       // remove component
         public static event AddControlEvent AddControl;
         #endregion
 

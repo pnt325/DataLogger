@@ -81,3 +81,5 @@ D:\DailyWork\DataLogger\new_chart_delections\new_chart_delections\obj\Debug\Data
 D:\DailyWork\DataLogger\new_chart_delections\new_chart_delections\obj\Debug\DataLogger.csproj.CopyComplete
 D:\DailyWork\DataLogger\new_chart_delections\new_chart_delections\obj\Debug\DataLogger.exe
 D:\DailyWork\DataLogger\new_chart_delections\new_chart_delections\obj\Debug\DataLogger.pdb
+D:\DailyWork\DataLogger\new_chart_delections\new_chart_delections\obj\Debug\DataLogger.csprojAssemblyReference.cache
+D:\DailyWork\DataLogger\new_chart_delections\new_chart_delections\obj\Debug\DataLogger.Layout.TestGui.resources

@@ -1,11 +1,8 @@
 ﻿using BrightIdeasSoftware;
 using DataLogger.Components;
-using DataLogger.Core;
 using System;
-using System.CodeDom;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace DataLogger.Layout
@@ -21,7 +18,7 @@ namespace DataLogger.Layout
             //btnChange.Enabled = false;
             btnOk.Enabled = false;
 
-            // listview 
+            // listview
 
             InitEvent();
             NormalSize();
@@ -48,7 +45,7 @@ namespace DataLogger.Layout
 
         private void TxbName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(e.KeyChar == (char)Keys.Enter)
+            if (e.KeyChar == (char)Keys.Enter)
             {
                 BtnChange_Click(null, null);
             }
@@ -163,7 +160,7 @@ namespace DataLogger.Layout
                     break;
             }
 
-            if(SelectComponent.Type == ComponentTypes.None)
+            if (SelectComponent.Type == ComponentTypes.None)
             {
                 this.DialogResult = DialogResult.None;
             }
@@ -173,9 +170,9 @@ namespace DataLogger.Layout
 
         private void InputVerify()
         {
-            if(cbbComponent.Text == Components.Type.ToString(Components.ComponentTypes.Label) && txbTitle.Text != "")
+            if (cbbComponent.Text == Components.Type.ToString(Components.ComponentTypes.Label) && txbTitle.Text != "")
             {
-                if(lsvData.CheckedItems.Count == 1)
+                if (lsvData.CheckedItems.Count == 1)
                 {
                     btnOk.Enabled = true;
                 }
@@ -186,7 +183,7 @@ namespace DataLogger.Layout
             }
             else
             {
-                if(txbTitle.Text != "" && lsvSelect.Items.Count > 0)
+                if (txbTitle.Text != "" && lsvSelect.Items.Count > 0)
                 {
                     btnOk.Enabled = true;
                 }
@@ -213,7 +210,7 @@ namespace DataLogger.Layout
             {
                 if (colorDialog.ShowDialog() == DialogResult.OK)
                 {
-                    if(selectedIndex >= 0)
+                    if (selectedIndex >= 0)
                     {
                         lsvSelect.Items[selectedIndex].SubItems[3].BackColor = colorDialog.Color;
                     }
@@ -345,7 +342,7 @@ namespace DataLogger.Layout
 
         private void colorHexagon1_ColorChanged(object sender, ColorChangedEventArgs args)
         {
-            if(selectedIndex >= 0)
+            if (selectedIndex >= 0)
             {
                 lsvSelect.Items[selectedIndex].SubItems[3].BackColor = args.SelectedColor;
             }

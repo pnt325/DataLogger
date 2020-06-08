@@ -74,6 +74,7 @@ namespace DataLogger.Layout
             foreach(KeyValuePair<string, Core.MemoryTypes> varType in Core.Memory.Types)
             {
                 ListViewItem item = new ListViewItem(varType.Key);
+                item.Tag = varType.Value;
                 item.SubItems.Add(Core.MemoryType.ToString(varType.Value));
                 lsvData.Items.Add(item);
             }
@@ -182,10 +183,6 @@ namespace DataLogger.Layout
             // Remove data from listview.
             lsvData.Items.RemoveAt(lsvData.FocusedItem.Index);
             btnSave.Enabled = true;
-
-
-
-
         }
     }
 }
