@@ -363,6 +363,7 @@ namespace DataLogger.Core
                 g.FillRectangle(brush, rect);
             }
         }
+
         private static void Update(Size size)
         {
             clientSize = size;

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
 
 namespace DataLogger
 {
@@ -16,7 +15,7 @@ namespace DataLogger
         static void Main(string[] args)
         {
             // Get input file.
-            if(args != null)
+            if (args != null)
             {
                 if (args.Length > 0)
                 {
@@ -28,9 +27,7 @@ namespace DataLogger
             Application.SetCompatibleTextRenderingDefault(false);
 
             /* Main gui */
-            Application.Run(new Layout.FrmMain());
+            Application.Run(new Layout.FrmMain());  // active main gui for first run...
         }
     }
 }
-
-

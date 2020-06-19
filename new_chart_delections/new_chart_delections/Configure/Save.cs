@@ -1,9 +1,6 @@
-﻿using Microsoft.SqlServer.Server;
-using Newtonsoft.Json.Linq;
-using System;
+﻿using Newtonsoft.Json.Linq;
 using System.IO;
 using System.Security.Cryptography;
-using System.Text;
 using System.Windows.Forms;
 
 namespace DataLogger.Configure
@@ -12,7 +9,7 @@ namespace DataLogger.Configure
     {
         public static string FileName = "";
 
-        public static void Show ()
+        public static void Show()
         {
             //string filename = "";
             using (SaveFileDialog sfd = new SaveFileDialog())
@@ -35,7 +32,7 @@ namespace DataLogger.Configure
 
         public static bool Show(string filename)
         {
-            if(File.Exists(filename) == false)
+            if (File.Exists(filename) == false)
             {
                 return false;
             }

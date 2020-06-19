@@ -150,25 +150,27 @@ namespace DataLogger.Components
                         value = (float)Core.Memory.Read(chartInfo.Lines[i].VarAddress, chartInfo.Lines[i].VarType);
 
                         LineItem lineItem = this.GraphPane.CurveList[i] as LineItem;
-                        IPointListEdit list = lineItem.Points as IPointListEdit;
 
+                        IPointListEdit list = lineItem.Points as IPointListEdit;
                         list.Add(valueCount, value);
                         valueCount++;
                     }
 
-                    // scale exist
+                    // auto scale exist
                     if (valueCount > this.GraphPane.XAxis.Scale.Max)
                     {
                         this.GraphPane.XAxis.Scale.Max = valueCount;
                         this.GraphPane.XAxis.Scale.Min = valueCount - chartInfo.Sample;
                     }
 
+                    // udpate new value to chart
                     this.AxisChange();
                     this.Invalidate();
 
                     Thread.Sleep(delayTime);
                 }
 
+                // chart stop update, set upate status to component management
                 Core.Component.SetStatus(UUID, Core.ComponentStaus.Stoped);
             });
             th.IsBackground = true;
