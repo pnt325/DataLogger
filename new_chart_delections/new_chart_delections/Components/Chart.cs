@@ -37,14 +37,14 @@ namespace DataLogger.Components
             this.Size = Core.Grid.GetSize(startPoint, endPoint);
 
             // Zedgraph init
-            this.GraphPane.Title.Text = chartInfo.Title;
-            this.GraphPane.XAxis.Title.IsVisible = false;
-            this.GraphPane.YAxis.Title.IsVisible = false;
-            this.GraphPane.XAxis.MajorGrid.IsVisible = true;
-            this.GraphPane.YAxis.MajorGrid.IsVisible = true;
-            this.GraphPane.IsFontsScaled = false;
-            this.GraphPane.XAxis.Title.FontSpec.Size = 8.5f;
-            this.GraphPane.YAxis.Title.FontSpec.Size = 8.5f;
+            this.GraphPane.Title.Text = chartInfo.Title;            /*Chart title*/
+            this.GraphPane.XAxis.Title.IsVisible = false;           /*Chart hide axis x title*/
+            this.GraphPane.YAxis.Title.IsVisible = false;           /*Chart hide axis y title*/
+            this.GraphPane.XAxis.MajorGrid.IsVisible = true;        /*Chart show axis x grid*/
+            this.GraphPane.YAxis.MajorGrid.IsVisible = true;        /*Chart show axis y grid*/
+            this.GraphPane.IsFontsScaled = false;                   /*Chart disable scale font*/
+            this.GraphPane.XAxis.Title.FontSpec.Size = 8.5f;        /*Axis title X font size*/
+            this.GraphPane.YAxis.Title.FontSpec.Size = 8.5f;        /*Axis title Y font size*/
 
             this.GraphPane.XAxis.Scale.Min = 0;
             this.GraphPane.YAxis.Scale.Max = 100;

@@ -19,9 +19,10 @@ namespace DataLogger.Layout
 
             // graphics Settings
             this.SetStyle(ControlStyles.AllPaintingInWmPaint |
-            ControlStyles.UserPaint |
-            ControlStyles.DoubleBuffer | ControlStyles.OptimizedDoubleBuffer | ControlStyles.ResizeRedraw,
-            true);
+                          ControlStyles.UserPaint |
+                          ControlStyles.DoubleBuffer |
+                          ControlStyles.OptimizedDoubleBuffer |
+                          ControlStyles.ResizeRedraw, true);
 
             this.DoubleBuffered = true;
 
@@ -52,9 +53,9 @@ namespace DataLogger.Layout
         private void FrmMain_Shown(object sender, EventArgs e)
         {
             // check to open file setting
-            if(Program.FileName != "")
+            if (Program.FileName != "")
             {
-                if(File.Exists(Program.FileName))
+                if (File.Exists(Program.FileName))
                 {
                     Configure.Load.FromFile(Program.FileName);
                 }
@@ -115,7 +116,7 @@ namespace DataLogger.Layout
             Program.Uart.Disconnect();
 
             // Stop component update
-            foreach(Core.ComponentItem item in Core.Component.Items)
+            foreach (Core.ComponentItem item in Core.Component.Items)
             {
                 Core.Component.SetStop(item.Uuid);
             }
@@ -162,7 +163,7 @@ namespace DataLogger.Layout
 
         private void componentToolStripMenuItem_DropDownOpening(object sender, EventArgs e)
         {
-            if(Program.Uart.Status)
+            if (Program.Uart.Status)
             {
                 startToolStripMenuItem1.Enabled = true;
                 stopToolStripMenuItem1.Enabled = true;
@@ -176,9 +177,9 @@ namespace DataLogger.Layout
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(Configure.Save.Show(Configure.Save.FileName) == false)
+            if (Configure.Save.Show(Configure.Save.FileName) == false)
             {
-                if(MessageBox.Show("Do you want to save to other location?", "File name not exist", MessageBoxButtons.OKCancel, MessageBoxIcon.Error) == DialogResult.OK)
+                if (MessageBox.Show("Do you want to save to other location?", "File name not exist", MessageBoxButtons.OKCancel, MessageBoxIcon.Error) == DialogResult.OK)
                 {
                     Configure.Save.Show();
                 }
@@ -187,7 +188,7 @@ namespace DataLogger.Layout
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using(FrmAbout frm =new FrmAbout())
+            using (FrmAbout frm = new FrmAbout())
             {
                 frm.StartPosition = FormStartPosition.Manual;
                 frm.Top = this.Top + (this.Size.Height - frm.Size.Height) / 2;
@@ -199,7 +200,7 @@ namespace DataLogger.Layout
 
         private void compoentsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using(FrmEditComponent frm = new FrmEditComponent())
+            using (FrmEditComponent frm = new FrmEditComponent())
             {
                 frm.ShowDialog();
             }
